@@ -3,9 +3,11 @@
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
+    "type": "module",
 	"scripts": {
 		"build": "tsc",
-		"watch": "concurrently \"tsc -w\" \"nodemon dist/index.js\""
+		"update": "node ./scripts/update.js",
+        "gen": "node ./scripts/generate.js"
 	},
 	"author": "CENSOR_1337",
 	"license": "MIT",
