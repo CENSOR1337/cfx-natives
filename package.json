@@ -1,0 +1,23 @@
+{
+	"name": "@fivemjs/natives",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"watch": "concurrently \"tsc -w\" \"nodemon dist/index.js\""
+	},
+	"author": "CENSOR_1337",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.4.0",
+		"@types/node-int64": "^0.4.29",
+		"axios": "^1.4.0",
+		"concurrently": "^8.2.0",
+		"nodemon": "^3.0.1",
+		"typescript": "^5.1.6"
+	},
+	"dependencies": {
+		"node-int64": "^0.4.0"
+	}
+}
