@@ -1,23 +1,134 @@
-import axios from "axios";
 import fs from "fs";
-
 import { splitHash, trimAndNormalize } from "./utils.js";
-import { getVariableType, getArgumentWarpper, getNativeReturnType, isPointerArgument } from "./types.js";
+//import { getVariableType, getArgumentWarpper, getNativeReturnType, isPointerArgument } from "./types.js";
 
-function getNativeName(native) {
-    let nativeName = native.name;
-    const words = nativeName.split('_');
+function isSinglePointerNative(native) {
+    const pointerCount = native.params.filter((param) => param.ref).length;
+    return pointerCount == 1;
+}
+function getArgumentWarpper(argument, native) {
+    const isPointer = argument.ref;
+    if (isPointer) {
+        const isSinglePointer = isSinglePointerNative(native);
+        if (native.hash == "0x1E8C308FD312C036") {
+            console.log(isSinglePointer, argument.type)
+        }
+        if (argument.type.includes("int")) return isSinglePointer ? `_ii(${argument.name})` : `_i`;
+        if (argument.type.includes("float")) return isSinglePointer ? `_fi(${argument.name})` : `_f`;
+        if (argument.type.includes("Vector3")) return `_v`;
 
-    const transformedWords = words.map((word, index) => {
-        if (index === 0) return word.toLowerCase();
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    });
+        return `_i`;
+    }
 
-    return transformedWords.join("");
+    if (argument.type.includes("func")) return `_mfr(${argument.name})`;
+    if (argument.type.includes("float")) return `_fv(${argument.name})`;
+    if (argument.type.includes("hash")) return `_ch(${argument.name})`;
+    if (argument.type.includes("object")) return `...(_obj(${argument.name})`;
+    if (argument.type.includes("string")) return `_ts(${argument.name})`;
+    if (argument.type.includes("char")) return `_ts(${argument.name})`;
+
+    return argument.name;
+}
+
+function getNativeReturnType(native) {
+    if (native.results.includes("string")) return "_s";
+    if (native.results.includes("char")) return "_s";
+    if (native.results.includes("float")) return "_rf";
+    if (native.results.includes("Vector3")) return "_rv";
+    if (native.results.includes("long")) return "_rl";
+    if (native.results.includes("int")) return "_ri";
+    if (native.results.includes("any")) return "_ri";
+    if (native.results.includes("object")) return "_ro";
+}
+
+
+function getNativeInvokeParams(native) {
+    const hashs = splitHash(native.hash);
+    const returns = [hashs.one, hashs.two];
+
+    for (const param of native.params) {
+        returns.push(getArgumentWarpper(param, native));
+    }
+
+    if (!native.results.includes("void")) {
+        returns.push("_r");
+        const returnType = getNativeReturnType(native);
+        if (returnType) {
+            returns.push(returnType);
+        }
+    }
+
+    return returns.join(", ");
+}
+
+function getParamType(param) {
+    switch (param.type) {
+        case "int":
+            return "int";
+        case "Any":
+            return "int";
+        case "float":
+            return "float";
+        case "boolean":
+            return "boolean";
+        case "Vehicle":
+            return "int";
+        case "Cam":
+            return "int";
+        case "Vector3":
+            return "Vector3";
+        case "FireId":
+            return "int";
+        case "Pickup":
+            return "int";
+        case "string":
+            return "string";
+        case "Hash":
+            return "hash";
+        case "Ped":
+            return "int";
+        case "Entity":
+            return "int";
+        case "Object":
+            return "int";
+        case "Player":
+            return "int";
+        case "ScrHandle":
+            return "int";
+        case "Blip":
+            return "int";
+        case "Interior":
+            return "int";
+        default:
+            return "any";
+    }
+
+}
+
+function getTypescriptType(argument) {
+    const type = getParamType(argument);
+    if (type.includes("int")) return "number";
+    if (type.includes("float")) return "number";
+    if (type.includes("Vector3")) return "Vector3";
+    if (type.includes("hash")) return "string | number";
+    return "any"
+}
+
+function getNativeArguments(native) {
+    const params = [];
+    for (const param of native.params) {
+        if (!param.ref || isSinglePointerNative(native)) {
+            const paramType = getTypescriptType(param);
+            params.push(`${param.name}: ${paramType}`);
+        };
+    }
+    return params.join(", ");
 }
 
 function getNativeDoc(native) {
-    const desc = native.description;
+    const desc = native.comment;
+
+    if (desc.length <= 0) return "";
     let doc = "/**\n";
 
     const lines = desc.split("\n");
@@ -36,87 +147,48 @@ function getNativeDoc(native) {
     doc = doc.concat(" */\n");
     return doc;
 }
-
-function getNativeParams(native) {
-    const params = [];
-    for (const param of native.params) {
-        if (isPointerArgument(param)) continue;
-        const paramType = getVariableType(param.type);
-        params.push(`${param.name}: ${paramType}`);
-    }
-    //const params = native.params.map((param) => `${param.name}: ${getVariableType(param.type)}`).join(", ");
-    //return params;
-    return params.join(", ");
-}
-
-function getNativeInvokeParams(native) {
-    const hashs = splitHash(native.hash);
-    const returns = [hashs.one, hashs.two];
-
-    for (const param of native.params) {
-        returns.push(getArgumentWarpper(param, native));
-    }
-
-    if (native.results != "void") {
-        returns.push("_r");
-        const returnType = getNativeReturnType(native);
-        if (returnType) {
-            returns.push(returnType);
-        }
-    }
-
-    return returns.join(", ");
-}
-
 const template = fs.readFileSync("./scripts/template.txt", "utf8");
-const codegenTypes = [];
-function getNatives(nativeFile) {
-    const filePath = `./bin/${nativeFile}.json`;
-    if (!fs.existsSync(filePath)) throw new Error(`File ${filePath} not found`);
-    const file = fs.readFileSync(filePath, "utf8");
 
-    const data = JSON.parse(file);
-    const returnNatives = new Map();
 
-    for (const [module, natives] of Object.entries(data)) {
-        for (let [hash, native] of Object.entries(natives)) {
-            if (!native.name) continue;
+function generateNatives() {
+    const path = "./bin/natives.json";
+    if (!fs.existsSync(path)) throw new Error(`File ${path} not found`);
+    const nativeDB = JSON.parse(fs.readFileSync(path, "utf8"));
+    const allNatives = new Array();
 
-            if (native.params) {
-                for (const param of native.params) {
-                    param.name = param.name == "var" ? "varName" : param.name;
-                    param.type = param.type.replace("*", "Ptr");
-                    param.type = param.type.toLowerCase();
-
-                    if (!codegenTypes.includes(param.type)) {
-                        codegenTypes.push(param.type);
-                    }
-                }
+    for (const [namespace, natives] of Object.entries(nativeDB)) {
+        for (const [hash, native] of Object.entries(natives)) {
+            native.hash = hash;
+            allNatives.push(native);
+            for (const param of native.params) {
+                param.type = getParamType(param);
             }
-            native.results = native.results.replace("*", "Ptr");
-            native.results = native.results.toLowerCase();
-            returnNatives.set(hash, native);
         }
     }
 
-    return returnNatives;
-}
+    // Sort by name
+    allNatives.sort((a, b) => {
+        if (a.altName > b.altName) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
 
-async function nativeGen(nativeFile) {
-    const data = getNatives(nativeFile);
     let output = template;
-    data.forEach((native) => {
-        const nativeName = getNativeName(native);
+    allNatives.forEach((native) => {
+        const nativeName = native.altName;
         const doc = getNativeDoc(native);
-        const param = getNativeParams(native);
-        const returnType = getVariableType(native.results);
+        const args = getNativeArguments(native);
+        const returnType = getTypescriptType({ type: native.results });
         const invokeParam = getNativeInvokeParams(native);
-        const fnNative = `\n${doc}export function ${nativeName}(${param}): ${returnType} {\n\treturn _in(${invokeParam}); \n}\n`;
 
+        const fnNative = `\n${doc}export function ${nativeName}(${args}): ${returnType} {\n\treturn _in(${invokeParam}); \n}\n`;
         output = output.concat(fnNative);
     });
-    fs.writeFileSync(`./src/${nativeFile}.ts`, output);
+
+    fs.writeFileSync("./src/natives.ts", output);
+
 }
 
-nativeGen("natives");
-nativeGen("natives_cfx");
+generateNatives();
