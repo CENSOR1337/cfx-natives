@@ -100,3 +100,18 @@ export function getParamType(type) {
             return "any";
     }
 }
+
+
+export function getParamSafeFunction(type) {
+    type = type.toLowerCase();
+    const isPtr = type.includes("ptr");
+    const paramType = getParamType(type);
+
+    if (isPtr) {
+        if (paramType === "number") {
+            return isPtr ? "_ii" : "_i";
+        }
+    }
+}
+
+

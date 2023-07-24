@@ -2,8 +2,7 @@ import axios from "axios";
 import fs from "fs";
 
 import { splitHash, trimAndNormalize } from "./utils.js";
-import { ParamTypes, getParamType } from "./paramTypes.js";
-import { ReturnTypes, getInvokeType, getReturnType } from "./returnType.js";
+import { getVariableType, getArgumentWarpper, getNativeReturnType, isPointerArgument } from "./types.js";
 
 function getNativeName(native) {
     let nativeName = native.name;
@@ -39,8 +38,15 @@ function getNativeDoc(native) {
 }
 
 function getNativeParams(native) {
-    const params = native.params.map((param) => `${param.name}: ${getParamType(param.type)}`).join(", ");
-    return params;
+    const params = [];
+    for (const param of native.params) {
+        if (isPointerArgument(param)) continue;
+        const paramType = getVariableType(param.type);
+        params.push(`${param.name}: ${paramType}`);
+    }
+    //const params = native.params.map((param) => `${param.name}: ${getVariableType(param.type)}`).join(", ");
+    //return params;
+    return params.join(", ");
 }
 
 function getNativeInvokeParams(native) {
@@ -48,20 +54,22 @@ function getNativeInvokeParams(native) {
     const returns = [hashs.one, hashs.two];
 
     for (const param of native.params) {
-        returns.push(param.name);
+        returns.push(getArgumentWarpper(param, native));
     }
 
     if (native.results != "void") {
         returns.push("_r");
-
-        returns.push(getInvokeType(native.results));
+        const returnType = getNativeReturnType(native);
+        if (returnType) {
+            returns.push(returnType);
+        }
     }
 
     return returns.join(", ");
 }
 
 const template = fs.readFileSync("./scripts/template.txt", "utf8");
-
+const codegenTypes = [];
 function getNatives(nativeFile) {
     const filePath = `./bin/${nativeFile}.json`;
     if (!fs.existsSync(filePath)) throw new Error(`File ${filePath} not found`);
@@ -77,8 +85,16 @@ function getNatives(nativeFile) {
             if (native.params) {
                 for (const param of native.params) {
                     param.name = param.name == "var" ? "varName" : param.name;
+                    param.type = param.type.replace("*", "Ptr");
+                    param.type = param.type.toLowerCase();
+
+                    if (!codegenTypes.includes(param.type)) {
+                        codegenTypes.push(param.type);
+                    }
                 }
             }
+            native.results = native.results.replace("*", "Ptr");
+            native.results = native.results.toLowerCase();
             returnNatives.set(hash, native);
         }
     }
@@ -93,7 +109,7 @@ async function nativeGen(nativeFile) {
         const nativeName = getNativeName(native);
         const doc = getNativeDoc(native);
         const param = getNativeParams(native);
-        const returnType = getReturnType(native.results);
+        const returnType = getVariableType(native.results);
         const invokeParam = getNativeInvokeParams(native);
         const fnNative = `\n${doc}export function ${nativeName}(${param}): ${returnType} {\n\treturn _in(${invokeParam}); \n}\n`;
 
