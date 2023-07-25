@@ -1,13 +1,13 @@
 {
 	"name": "@fivemjs/natives",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"types": "dist/index.d.ts",
-    "type": "module",
+	"main": "dist/natives.js",
+	"module": "dist/natives.js",
+	"types": "dist/natives.d.ts",
 	"scripts": {
 		"build": "tsc",
 		"update": "node ./scripts/update.js",
-        "gen": "node ./scripts/generate.js"
+        "gen": "node ./scripts/generate.js",
+        "validate": "node ./scripts/validate.js"
 	},
 	"author": "CENSOR_1337",
 	"license": "MIT",

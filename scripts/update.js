@@ -1,21 +1,20 @@
-import fs from "fs";
+const fs = require("fs");
 
-const links = {
-    natives: "https://runtime.fivem.net/doc/natives.json",
-    natives_cfx: "https://runtime.fivem.net/doc/natives_cfx.json",
-};
+const nativeDbLink = "https://natives.altv.mp/natives";
 
 async function downloadJsonNative() {
-    for (const [name, link] of Object.entries(links)) {
-        const response = await fetch(link);
-        const json = await response.json();
-        fs.writeFile(`./bin/${name}.json`, JSON.stringify(json, null, 4), (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            };
-        });
+    const response = await fetch(nativeDbLink);
+    const data = await response.json();
+    const jsonData = JSON.stringify(data, null, 4);
+    if (!fs.existsSync("./bin")) {
+        fs.mkdirSync("./bin");
     }
+    fs.writeFile(`./bin/natives.json`, jsonData, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        };
+    });
 }
 
 downloadJsonNative();
