@@ -10,9 +10,6 @@ function getArgumentWarpper(argument, native) {
     const isPointer = argument.ref;
     if (isPointer) {
         const isSinglePointer = isSinglePointerNative(native);
-        if (native.hash == "0x1E8C308FD312C036") {
-            console.log(isSinglePointer, argument.type)
-        }
         if (argument.type.includes("int")) return isSinglePointer ? `_ii(${argument.name})` : `_i`;
         if (argument.type.includes("float")) return isSinglePointer ? `_fi(${argument.name})` : `_f`;
         if (argument.type.includes("Vector3")) return `_v`;
