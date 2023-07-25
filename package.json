@@ -3,7 +3,6 @@
 	"main": "dist/natives.js",
 	"module": "dist/natives.js",
 	"types": "dist/natives.d.ts",
-    "type": "module",
 	"scripts": {
 		"build": "tsc",
 		"update": "node ./scripts/update.js",
