@@ -1,8 +1,8 @@
 {
 	"name": "@fivemjs/natives",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/natives.js",
+	"module": "dist/natives.js",
+	"types": "dist/natives.d.ts",
     "type": "module",
 	"scripts": {
 		"build": "tsc",
