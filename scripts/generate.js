@@ -214,6 +214,9 @@ function generateNatives() {
         output = output.concat(fnNative);
     });
 
+    if (!fs.existsSync("./src")) {
+        fs.mkdirSync("./src");
+    }
     fs.writeFileSync("./src/natives.ts", output);
 
 }
