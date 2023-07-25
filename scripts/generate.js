@@ -1,11 +1,28 @@
-import fs from "fs";
-import { splitHash, trimAndNormalize } from "./utils.js";
-//import { getVariableType, getArgumentWarpper, getNativeReturnType, isPointerArgument } from "./types.js";
+const fs = require("fs");
+
+function splitHash(hash) {
+    const bigHash = BigInt(hash);
+    const hashOne = (bigHash >> BigInt(32)) & BigInt(0xffffffff);
+    const hashTwo = bigHash & BigInt(0xffffffff);
+    return {
+        one: `0x${hashOne.toString(16).padStart(8, "0")}`,
+        two: `0x${hashTwo.toString(16).padStart(8, "0")}`,
+    };
+}
+
+function trimAndNormalize(str) {
+    return str.trim().replace(/\/\*/g, " -- [[").replace(/\*\//g, "]] ");
+}
+
+
+function getNumOfPointers(native) {
+    return native.params.filter((param) => param.ref).length;
+}
 
 function isSinglePointerNative(native) {
-    const pointerCount = native.params.filter((param) => param.ref).length;
-    return pointerCount == 1;
+    return getNumOfPointers(native) == 1;
 }
+
 function getArgumentWarpper(argument, native) {
     const isPointer = argument.ref;
     if (isPointer) {
@@ -144,6 +161,18 @@ function getNativeDoc(native) {
     doc = doc.concat(" */\n");
     return doc;
 }
+
+function getReturnWarpper(native, invokeParams) {
+
+    if (native.results.includes("Vector3")) {
+        const returnCount = native.results.split("Vector3").length - 1;
+        const warpperFunction = returnCount == 1 ? "Vector3.fromArray" : "Vector3.fromArrays"
+        return `${warpperFunction}(_in(${invokeParams}))`;
+    }
+
+    return `_in(${invokeParams})`;
+}
+
 const template = fs.readFileSync("./scripts/template.txt", "utf8");
 
 
@@ -178,9 +207,10 @@ function generateNatives() {
         const doc = getNativeDoc(native);
         const args = getNativeArguments(native);
         const returnType = getTypescriptType({ type: native.results });
-        const invokeParam = getNativeInvokeParams(native);
+        const invokeParams = getNativeInvokeParams(native);
+        const returnWarp = getReturnWarpper(native, invokeParams);
 
-        const fnNative = `\n${doc}export function ${nativeName}(${args}): ${returnType} {\n\treturn _in(${invokeParam}); \n}\n`;
+        const fnNative = `\n${doc}export function ${nativeName}(${args}): ${returnType} {\n\treturn ${returnWarp}; \n}\n`;
         output = output.concat(fnNative);
     });
 
