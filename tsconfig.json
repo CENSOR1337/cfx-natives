@@ -16,5 +16,11 @@
         "strict": true,
         "strictNullChecks": true,
         "skipLibCheck": true
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "bin",
+        "src/header.ts"
+    ],
 }

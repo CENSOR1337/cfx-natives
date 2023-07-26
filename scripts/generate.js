@@ -173,7 +173,7 @@ function getReturnWarpper(native, invokeParams) {
     return `_in(${invokeParams})`;
 }
 
-const template = fs.readFileSync("./scripts/template.txt", "utf8");
+const template = fs.readFileSync("./src/header.ts", "utf8");
 
 
 function generateNatives() {

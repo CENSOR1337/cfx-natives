@@ -3,4 +3,4 @@ dist
 *.log
 package-lock.json
 bin/*
-src/*
+src/natives.ts
