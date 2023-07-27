@@ -1,4 +1,4 @@
-import { Vector3 } from "@fivemjs/shared";
+import { Vector3 } from "@cfx/shared";
 //@ts-ignore
 const Citizen = global.Citizen;
 //@ts-ignore
