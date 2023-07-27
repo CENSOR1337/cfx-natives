@@ -120,13 +120,18 @@ function getParamType(param) {
     }
 }
 
-function getTypescriptType(argument) {
+function getTypescriptType(argument, array = false) {
     const type = getParamType(argument);
-    if (type.includes("int")) return "number";
-    if (type.includes("float")) return "number";
-    if (type.includes("Vector3")) return "Vector3";
-    if (type.includes("hash")) return "string | number";
-    return "any"
+    let tsType = "any"
+    if (type.includes("int")) tsType = "number";
+    if (type.includes("float")) tsType = "number";
+    if (type.includes("Vector3")) tsType = "Vector3";
+    if (type.includes("hash")) {
+        if (array) return "string[] | number[]"
+        return "string | number"
+    }
+
+    return `${tsType}${array ? "[]" : ""}`
 }
 
 function getNativeArguments(native) {
@@ -208,9 +213,9 @@ function generateNatives() {
         const nativeName = native.altName;
         const doc = getNativeDoc(native);
         const args = getNativeArguments(native);
-        const returnType = getTypescriptType({ type: native.results });
         const invokeParams = getNativeInvokeParams(native);
         const returnWarp = getReturnWarpper(native, invokeParams);
+        const returnType = getTypescriptType({ type: native.results }, returnWarp.includes("Vector3.fromArrays"));
 
         const fnNative = `\n${doc}export function ${nativeName}(${args}): ${returnType} {\n\treturn ${returnWarp}; \n}\n`;
         output = output.concat(fnNative);
