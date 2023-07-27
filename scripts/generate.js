@@ -195,6 +195,7 @@ function generateNatives() {
                 param.type = getParamType(param);
             }
             native.results = getParamType({ type: native.results });
+            native.namespace = namespace;
             allNatives.push(native);
         }
     }
