@@ -79,6 +79,8 @@ function getParamType(param) {
     switch (param.type) {
         case "int":
             return "int";
+        case "void":
+            return "void";
         case "Any":
             return "int";
         case "float":
@@ -114,9 +116,8 @@ function getParamType(param) {
         case "Interior":
             return "int";
         default:
-            return "any";
+            return param.type;
     }
-
 }
 
 function getTypescriptType(argument) {
