@@ -185,10 +185,11 @@ function generateNatives() {
     for (const [namespace, natives] of Object.entries(nativeDB)) {
         for (const [hash, native] of Object.entries(natives)) {
             native.hash = hash;
-            allNatives.push(native);
             for (const param of native.params) {
                 param.type = getParamType(param);
             }
+            native.results = getParamType({ type: native.results });
+            allNatives.push(native);
         }
     }
 
