@@ -1,1 +1,1 @@
-# @fivemjs/natives
+# @cfx/natives

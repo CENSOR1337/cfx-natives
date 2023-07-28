@@ -1,5 +1,5 @@
 {
-	"name": "@fivemjs/natives",
+	"name": "@cfx/natives",
 	"main": "dist/natives.js",
 	"module": "dist/natives.js",
 	"types": "dist/natives.d.ts",
