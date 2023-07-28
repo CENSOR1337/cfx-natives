@@ -206,7 +206,7 @@ class Native {
     genReturnTypes() {
         const results = [...this.results];
         if (results.length <= 1) return results[0];
-        results.shift();
+        if (results[0] == "void") results.shift();
         return `[${results.join(", ")}]`;
     }
 
@@ -217,8 +217,13 @@ class Native {
     genBody() {
         const invokeParams = this.getInvokeArgs().join(", ");
         if (this.getReferenceParams().length > 1) {
-            const invokePart = `const [${this.getReferenceParams().map(p => p.name).join(", ")}] = _in(${invokeParams});`;
-            const returnPart = `return [${this.getReferenceParams().map(p => getReturnWarpper(p)).join(", ")}]`;
+            const referenceParams = [];
+            if (this.results.length > 0 && this.results[0] != "void") {
+                referenceParams.push({ name: "retval", type: this.results[0] });
+            }
+            referenceParams.push(...this.getReferenceParams());
+            const invokePart = `const [${referenceParams.map(p => p.name).join(", ")}] = _in(${invokeParams});`;
+            const returnPart = `return [${referenceParams.map(p => getReturnWarpper(p)).join(", ")}]`;
             return `${invokePart}\n\t${returnPart}`;
         }
         return `return _in(${invokeParams})`;
@@ -238,6 +243,9 @@ const debugNatives = [
     "0xA6E9C38DB51D7748",
     "0xBE8CD9BE829BBEBF",
     "0x7B3703D2D32DFA18",
+    "0xC906A7DAB05C8D2B",
+    "0x8BDC7BFC57A81E76",
+    "0x9E82F0F362881B29"
 ]
 const bDebug = false;
 const template = fs.readFileSync("./src/header.ts", "utf8");
