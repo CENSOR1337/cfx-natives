@@ -72,3 +72,7 @@ function _fv(flt: number) {
 function _mfr(fn: any) {
 	return Citizen.makeRefFunction(fn);
 }
+
+function _mv(vector: any): Vector3 {
+	return Vector3.fromArray(vector);
+}
