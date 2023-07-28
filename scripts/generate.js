@@ -14,173 +14,233 @@ function trimAndNormalize(str) {
     return str.trim().replace(/\/\*/g, " -- [[").replace(/\*\//g, "]] ");
 }
 
-
-function getNumOfPointers(native) {
-    return native.params.filter((param) => param.ref).length;
+function getNativeReturnType(type) {
+    if (type == "string") return "_s";
+    if (type == "char") return "_s";
+    if (type == "float") return "_rf";
+    if (type == "Vector3") return "_rv";
+    if (type == "long") return "_rl";
+    if (type == "int") return "_ri";
+    if (type == "object") return "_ro";
+    return "_ri"// default
 }
 
-function isSinglePointerNative(native) {
-    return getNumOfPointers(native) == 1;
-}
-
-function getArgumentWarpper(argument, native) {
-    const isPointer = argument.ref;
-    if (isPointer) {
-        const isSinglePointer = isSinglePointerNative(native);
-        if (argument.type.includes("int")) return isSinglePointer ? `_ii(${argument.name})` : `_i`;
-        if (argument.type.includes("float")) return isSinglePointer ? `_fi(${argument.name})` : `_f`;
-        if (argument.type.includes("Vector3")) return `_v`;
-
-        return `_i`;
-    }
-
-    if (argument.type.includes("func")) return `_mfr(${argument.name})`;
-    if (argument.type.includes("float")) return `_fv(${argument.name})`;
-    if (argument.type.includes("hash")) return `_ch(${argument.name})`;
-    if (argument.type.includes("object")) return `...(_obj(${argument.name})`;
-    if (argument.type.includes("string")) return `_ts(${argument.name})`;
-    if (argument.type.includes("char")) return `_ts(${argument.name})`;
-
-    return argument.name;
-}
-
-function getNativeReturnType(native) {
-    if (native.results.includes("string")) return "_s";
-    if (native.results.includes("char")) return "_s";
-    if (native.results.includes("float")) return "_rf";
-    if (native.results.includes("Vector3")) return "_rv";
-    if (native.results.includes("long")) return "_rl";
-    if (native.results.includes("int")) return "_ri";
-    if (native.results.includes("any")) return "_ri";
-    if (native.results.includes("object")) return "_ro";
-}
-
-
-function getNativeInvokeParams(native) {
-    const hashs = splitHash(native.hash);
-    const returns = [hashs.one, hashs.two];
-
-    for (const param of native.params) {
-        returns.push(getArgumentWarpper(param, native));
-    }
-
-    if (!native.results.includes("void")) {
-        returns.push("_r");
-        const returnType = getNativeReturnType(native);
-        if (returnType) {
-            returns.push(returnType);
-        }
-    }
-
-    return returns.join(", ");
+const nativeParamTypes = {
+    "int": "int",
+    "Any": "int",
+    "float": "float",
+    "boolean": "boolean",
+    "Vehicle": "int",
+    "Cam": "int",
+    "Vector3": "Vector3",
+    "FireId": "int",
+    "Pickup": "int",
+    "string": "string",
+    "Hash": "hash",
+    "Ped": "int",
+    "Entity": "int",
+    "Object": "int",
+    "Player": "int",
+    "ScrHandle": "int",
+    "Blip": "int",
+    "Interior": "int",
 }
 
 function getParamType(param) {
-    switch (param.type) {
-        case "int":
-            return "int";
-        case "void":
-            return "void";
-        case "Any":
-            return "int";
-        case "float":
-            return "float";
-        case "boolean":
-            return "boolean";
-        case "Vehicle":
-            return "int";
-        case "Cam":
-            return "int";
-        case "Vector3":
-            return "Vector3";
-        case "FireId":
-            return "int";
-        case "Pickup":
-            return "int";
-        case "string":
-            return "string";
-        case "Hash":
-            return "hash";
-        case "Ped":
-            return "int";
-        case "Entity":
-            return "int";
-        case "Object":
-            return "int";
-        case "Player":
-            return "int";
-        case "ScrHandle":
-            return "int";
-        case "Blip":
-            return "int";
-        case "Interior":
-            return "int";
-        default:
-            return param.type;
-    }
+    return nativeParamTypes[param.type] || param.type;
 }
 
-function getTypescriptType(argument, array = false) {
+function getTypescriptType(argument) {
     const type = getParamType(argument);
-    let tsType = "any"
-    if (type.includes("int")) tsType = "number";
-    if (type.includes("float")) tsType = "number";
-    if (type.includes("Vector3")) tsType = "Vector3";
-    if (type.includes("hash")) {
-        if (array) return "string[] | number[]"
-        return "string | number"
-    }
-
-    return `${tsType}${array ? "[]" : ""}`
+    let tsType = "any";
+    if (type == "string") return "string";
+    if (type == "boolean") return "boolean";
+    if (type == "int") return "number";
+    if (type == "float") return "number";
+    if (type == "Vector3") return "Vector3";
+    if (type == "hash") return "number";
+    return tsType;
 }
 
-function getNativeArguments(native) {
-    const params = [];
-    for (const param of native.params) {
-        if (!param.ref || isSinglePointerNative(native)) {
-            const paramType = getTypescriptType(param);
-            params.push(`${param.name}: ${paramType}`);
-        };
-    }
-    return params.join(", ");
+function getTypescriptReturnType(type) {
+    type = type.replace("[", "").replace("]", "");
+    if (type == "void") return "void";
+    return getTypescriptType({ type });
 }
 
-function getNativeDoc(native) {
-    const desc = native.comment;
-
-    if (desc.length <= 0) return "";
-    let doc = "/**\n";
-
-    const lines = desc.split("\n");
-    lines.forEach((line) => {
-        doc = doc.concat(` * ${trimAndNormalize(line)}\n`);
-    });
-
-    for (const param of native.params) {
-        doc = doc.concat(` * @param ${param.name}\n`);
-    }
-
-    if (native.resultsDescription) {
-        doc = doc.concat(` * @return ${trimAndNormalize(native.resultsDescription)}\n`);
-    }
-
-    doc = doc.concat(" */\n");
-    return doc;
+function getReturnWarpper(param) {
+    const nativeType = getTypescriptType(param);
+    let warpper = "";
+    if (nativeType == "Vector3") warpper = "_mv";
+    return warpper ? `${warpper}(${param.name})` : `${param.name} as ${nativeType}`;
 }
 
-function getReturnWarpper(native, invokeParams) {
+class Native {
+    hash;
+    name;
+    jhash;
+    comment;
+    params;
+    results;
+    rawNativeInfo;
 
-    if (native.results.includes("Vector3")) {
-        const returnCount = native.results.split("Vector3").length - 1;
-        const warpperFunction = returnCount == 1 ? "Vector3.fromArray" : "Vector3.fromArrays"
-        return `${warpperFunction}(_in(${invokeParams}))`;
+    constructor(data) {
+        this.rawNativeInfo = data;
+        this.hash = data.hash;
+        this.name = data.name;
+        this.jhash = "Placeholder";
+        this.comment = data.comment;
+
+        // Convert params
+        const params = [];
+        for (const param of data.params) {
+            params.push({
+                name: param.name,
+                type: getParamType(param),
+                ref: param.ref,
+            });
+        }
+        this.params = params;
+
+
+        // Convert results
+        const results = [];
+        let splitedResults = data.results.split(", ");
+        if (splitedResults.length <= 0) {
+            results.push(getTypescriptReturnType(data.results));
+        } else {
+            for (const result of splitedResults) {
+                results.push(getTypescriptReturnType(result));
+            }
+        }
+        this.results = results;
+
     }
 
-    return `_in(${invokeParams})`;
+    getReferenceParams() {
+        const params = [];
+        for (const param of this.params) {
+            if (param.ref) params.push(param);
+        }
+        return params;
+    }
+
+    isSinglePointer() {
+        return this.getReferenceParams().length == 1;
+    }
+
+    getNativeName() {
+        let name = this.name;
+        const isUnderscore = name.startsWith("_");
+        if (isUnderscore) {
+            name = name.substring(1);
+        }
+        const parts = name.split("_");
+        const firstPart = parts.shift().toLowerCase();
+        const rest = parts.map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase()).join("");
+        return firstPart + rest;
+    }
+
+    getInvokeArgs() {
+        const hashs = splitHash(this.hash);
+        const args = [hashs.one, hashs.two];
+        for (const param of this.params) {
+            let acc = "";
+            if (param.ref) {
+                const singlePointer = this.isSinglePointer();
+                if (param.type == "int") acc = singlePointer ? `_ii(${param.name})` : `_i`;
+                if (param.type == "float") acc = singlePointer ? `_fi(${param.name})` : `_f`;
+                if (param.type == "Vector3") acc = `_v`;
+                acc = acc || "_i";
+            } else {
+                if (param.type == "func") acc = `_mfr(${param.name})`;
+                if (param.type == "float") acc = `_fv(${param.name})`;
+                if (param.type == "hash") acc = `_ch(${param.name})`;
+                if (param.type == "object") acc = `...(_obj(${param.name})`;
+                if (param.type == "string") acc = `_ts(${param.name})`;
+                if (param.type == "char") acc = `_ts(${param.name})`;
+                acc = acc || param.name;
+            }
+
+            args.push(acc);
+        }
+
+        if (this.results.length > 0 && this.results[0] != "void") {
+            args.push("_r");
+            if (this.results[0] != "boolean") {
+                args.push(getNativeReturnType(this.results[0]));
+            }
+        }
+
+        return args;
+    }
+
+    genDoc() {
+        const desc = this.comment;
+
+        if (desc.length <= 0) return "";
+        let doc = "/**\n";
+
+        const lines = desc.split("\n");
+        lines.forEach((line) => {
+            doc = doc.concat(` * ${trimAndNormalize(line)}\n`);
+        });
+
+        for (const param of this.params) {
+            doc = doc.concat(` * @param ${param.name}\n`);
+        }
+
+        doc = doc.concat(" */\n");
+        return doc;
+    }
+
+    genParams() {
+        const params = []
+        for (const param of this.params) {
+            if (param.ref && !this.isSinglePointer()) continue;
+            params.push(`${param.name}: ${getTypescriptType(param)}`);
+        }
+        return params.join(", ");
+    }
+
+    genReturnTypes() {
+        const results = [...this.results];
+        if (results.length <= 1) return results[0];
+        results.shift();
+        return `[${results.join(", ")}]`;
+    }
+
+    genReturn() {
+        if (this.getReferenceParams().length <= 0) return "void";
+    }
+
+    genBody() {
+        const invokeParams = this.getInvokeArgs().join(", ");
+        if (this.getReferenceParams().length > 1) {
+            const invokePart = `const [${this.getReferenceParams().map(p => p.name).join(", ")}] = _in(${invokeParams});`;
+            const returnPart = `return [${this.getReferenceParams().map(p => getReturnWarpper(p)).join(", ")}]`;
+            return `${invokePart}\n\t${returnPart}`;
+        }
+        return `return _in(${invokeParams})`;
+    }
+
+    generate() {
+        return `\n${this.genDoc()}export function ${this.getNativeName()}(${this.genParams()}): ${this.genReturnTypes()} { \n\t${this.genBody()}; \n}\n`
+    }
+
 }
 
+const debugNatives = [
+    "0x3FEF770D40960D5A",
+    "0xECB2FC7235A7D137",
+    "0xEEF059FAD016D209",
+    "0x2975C866E6713290",
+    "0xA6E9C38DB51D7748",
+    "0xBE8CD9BE829BBEBF",
+    "0x7B3703D2D32DFA18",
+]
+const bDebug = false;
 const template = fs.readFileSync("./src/header.ts", "utf8");
-
 
 function generateNatives() {
     const path = "./bin/natives.json";
@@ -191,10 +251,6 @@ function generateNatives() {
     for (const [namespace, natives] of Object.entries(nativeDB)) {
         for (const [hash, native] of Object.entries(natives)) {
             native.hash = hash;
-            for (const param of native.params) {
-                param.type = getParamType(param);
-            }
-            native.results = getParamType({ type: native.results });
             native.namespace = namespace;
             allNatives.push(native);
         }
@@ -210,16 +266,10 @@ function generateNatives() {
     });
 
     let output = template;
-    allNatives.forEach((native) => {
-        const nativeName = native.altName;
-        const doc = getNativeDoc(native);
-        const args = getNativeArguments(native);
-        const invokeParams = getNativeInvokeParams(native);
-        const returnWarp = getReturnWarpper(native, invokeParams);
-        const returnType = getTypescriptType({ type: native.results }, returnWarp.includes("Vector3.fromArrays"));
-
-        const fnNative = `\n${doc}export function ${nativeName}(${args}): ${returnType} {\n\treturn ${returnWarp}; \n}\n`;
-        output = output.concat(fnNative);
+    allNatives.forEach((nativeInfo) => {
+        if (bDebug && !debugNatives.includes(nativeInfo.hash)) return;
+        const native = new Native(nativeInfo);
+        output = output.concat(native.generate());
     });
 
     if (!fs.existsSync("./src")) {
