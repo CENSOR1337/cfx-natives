@@ -27,7 +27,7 @@ function getNativeReturnType(type) {
 
 const nativeParamTypes = {
     "int": "int",
-    "Any": "int",
+   //"Any": "int",
     "float": "float",
     "boolean": "boolean",
     "Vehicle": "int",
@@ -66,6 +66,13 @@ function getTypescriptReturnType(type) {
     type = type.replace("[", "").replace("]", "");
     if (type == "void") return "void";
     return getTypescriptType({ type });
+}
+
+function getReturnWarperFunction(param) {
+    const nativeType = getTypescriptType(param);
+    let warpper = undefined;
+    if (nativeType == "Vector3") warpper = "_mv";
+    return warpper
 }
 
 function getReturnWarpper(param) {
@@ -126,7 +133,14 @@ class Native {
     }
 
     isSinglePointer() {
-        return this.getReferenceParams().length == 1;
+        let foundPointer = false;
+        for (const param of this.params) {
+            if (param.ref) {
+                if (foundPointer) return false;
+                foundPointer = true;
+            }
+        }
+        return this.params[this.params.length - 1].ref;
     }
 
     getNativeName() {
@@ -197,10 +211,18 @@ class Native {
     genParams() {
         const params = []
         for (const param of this.params) {
-            if (param.ref && !this.isSinglePointer()) continue;
-            params.push(`${param.name}: ${getTypescriptType(param)}`);
+            if (!param.ref || this.isSinglePointer()) {
+                params.push(`${param.name}: ${getTypescriptType(param)}`);
+            }
         }
         return params.join(", ");
+    }
+
+    isNameTakenByParam(name) {
+        for (const param of this.params) {
+            if (param.name == name) return true;
+        }
+        return false;
     }
 
     genReturnTypes() {
@@ -216,17 +238,23 @@ class Native {
 
     genBody() {
         const invokeParams = this.getInvokeArgs().join(", ");
-        if (this.getReferenceParams().length > 1) {
+        if (this.getReferenceParams().length > 0) {
             const referenceParams = [];
             if (this.results.length > 0 && this.results[0] != "void") {
                 referenceParams.push({ name: "retval", type: this.results[0] });
             }
             referenceParams.push(...this.getReferenceParams());
+            for (const refParam of referenceParams) {
+                refParam.name = this.isNameTakenByParam(refParam.name) ? `${refParam.name}_out` : refParam.name;
+            }
             const invokePart = `const [${referenceParams.map(p => p.name).join(", ")}] = _in(${invokeParams});`;
             const returnPart = `return [${referenceParams.map(p => getReturnWarpper(p)).join(", ")}]`;
             return `${invokePart}\n\t${returnPart}`;
         }
-        return `return _in(${invokeParams})`;
+
+        const returnWarpper = getReturnWarperFunction({ type: this.results[0] });
+        const aaa = returnWarpper ? `${returnWarpper}(_in(${invokeParams}))` : `_in(${invokeParams})`;
+        return `return ${aaa}`
     }
 
     generate() {
