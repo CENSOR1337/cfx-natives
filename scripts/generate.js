@@ -27,7 +27,7 @@ function getNativeReturnType(type) {
 
 const nativeParamTypes = {
     "int": "int",
-   //"Any": "int",
+    //"Any": "int",
     "float": "float",
     "boolean": "boolean",
     "Vehicle": "int",
@@ -114,10 +114,10 @@ class Native {
         const results = [];
         let splitedResults = data.results.split(", ");
         if (splitedResults.length <= 0) {
-            results.push(getTypescriptReturnType(data.results));
+            results.push(data.results);
         } else {
             for (const result of splitedResults) {
-                results.push(getTypescriptReturnType(result));
+                results.push(result);
             }
         }
         this.results = results;
@@ -226,7 +226,10 @@ class Native {
     }
 
     genReturnTypes() {
-        const results = [...this.results];
+        const results = [];
+        for (const result of this.results) {
+            results.push(getTypescriptType({ type: result }));
+        }
         if (results.length <= 1) return results[0];
         if (results[0] == "void") results.shift();
         return `[${results.join(", ")}]`;
