@@ -25,7 +25,7 @@ function getNativeReturnType(type) {
 
 const nativeParamTypes = {
     "int": "int",
-    //"Any": "int",
+    "Any": "int",
     "float": "float",
     "boolean": "boolean",
     "Vehicle": "int",
