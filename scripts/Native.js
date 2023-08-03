@@ -109,7 +109,8 @@ class Native {
         if (splitedResults.length <= 0) {
             results.push(data.results);
         } else {
-            for (const result of splitedResults) {
+            for (let result of splitedResults) {
+                result = result.replace("[", "").replace("]", "");
                 results.push(result);
             }
         }
