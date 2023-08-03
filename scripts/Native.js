@@ -57,6 +57,7 @@ function getTypescriptType(argument) {
     if (type == "float") return "number";
     if (type == "Vector3") return "Vector3";
     if (type == "hash") return "number";
+    if (type == "void") return "void";
     return tsType;
 }
 
