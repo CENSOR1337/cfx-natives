@@ -203,7 +203,7 @@ function abortVehicleCrewEmblemRequest(p0) {
 }
 exports.abortVehicleCrewEmblemRequest = abortVehicleCrewEmblemRequest;
 function absf(value) {
-    return _in(0x73d57cff, 0xdd12c355, _fv(value), _r, _ri);
+    return _in(0x73d57cff, 0xdd12c355, _fv(value), _r, _rf);
 }
 exports.absf = absf;
 function absi(value) {
@@ -211,7 +211,7 @@ function absi(value) {
 }
 exports.absi = absi;
 function acos(p0) {
-    return _in(0x1d08b970, 0x013c34b6, _fv(p0), _r, _ri);
+    return _in(0x1d08b970, 0x013c34b6, _fv(p0), _r, _rf);
 }
 exports.acos = acos;
 /**
@@ -1053,7 +1053,7 @@ exports.addRoadNodeSpeedZone = addRoadNodeSpeedZone;
  * @param unkPtr
  */
 function addRope(x, y, z, rotX, rotY, rotZ, length, ropeType, maxLength, minLength, windingSpeed, p11, p12, rigid, p14, breakWhenShot, unkPtr) {
-    const [retval, unkPtr_out] = _in(0xe832d760, 0x399eb220, _fv(x), _fv(y), _fv(z), _fv(rotX), _fv(rotY), _fv(rotZ), _fv(length), ropeType, _fv(maxLength), _fv(minLength), _fv(windingSpeed), p11, p12, rigid, _fv(p14), breakWhenShot, _i, _r, _ri);
+    const [retval, unkPtr_out] = _in(0xe832d760, 0x399eb220, _fv(x), _fv(y), _fv(z), _fv(rotX), _fv(rotY), _fv(rotZ), _fv(length), ropeType, _fv(maxLength), _fv(minLength), _fv(windingSpeed), p11, p12, rigid, _fv(p14), breakWhenShot, _ii(unkPtr), _r, _ri);
     return [retval, unkPtr_out];
 }
 exports.addRope = addRope;
@@ -1460,7 +1460,7 @@ exports.animatedShakeScriptGlobal = animatedShakeScriptGlobal;
  * @param effectName
  */
 function animpostfxGetCurrentTime(effectName) {
-    return _in(0xe35b38a2, 0x7e8e7179, _ts(effectName), _r, _ri);
+    return _in(0xe35b38a2, 0x7e8e7179, _ts(effectName), _r, _rf);
 }
 exports.animpostfxGetCurrentTime = animpostfxGetCurrentTime;
 /**
@@ -1540,7 +1540,7 @@ function appGetDeletedFileStatus() {
 }
 exports.appGetDeletedFileStatus = appGetDeletedFileStatus;
 function appGetFloat(property) {
-    return _in(0x1514fb24, 0xc02c2322, _ts(property), _r, _ri);
+    return _in(0x1514fb24, 0xc02c2322, _ts(property), _r, _rf);
 }
 exports.appGetFloat = appGetFloat;
 function appGetInt(property) {
@@ -1883,7 +1883,7 @@ function areWingsOfPlaneIntact(plane) {
 }
 exports.areWingsOfPlaneIntact = areWingsOfPlaneIntact;
 function asin(p0) {
-    return _in(0xc843060b, 0x5765dce7, _fv(p0), _r, _ri);
+    return _in(0xc843060b, 0x5765dce7, _fv(p0), _r, _rf);
 }
 exports.asin = asin;
 function assistedMovementCloseRoute() {
@@ -1919,11 +1919,11 @@ function assistedMovementSetRouteProperties(route, props) {
 }
 exports.assistedMovementSetRouteProperties = assistedMovementSetRouteProperties;
 function atan(p0) {
-    return _in(0xa9d1795c, 0xd5043663, _fv(p0), _r, _ri);
+    return _in(0xa9d1795c, 0xd5043663, _fv(p0), _r, _rf);
 }
 exports.atan = atan;
 function atan2(p0, p1) {
-    return _in(0x8927cbf9, 0xd22261a4, _fv(p0), _fv(p1), _r, _ri);
+    return _in(0x8927cbf9, 0xd22261a4, _fv(p0), _fv(p1), _r, _rf);
 }
 exports.atan2 = atan2;
 /**
@@ -2575,7 +2575,7 @@ exports.bypassCutsceneCamRenderingThisUpdate = bypassCutsceneCamRenderingThisUpd
  * @param z2
  */
 function calculateTravelDistanceBetweenPoints(x1, y1, z1, x2, y2, z2) {
-    return _in(0xadd95c70, 0x05c4a197, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _ri);
+    return _in(0xadd95c70, 0x05c4a197, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _rf);
 }
 exports.calculateTravelDistanceBetweenPoints = calculateTravelDistanceBetweenPoints;
 /**
@@ -3902,7 +3902,7 @@ exports.convertOldPickupTypeToNew = convertOldPickupTypeToNew;
  * @param timeStructure
  */
 function convertPosixTime(posixTime, timeStructure) {
-    const [timeStructure_out] = _in(0xac97af97, 0xfa68e5d5, posixTime, _i);
+    const [timeStructure_out] = _in(0xac97af97, 0xfa68e5d5, posixTime, _ii(timeStructure));
     return [timeStructure_out];
 }
 exports.convertPosixTime = convertPosixTime;
@@ -3921,7 +3921,7 @@ function copyVehicleDamages(sourceVehicle, targetVehicle) {
 }
 exports.copyVehicleDamages = copyVehicleDamages;
 function cos(value) {
-    return _in(0xd0ffb162, 0xf40a139c, _fv(value), _r, _ri);
+    return _in(0xd0ffb162, 0xf40a139c, _fv(value), _r, _rf);
 }
 exports.cos = cos;
 function countPedsInCombatWithTarget(ped) {
@@ -3978,7 +3978,7 @@ exports.createAirDefenceSphere = createAirDefenceSphere;
  * @param p8
  */
 function createAmbientPickup(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8) {
-    return _in(0x673966a0, 0xc0fd7171, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ri);
+    return _in(0x673966a0, 0xc0fd7171, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ro);
 }
 exports.createAmbientPickup = createAmbientPickup;
 /**
@@ -4327,7 +4327,7 @@ function createNmMessage(startImmediately, messageId) {
 }
 exports.createNmMessage = createNmMessage;
 function createNonNetworkedAmbientPickup(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8) {
-    return _in(0x9c937642, 0x23e29c50, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ri);
+    return _in(0x9c937642, 0x23e29c50, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ro);
 }
 exports.createNonNetworkedAmbientPickup = createNonNetworkedAmbientPickup;
 /**
@@ -4340,7 +4340,7 @@ exports.createNonNetworkedAmbientPickup = createNonNetworkedAmbientPickup;
  * @param modelHash
  */
 function createNonNetworkedPortablePickup(pickupHash, x, y, z, placeOnGround, modelHash) {
-    return _in(0x125494b9, 0x8a21aaf7, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ri);
+    return _in(0x125494b9, 0x8a21aaf7, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ro);
 }
 exports.createNonNetworkedPortablePickup = createNonNetworkedPortablePickup;
 /**
@@ -4354,7 +4354,7 @@ exports.createNonNetworkedPortablePickup = createNonNetworkedPortablePickup;
  * @param dynamic
  */
 function createObject(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic) {
-    return _in(0x509d5878, 0xeb39e842, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ri);
+    return _in(0x509d5878, 0xeb39e842, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ro);
 }
 exports.createObject = createObject;
 /**
@@ -4368,11 +4368,11 @@ exports.createObject = createObject;
  * @param dynamic
  */
 function createObjectNoOffset(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic) {
-    return _in(0x9a294b21, 0x38abb884, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ri);
+    return _in(0x9a294b21, 0x38abb884, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ro);
 }
 exports.createObjectNoOffset = createObjectNoOffset;
 function createParachuteBagObject(ped, p1, p2) {
-    return _in(0x8c4f3bf2, 0x3b6237db, ped, p1, p2, _r, _ri);
+    return _in(0x8c4f3bf2, 0x3b6237db, ped, p1, p2, _r, _ro);
 }
 exports.createParachuteBagObject = createParachuteBagObject;
 function createPatrolRoute() {
@@ -4475,7 +4475,7 @@ exports.createPickupRotate = createPickupRotate;
  * @param modelHash
  */
 function createPortablePickup(pickupHash, x, y, z, placeOnGround, modelHash) {
-    return _in(0x2eaf1fdb, 0x2fb55698, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ri);
+    return _in(0x2eaf1fdb, 0x2fb55698, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ro);
 }
 exports.createPortablePickup = createPortablePickup;
 /**
@@ -4597,7 +4597,7 @@ exports.createVehicle = createVehicle;
  * @param p9
  */
 function createWeaponObject(weaponHash, ammoCount, x, y, z, showWorldModel, scale, p7, p8, p9) {
-    return _in(0x9541d3cf, 0x0d398f36, _ch(weaponHash), ammoCount, _fv(x), _fv(y), _fv(z), showWorldModel, _fv(scale), p7, p8, p9, _r, _ri);
+    return _in(0x9541d3cf, 0x0d398f36, _ch(weaponHash), ammoCount, _fv(x), _fv(y), _fv(z), showWorldModel, _fv(scale), p7, p8, p9, _r, _ro);
 }
 exports.createWeaponObject = createWeaponObject;
 function customMinimapClearBlips() {
@@ -4641,7 +4641,7 @@ function dataarrayAddBool(value) {
 }
 exports.dataarrayAddBool = dataarrayAddBool;
 function dataarrayAddDict(arrayData) {
-    const [retval, arrayData_out] = _in(0x6889498b, 0x3e19c797, _i, _r, _ri);
+    const [retval, arrayData_out] = _in(0x6889498b, 0x3e19c797, _ii(arrayData), _r, _ri);
     return [retval, arrayData_out];
 }
 exports.dataarrayAddDict = dataarrayAddDict;
@@ -4671,7 +4671,7 @@ function dataarrayGetBool(arrayIndex) {
 }
 exports.dataarrayGetBool = dataarrayGetBool;
 function dataarrayGetCount(arrayData) {
-    const [retval, arrayData_out] = _in(0x065db281, 0x590cea2d, _i, _r, _ri);
+    const [retval, arrayData_out] = _in(0x065db281, 0x590cea2d, _ii(arrayData), _r, _ri);
     return [retval, arrayData_out];
 }
 exports.dataarrayGetCount = dataarrayGetCount;
@@ -4681,7 +4681,7 @@ function dataarrayGetDict(arrayIndex) {
 }
 exports.dataarrayGetDict = dataarrayGetDict;
 function dataarrayGetFloat(arrayIndex) {
-    const [retval, arrayData_out] = _in(0xc0c527b5, 0x25d7cfb5, _i, arrayIndex, _r, _ri);
+    const [retval, arrayData_out] = _in(0xc0c527b5, 0x25d7cfb5, _i, arrayIndex, _r, _rf);
     return [retval, arrayData_out];
 }
 exports.dataarrayGetFloat = dataarrayGetFloat;
@@ -4743,7 +4743,7 @@ function datadictGetDict(key) {
 }
 exports.datadictGetDict = datadictGetDict;
 function datadictGetFloat(key) {
-    const [retval, objectData_out] = _in(0x06610343, 0xe73b9727, _i, _ts(key), _r, _ri);
+    const [retval, objectData_out] = _in(0x06610343, 0xe73b9727, _i, _ts(key), _r, _rf);
     return [retval, objectData_out];
 }
 exports.datadictGetFloat = datadictGetFloat;
@@ -4942,7 +4942,7 @@ function decorGetBool(entity, propertyName) {
 }
 exports.decorGetBool = decorGetBool;
 function decorGetFloat(entity, propertyName) {
-    return _in(0x6524a2f1, 0x14706f43, entity, _ts(propertyName), _r, _ri);
+    return _in(0x6524a2f1, 0x14706f43, entity, _ts(propertyName), _r, _rf);
 }
 exports.decorGetFloat = decorGetFloat;
 function decorGetInt(entity, propertyName) {
@@ -5056,7 +5056,7 @@ exports.deleteMissionTrain = deleteMissionTrain;
  * @param object
  */
 function deleteObject(object) {
-    const [object_out] = _in(0x539e0ae3, 0xe6634b9f, _ii(object));
+    const [object_out] = _in(0x539e0ae3, 0xe6634b9f, _i);
     return [object_out];
 }
 exports.deleteObject = deleteObject;
@@ -6088,7 +6088,7 @@ function doorSystemFindExistingDoor(x, y, z, modelHash, outDoorHash) {
 }
 exports.doorSystemFindExistingDoor = doorSystemFindExistingDoor;
 function doorSystemGetAutomaticDistance(doorHash) {
-    return _in(0xe851471a, 0xefc3374f, _ch(doorHash), _r, _ri);
+    return _in(0xe851471a, 0xefc3374f, _ch(doorHash), _r, _rf);
 }
 exports.doorSystemGetAutomaticDistance = doorSystemGetAutomaticDistance;
 function doorSystemGetDoorPendingState(doorHash) {
@@ -6104,7 +6104,7 @@ function doorSystemGetIsPhysicsLoaded(p0) {
 }
 exports.doorSystemGetIsPhysicsLoaded = doorSystemGetIsPhysicsLoaded;
 function doorSystemGetOpenRatio(doorHash) {
-    return _in(0x65499865, 0xfca6e5ec, _ch(doorHash), _r, _ri);
+    return _in(0x65499865, 0xfca6e5ec, _ch(doorHash), _r, _rf);
 }
 exports.doorSystemGetOpenRatio = doorSystemGetOpenRatio;
 /**
@@ -7138,7 +7138,7 @@ function endTextCommandGetNumberOfLinesForString(x, y) {
 }
 exports.endTextCommandGetNumberOfLinesForString = endTextCommandGetNumberOfLinesForString;
 function endTextCommandGetScreenWidthOfDisplayText(p0) {
-    return _in(0x85f061da, 0x64ed2f67, p0, _r, _ri);
+    return _in(0x85f061da, 0x64ed2f67, p0, _r, _rf);
 }
 exports.endTextCommandGetScreenWidthOfDisplayText = endTextCommandGetScreenWidthOfDisplayText;
 function endTextCommandIsMessageDisplayed() {
@@ -8110,7 +8110,7 @@ function getAiPedVehicleBlipIndex(ped) {
 }
 exports.getAiPedVehicleBlipIndex = getAiPedVehicleBlipIndex;
 function getAllVehicles(vehsStruct) {
-    const [retval, vehsStruct_out] = _in(0x9b8e1bf0, 0x4b51f2e8, _i, _r, _ri);
+    const [retval, vehsStruct_out] = _in(0x9b8e1bf0, 0x4b51f2e8, _ii(vehsStruct), _r, _ri);
     return [retval, vehsStruct_out];
 }
 exports.getAllVehicles = getAllVehicles;
@@ -8157,7 +8157,7 @@ function getAmmoInPedWeapon(ped, weaponhash) {
 }
 exports.getAmmoInPedWeapon = getAmmoInPedWeapon;
 function getAngleBetween2dVectors(x1, y1, x2, y2) {
-    return _in(0x186fc4be, 0x848e1c92, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _ri);
+    return _in(0x186fc4be, 0x848e1c92, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _rf);
 }
 exports.getAngleBetween2dVectors = getAngleBetween2dVectors;
 /**
@@ -8166,7 +8166,7 @@ exports.getAngleBetween2dVectors = getAngleBetween2dVectors;
  * @param animName
  */
 function getAnimDuration(animDict, animName) {
-    return _in(0xfeddf04d, 0x62b8d790, _ts(animDict), _ts(animName), _r, _ri);
+    return _in(0xfeddf04d, 0x62b8d790, _ts(animDict), _ts(animName), _r, _rf);
 }
 exports.getAnimDuration = getAnimDuration;
 /**
@@ -8211,7 +8211,7 @@ exports.getAnimInitialOffsetRotation = getAnimInitialOffsetRotation;
  * @param y2
  */
 function getApproxFloorForArea(x1, y1, x2, y2) {
-    return _in(0x3599d741, 0xc9ac6310, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _ri);
+    return _in(0x3599d741, 0xc9ac6310, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _rf);
 }
 exports.getApproxFloorForArea = getApproxFloorForArea;
 /**
@@ -8220,7 +8220,7 @@ exports.getApproxFloorForArea = getApproxFloorForArea;
  * @param y
  */
 function getApproxFloorForPoint(x, y) {
-    return _in(0x336511a3, 0x4f2e5185, _fv(x), _fv(y), _r, _ri);
+    return _in(0x336511a3, 0x4f2e5185, _fv(x), _fv(y), _r, _rf);
 }
 exports.getApproxFloorForPoint = getApproxFloorForPoint;
 /**
@@ -8231,7 +8231,7 @@ exports.getApproxFloorForPoint = getApproxFloorForPoint;
  * @param y2
  */
 function getApproxHeightForArea(x1, y1, x2, y2) {
-    return _in(0x8abe8608, 0x576d9ce3, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _ri);
+    return _in(0x8abe8608, 0x576d9ce3, _fv(x1), _fv(y1), _fv(x2), _fv(y2), _r, _rf);
 }
 exports.getApproxHeightForArea = getApproxHeightForArea;
 /**
@@ -8240,7 +8240,7 @@ exports.getApproxHeightForArea = getApproxHeightForArea;
  * @param y
  */
 function getApproxHeightForPoint(x, y) {
-    return _in(0x29c24bfb, 0xed8ab8fb, _fv(x), _fv(y), _r, _ri);
+    return _in(0x29c24bfb, 0xed8ab8fb, _fv(x), _fv(y), _r, _rf);
 }
 exports.getApproxHeightForPoint = getApproxHeightForPoint;
 /**
@@ -8261,7 +8261,7 @@ function getAreCameraControlsDisabled() {
 }
 exports.getAreCameraControlsDisabled = getAreCameraControlsDisabled;
 function getAspectRatio(b) {
-    return _in(0xf1307ef6, 0x24a80d87, b, _r, _ri);
+    return _in(0xf1307ef6, 0x24a80d87, b, _r, _rf);
 }
 exports.getAspectRatio = getAspectRatio;
 /**
@@ -8309,7 +8309,7 @@ exports.getBestPedWeapon = getBestPedWeapon;
  * @param binkMovie
  */
 function getBinkMovieTime(binkMovie) {
-    return _in(0x8e17ddd6, 0xb9d5bf29, binkMovie, _r, _ri);
+    return _in(0x8e17ddd6, 0xb9d5bf29, binkMovie, _r, _rf);
 }
 exports.getBinkMovieTime = getBinkMovieTime;
 function getBitsInRange(unkVar, rangeStart, rangeEnd) {
@@ -8397,7 +8397,7 @@ function getBlipSprite(blip) {
 }
 exports.getBlipSprite = getBlipSprite;
 function getBoatBoomPositionRatio(vehicle) {
-    return _in(0x6636c535, 0xf6cc2725, vehicle, _r, _ri);
+    return _in(0x6636c535, 0xf6cc2725, vehicle, _r, _rf);
 }
 exports.getBoatBoomPositionRatio = getBoatBoomPositionRatio;
 /**
@@ -8405,7 +8405,7 @@ exports.getBoatBoomPositionRatio = getBoatBoomPositionRatio;
  * @param modelHash
  */
 function getBoatVehicleModelAgility(modelHash) {
-    return _in(0x5aa3f878, 0xa178c4fc, _ch(modelHash), _r, _ri);
+    return _in(0x5aa3f878, 0xa178c4fc, _ch(modelHash), _r, _rf);
 }
 exports.getBoatVehicleModelAgility = getBoatVehicleModelAgility;
 function getBossGoonUuid(characterSlot, p1, p2) {
@@ -8438,7 +8438,7 @@ function getCamActiveViewModeContext() {
 }
 exports.getCamActiveViewModeContext = getCamActiveViewModeContext;
 function getCamAnimCurrentPhase(cam) {
-    return _in(0xa10b2db4, 0x9e92a6b0, cam, _r, _ri);
+    return _in(0xa10b2db4, 0x9e92a6b0, cam, _r, _rf);
 }
 exports.getCamAnimCurrentPhase = getCamAnimCurrentPhase;
 function getCamCoord(cam) {
@@ -8446,27 +8446,27 @@ function getCamCoord(cam) {
 }
 exports.getCamCoord = getCamCoord;
 function getCamDofStrength(cam) {
-    return _in(0x06d153c0, 0xb99b6128, cam, _r, _ri);
+    return _in(0x06d153c0, 0xb99b6128, cam, _r, _rf);
 }
 exports.getCamDofStrength = getCamDofStrength;
 function getCamFarClip(cam) {
-    return _in(0xb60a9cfe, 0xb21ca6aa, cam, _r, _ri);
+    return _in(0xb60a9cfe, 0xb21ca6aa, cam, _r, _rf);
 }
 exports.getCamFarClip = getCamFarClip;
 function getCamFarDof(cam) {
-    return _in(0x255f8daf, 0xd540d397, cam, _r, _ri);
+    return _in(0x255f8daf, 0xd540d397, cam, _r, _rf);
 }
 exports.getCamFarDof = getCamFarDof;
 function getCamFov(cam) {
-    return _in(0xc3330a45, 0xcccdb26a, cam, _r, _ri);
+    return _in(0xc3330a45, 0xcccdb26a, cam, _r, _rf);
 }
 exports.getCamFov = getCamFov;
 function getCamNearClip(cam) {
-    return _in(0xc520a34d, 0xafbf24b1, cam, _r, _ri);
+    return _in(0xc520a34d, 0xafbf24b1, cam, _r, _rf);
 }
 exports.getCamNearClip = getCamNearClip;
 function getCamNearDof(cam) {
-    return _in(0xc2612d22, 0x3d915a1c, cam, _r, _ri);
+    return _in(0xc2612d22, 0x3d915a1c, cam, _r, _rf);
 }
 exports.getCamNearDof = getCamNearDof;
 /**
@@ -8487,7 +8487,7 @@ exports.getCamSplineNodeIndex = getCamSplineNodeIndex;
  * @param cam
  */
 function getCamSplineNodePhase(cam) {
-    return _in(0xd9d0e694, 0xc8282c96, cam, _r, _ri);
+    return _in(0xd9d0e694, 0xc8282c96, cam, _r, _rf);
 }
 exports.getCamSplineNodePhase = getCamSplineNodePhase;
 /**
@@ -8497,7 +8497,7 @@ exports.getCamSplineNodePhase = getCamSplineNodePhase;
  * @param cam
  */
 function getCamSplinePhase(cam) {
-    return _in(0xb5349e36, 0xc546509a, cam, _r, _ri);
+    return _in(0xb5349e36, 0xc546509a, cam, _r, _rf);
 }
 exports.getCamSplinePhase = getCamSplinePhase;
 /**
@@ -8623,7 +8623,7 @@ function getCharacterMenuPedMaskedIntStat(statHash, p2, mask, p4) {
 }
 exports.getCharacterMenuPedMaskedIntStat = getCharacterMenuPedMaskedIntStat;
 function getCityDensity() {
-    return _in(0xd10282b6, 0xe3751ba0, _r, _ri);
+    return _in(0xd10282b6, 0xe3751ba0, _r, _rf);
 }
 exports.getCityDensity = getCityDensity;
 function getClipSetForScriptedGunTask(gunTaskType) {
@@ -8722,7 +8722,7 @@ exports.getClosestMajorVehicleNode = getClosestMajorVehicleNode;
  * @param p7
  */
 function getClosestObjectOfType(x, y, z, radius, modelHash, isMission, p6, p7) {
-    return _in(0xe143fa22, 0x49364369, _fv(x), _fv(y), _fv(z), _fv(radius), _ch(modelHash), isMission, p6, p7, _r, _ri);
+    return _in(0xe143fa22, 0x49364369, _fv(x), _fv(y), _fv(z), _fv(radius), _ch(modelHash), isMission, p6, p7, _r, _ro);
 }
 exports.getClosestObjectOfType = getClosestObjectOfType;
 /**
@@ -8916,7 +8916,7 @@ function getCloudTimeAsString() {
 }
 exports.getCloudTimeAsString = getCloudTimeAsString;
 function getCloudsAlpha() {
-    return _in(0x20ac25e7, 0x81ae4a84, _r, _ri);
+    return _in(0x20ac25e7, 0x81ae4a84, _r, _rf);
 }
 exports.getCloudsAlpha = getCloudsAlpha;
 function getCollisionNormalOfLastHitForEntity(entity) {
@@ -8959,7 +8959,7 @@ exports.getCollisionNormalOfLastHitForEntity = getCollisionNormalOfLastHitForEnt
  * @param p1
  */
 function getCombatFloat(ped, p1) {
-    return _in(0x52dff8a1, 0x0508090a, ped, p1, _r, _ri);
+    return _in(0x52dff8a1, 0x0508090a, ped, p1, _r, _rf);
 }
 exports.getCombatFloat = getCombatFloat;
 /**
@@ -9056,7 +9056,7 @@ exports.getControlInstructionalButtonsString = getControlInstructionalButtonsStr
  * @param action
  */
 function getControlNormal(control, action) {
-    return _in(0xec3c9b8d, 0x5327b563, control, action, _r, _ri);
+    return _in(0xec3c9b8d, 0x5327b563, control, action, _r, _rf);
 }
 exports.getControlNormal = getControlNormal;
 /**
@@ -9067,7 +9067,7 @@ exports.getControlNormal = getControlNormal;
  * @param action
  */
 function getControlUnboundNormal(control, action) {
-    return _in(0x5b84d09c, 0xec5209c5, control, action, _r, _ri);
+    return _in(0x5b84d09c, 0xec5209c5, control, action, _r, _rf);
 }
 exports.getControlUnboundNormal = getControlUnboundNormal;
 /**
@@ -9259,14 +9259,14 @@ function getDebugCam() {
 }
 exports.getDebugCam = getDebugCam;
 function getDecalWashLevel(decal) {
-    return _in(0x323f6476, 0x79a09103, decal, _r, _ri);
+    return _in(0x323f6476, 0x79a09103, decal, _r, _rf);
 }
 exports.getDecalWashLevel = getDecalWashLevel;
 /**
  * Gets the aggressiveness factor of the ocean waves.
  */
 function getDeepOceanScaler() {
-    return _in(0x2b2a2cc8, 0x6778b619, _r, _ri);
+    return _in(0x2b2a2cc8, 0x6778b619, _r, _rf);
 }
 exports.getDeepOceanScaler = getDeepOceanScaler;
 function getDefaultAmmoForWeaponPickup(pickupHash) {
@@ -9294,7 +9294,7 @@ exports.getDefaultSecondaryTintForCreator = getDefaultSecondaryTintForCreator;
  * @param action
  */
 function getDisabledControlNormal(control, action) {
-    return _in(0x11e65974, 0xa982637c, control, action, _r, _ri);
+    return _in(0x11e65974, 0xa982637c, control, action, _r, _rf);
 }
 exports.getDisabledControlNormal = getDisabledControlNormal;
 /**
@@ -9305,7 +9305,7 @@ exports.getDisabledControlNormal = getDisabledControlNormal;
  * @param action
  */
 function getDisabledControlUnboundNormal(control, action) {
-    return _in(0x4f8a26a8, 0x90fd62fb, control, action, _r, _ri);
+    return _in(0x4f8a26a8, 0x90fd62fb, control, action, _r, _rf);
 }
 exports.getDisabledControlUnboundNormal = getDisabledControlUnboundNormal;
 /**
@@ -9339,7 +9339,7 @@ exports.getDisplayNameFromVehicleModel = getDisplayNameFromVehicleModel;
  * @param useZ
  */
 function getDistanceBetweenCoords(x1, y1, z1, x2, y2, z2, useZ) {
-    return _in(0xf1b76088, 0x1820c952, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), useZ, _r, _ri);
+    return _in(0xf1b76088, 0x1820c952, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), useZ, _r, _rf);
 }
 exports.getDistanceBetweenCoords = getDistanceBetweenCoords;
 /**
@@ -9350,7 +9350,7 @@ exports.getDistanceBetweenCoords = getDistanceBetweenCoords;
  * @param outData
  */
 function getDlcVehicleData(dlcVehicleIndex, outData) {
-    const [retval, outData_out] = _in(0x33468edc, 0x08e371f6, dlcVehicleIndex, _i, _r);
+    const [retval, outData_out] = _in(0x33468edc, 0x08e371f6, dlcVehicleIndex, _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getDlcVehicleData = getDlcVehicleData;
@@ -9395,7 +9395,7 @@ exports.getDlcVehicleModel = getDlcVehicleModel;
  * @param ComponentDataPtr
  */
 function getDlcWeaponComponentData(dlcWeaponIndex, dlcWeapCompIndex, ComponentDataPtr) {
-    const [retval, ComponentDataPtr_out] = _in(0x6cf598a2, 0x957c2bf8, dlcWeaponIndex, dlcWeapCompIndex, _i, _r);
+    const [retval, ComponentDataPtr_out] = _in(0x6cf598a2, 0x957c2bf8, dlcWeaponIndex, dlcWeapCompIndex, _ii(ComponentDataPtr), _r);
     return [retval, ComponentDataPtr_out];
 }
 exports.getDlcWeaponComponentData = getDlcWeaponComponentData;
@@ -9406,7 +9406,7 @@ exports.getDlcWeaponComponentData = getDlcWeaponComponentData;
  * @param ComponentDataPtr
  */
 function getDlcWeaponComponentDataSp(dlcWeaponIndex, dlcWeapCompIndex, ComponentDataPtr) {
-    const [retval, ComponentDataPtr_out] = _in(0x31d5e073, 0xb6f93cdc, dlcWeaponIndex, dlcWeapCompIndex, _i, _r);
+    const [retval, ComponentDataPtr_out] = _in(0x31d5e073, 0xb6f93cdc, dlcWeaponIndex, dlcWeapCompIndex, _ii(ComponentDataPtr), _r);
     return [retval, ComponentDataPtr_out];
 }
 exports.getDlcWeaponComponentDataSp = getDlcWeaponComponentDataSp;
@@ -9438,7 +9438,7 @@ exports.getDlcWeaponComponentDataSp = getDlcWeaponComponentDataSp;
  * @param outData
  */
 function getDlcWeaponData(dlcWeaponIndex, outData) {
-    const [retval, outData_out] = _in(0x79923cd2, 0x1bece14e, dlcWeaponIndex, _i, _r);
+    const [retval, outData_out] = _in(0x79923cd2, 0x1bece14e, dlcWeaponIndex, _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getDlcWeaponData = getDlcWeaponData;
@@ -9448,7 +9448,7 @@ exports.getDlcWeaponData = getDlcWeaponData;
  * @param outData
  */
 function getDlcWeaponDataSp(dlcWeaponIndex, outData) {
-    const [retval, outData_out] = _in(0x310836ee, 0x7129ba33, dlcWeaponIndex, _i, _r);
+    const [retval, outData_out] = _in(0x310836ee, 0x7129ba33, dlcWeaponIndex, _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getDlcWeaponDataSp = getDlcWeaponDataSp;
@@ -9490,7 +9490,7 @@ exports.getEntityAlpha = getEntityAlpha;
  * @param animName
  */
 function getEntityAnimCurrentTime(entity, animDict, animName) {
-    return _in(0x346d8150, 0x0d088f42, entity, _ts(animDict), _ts(animName), _r, _ri);
+    return _in(0x346d8150, 0x0d088f42, entity, _ts(animDict), _ts(animName), _r, _rf);
 }
 exports.getEntityAnimCurrentTime = getEntityAnimCurrentTime;
 /**
@@ -9506,7 +9506,7 @@ exports.getEntityAnimCurrentTime = getEntityAnimCurrentTime;
  * @param animName
  */
 function getEntityAnimTotalTime(entity, animDict, animName) {
-    return _in(0x50bd2730, 0xb191e360, entity, _ts(animDict), _ts(animName), _r, _ri);
+    return _in(0x50bd2730, 0xb191e360, entity, _ts(animDict), _ts(animName), _r, _rf);
 }
 exports.getEntityAnimTotalTime = getEntityAnimTotalTime;
 function getEntityAttachedTo(entity) {
@@ -9646,7 +9646,7 @@ exports.getEntityForwardVector = getEntityForwardVector;
  * @param entity
  */
 function getEntityForwardX(entity) {
-    return _in(0x8bb4ef42, 0x14e0e6d5, entity, _r, _ri);
+    return _in(0x8bb4ef42, 0x14e0e6d5, entity, _r, _rf);
 }
 exports.getEntityForwardX = getEntityForwardX;
 /**
@@ -9654,7 +9654,7 @@ exports.getEntityForwardX = getEntityForwardX;
  * @param entity
  */
 function getEntityForwardY(entity) {
-    return _in(0x866a4a5f, 0xae349510, entity, _r, _ri);
+    return _in(0x866a4a5f, 0xae349510, entity, _r, _rf);
 }
 exports.getEntityForwardY = getEntityForwardY;
 /**
@@ -9662,7 +9662,7 @@ exports.getEntityForwardY = getEntityForwardY;
  * @param entity
  */
 function getEntityHeading(entity) {
-    return _in(0xe83d4f9b, 0xa2a38914, entity, _r, _ri);
+    return _in(0xe83d4f9b, 0xa2a38914, entity, _r, _rf);
 }
 exports.getEntityHeading = getEntityHeading;
 /**
@@ -9672,7 +9672,7 @@ exports.getEntityHeading = getEntityHeading;
  * @param entity
  */
 function getEntityHeadingFromEulers(entity) {
-    return _in(0x846bf629, 0x1198a71e, entity, _r, _ri);
+    return _in(0x846bf629, 0x1198a71e, entity, _r, _rf);
 }
 exports.getEntityHeadingFromEulers = getEntityHeadingFromEulers;
 /**
@@ -9694,7 +9694,7 @@ function getEntityHealth(entity) {
 }
 exports.getEntityHealth = getEntityHealth;
 function getEntityHeight(entity, X, Y, Z, atTop, inWorldCoords) {
-    return _in(0x5a504562, 0x485944dd, entity, _fv(X), _fv(Y), _fv(Z), atTop, inWorldCoords, _r, _ri);
+    return _in(0x5a504562, 0x485944dd, entity, _fv(X), _fv(Y), _fv(Z), atTop, inWorldCoords, _r, _rf);
 }
 exports.getEntityHeight = getEntityHeight;
 /**
@@ -9706,7 +9706,7 @@ exports.getEntityHeight = getEntityHeight;
  * @param entity
  */
 function getEntityHeightAboveGround(entity) {
-    return _in(0x1dd55701, 0x034110e5, entity, _r, _ri);
+    return _in(0x1dd55701, 0x034110e5, entity, _r, _rf);
 }
 exports.getEntityHeightAboveGround = getEntityHeightAboveGround;
 function getEntityIndexOfCutsceneEntity(cutsceneEntName, modelHash) {
@@ -9765,7 +9765,7 @@ function getEntityOfTypeAttachedToEntity(entity, modelHash) {
 }
 exports.getEntityOfTypeAttachedToEntity = getEntityOfTypeAttachedToEntity;
 function getEntityPitch(entity) {
-    return _in(0xd45dc289, 0x3621e1fe, entity, _r, _ri);
+    return _in(0xd45dc289, 0x3621e1fe, entity, _r, _rf);
 }
 exports.getEntityPitch = getEntityPitch;
 /**
@@ -9811,7 +9811,7 @@ exports.getEntityQuaternion = getEntityQuaternion;
  * @param entity
  */
 function getEntityRoll(entity) {
-    return _in(0x831e0242, 0x595560df, entity, _r, _ri);
+    return _in(0x831e0242, 0x595560df, entity, _r, _rf);
 }
 exports.getEntityRoll = getEntityRoll;
 /**
@@ -9863,7 +9863,7 @@ exports.getEntityScript = getEntityScript;
  * @param entity
  */
 function getEntitySpeed(entity) {
-    return _in(0xd5037ba8, 0x2e12416f, entity, _r, _ri);
+    return _in(0xd5037ba8, 0x2e12416f, entity, _r, _rf);
 }
 exports.getEntitySpeed = getEntitySpeed;
 /**
@@ -9880,7 +9880,7 @@ exports.getEntitySpeedVector = getEntitySpeedVector;
  * @param entity
  */
 function getEntitySubmergedLevel(entity) {
-    return _in(0xe81afc1b, 0xc4cc41ce, entity, _r, _ri);
+    return _in(0xe81afc1b, 0xc4cc41ce, entity, _r, _rf);
 }
 exports.getEntitySubmergedLevel = getEntitySubmergedLevel;
 /**
@@ -9896,7 +9896,7 @@ function getEntityType(entity) {
 }
 exports.getEntityType = getEntityType;
 function getEntityUprightValue(entity) {
-    return _in(0x95eed5a6, 0x94951f9f, entity, _r, _ri);
+    return _in(0x95eed5a6, 0x94951f9f, entity, _r, _rf);
 }
 exports.getEntityUprightValue = getEntityUprightValue;
 function getEntityVelocity(entity) {
@@ -9978,7 +9978,7 @@ exports.getFakeSpectatorMode = getFakeSpectatorMode;
  * @param vehicle
  */
 function getFakeSuspensionLoweringAmount(vehicle) {
-    return _in(0x53952fd2, 0xbaa19f17, vehicle, _r, _ri);
+    return _in(0x53952fd2, 0xbaa19f17, vehicle, _r, _rf);
 }
 exports.getFakeSuspensionLoweringAmount = getFakeSuspensionLoweringAmount;
 function getFakeWantedLevel() {
@@ -9998,30 +9998,30 @@ function getFinalRenderedCamCoord() {
 }
 exports.getFinalRenderedCamCoord = getFinalRenderedCamCoord;
 function getFinalRenderedCamFarClip() {
-    return _in(0xdfc8cbc6, 0x06fdb0fc, _r, _ri);
+    return _in(0xdfc8cbc6, 0x06fdb0fc, _r, _rf);
 }
 exports.getFinalRenderedCamFarClip = getFinalRenderedCamFarClip;
 function getFinalRenderedCamFarDof() {
-    return _in(0x9780f32b, 0xcaf72431, _r, _ri);
+    return _in(0x9780f32b, 0xcaf72431, _r, _rf);
 }
 exports.getFinalRenderedCamFarDof = getFinalRenderedCamFarDof;
 /**
  * Gets some camera fov
  */
 function getFinalRenderedCamFov() {
-    return _in(0x80ec1146, 0x69daeff4, _r, _ri);
+    return _in(0x80ec1146, 0x69daeff4, _r, _rf);
 }
 exports.getFinalRenderedCamFov = getFinalRenderedCamFov;
 function getFinalRenderedCamMotionBlurStrength() {
-    return _in(0x162f9d99, 0x5753dc19, _r, _ri);
+    return _in(0x162f9d99, 0x5753dc19, _r, _rf);
 }
 exports.getFinalRenderedCamMotionBlurStrength = getFinalRenderedCamMotionBlurStrength;
 function getFinalRenderedCamNearClip() {
-    return _in(0xd0082607, 0x100d7193, _r, _ri);
+    return _in(0xd0082607, 0x100d7193, _r, _rf);
 }
 exports.getFinalRenderedCamNearClip = getFinalRenderedCamNearClip;
 function getFinalRenderedCamNearDof() {
-    return _in(0xa03502fc, 0x581f7d9b, _r, _ri);
+    return _in(0xa03502fc, 0x581f7d9b, _r, _rf);
 }
 exports.getFinalRenderedCamNearDof = getFinalRenderedCamNearDof;
 /**
@@ -10035,7 +10035,7 @@ function getFinalRenderedCamRot(rotationOrder) {
 }
 exports.getFinalRenderedCamRot = getFinalRenderedCamRot;
 function getFinalRenderedRemotePlayerCamFov(player) {
-    return _in(0x5f35f673, 0x2c3fbba0, player, _r, _ri);
+    return _in(0x5f35f673, 0x2c3fbba0, player, _r, _rf);
 }
 exports.getFinalRenderedRemotePlayerCamFov = getFinalRenderedRemotePlayerCamFov;
 function getFinalRenderedRemotePlayerCamRot(player, rotationOrder) {
@@ -10051,7 +10051,7 @@ function getFirstNCharactersOfLiteralString(string, length) {
 }
 exports.getFirstNCharactersOfLiteralString = getFirstNCharactersOfLiteralString;
 function getFirstPersonAimCamZoomFactor() {
-    return _in(0x7ec52cc4, 0x0597d170, _r, _ri);
+    return _in(0x7ec52cc4, 0x0597d170, _r, _rf);
 }
 exports.getFirstPersonAimCamZoomFactor = getFirstPersonAimCamZoomFactor;
 /**
@@ -10059,7 +10059,7 @@ exports.getFirstPersonAimCamZoomFactor = getFirstPersonAimCamZoomFactor;
  * @param modelHash
  */
 function getFlyingVehicleModelAgility(modelHash) {
-    return _in(0xc6ad107d, 0xdc9054cc, _ch(modelHash), _r, _ri);
+    return _in(0xc6ad107d, 0xdc9054cc, _ch(modelHash), _r, _rf);
 }
 exports.getFlyingVehicleModelAgility = getFlyingVehicleModelAgility;
 function getFmFemaleShopPedApparelItemIndex(p0) {
@@ -10120,7 +10120,7 @@ function getFrameCount() {
 }
 exports.getFrameCount = getFrameCount;
 function getFrameTime() {
-    return _in(0x15c40837, 0x039ffaf7, _r, _ri);
+    return _in(0x15c40837, 0x039ffaf7, _r, _rf);
 }
 exports.getFrameTime = getFrameTime;
 function getGameTimer() {
@@ -10132,15 +10132,15 @@ function getGameplayCamCoord() {
 }
 exports.getGameplayCamCoord = getGameplayCamCoord;
 function getGameplayCamFov() {
-    return _in(0x65019750, 0xa0324133, _r, _ri);
+    return _in(0x65019750, 0xa0324133, _r, _rf);
 }
 exports.getGameplayCamFov = getGameplayCamFov;
 function getGameplayCamRelativeHeading() {
-    return _in(0x74360764, 0x8add4587, _r, _ri);
+    return _in(0x74360764, 0x8add4587, _r, _rf);
 }
 exports.getGameplayCamRelativeHeading = getGameplayCamRelativeHeading;
 function getGameplayCamRelativePitch() {
-    return _in(0x3a6867b4, 0x845beda2, _r, _ri);
+    return _in(0x3a6867b4, 0x845beda2, _r, _rf);
 }
 exports.getGameplayCamRelativePitch = getGameplayCamRelativePitch;
 /**
@@ -10301,7 +10301,7 @@ exports.getHeadBlendEyeColor = getHeadBlendEyeColor;
  * @param dy
  */
 function getHeadingFromVector2d(dx, dy) {
-    return _in(0x2ffb6b22, 0x4f4b2926, _fv(dx), _fv(dy), _r, _ri);
+    return _in(0x2ffb6b22, 0x4f4b2926, _fv(dx), _fv(dy), _r, _rf);
 }
 exports.getHeadingFromVector2d = getHeadingFromVector2d;
 /**
@@ -10310,7 +10310,7 @@ exports.getHeadingFromVector2d = getHeadingFromVector2d;
  * @param vehicle
  */
 function getHeliMainRotorHealth(vehicle) {
-    return _in(0xe4cb7541, 0xf413d2c5, vehicle, _r, _ri);
+    return _in(0xe4cb7541, 0xf413d2c5, vehicle, _r, _rf);
 }
 exports.getHeliMainRotorHealth = getHeliMainRotorHealth;
 /**
@@ -10319,7 +10319,7 @@ exports.getHeliMainRotorHealth = getHeliMainRotorHealth;
  * @param vehicle
  */
 function getHeliTailBoomHealth(vehicle) {
-    return _in(0xac51915d, 0x27e4a5f7, vehicle, _r, _ri);
+    return _in(0xac51915d, 0x27e4a5f7, vehicle, _r, _rf);
 }
 exports.getHeliTailBoomHealth = getHeliTailBoomHealth;
 /**
@@ -10328,7 +10328,7 @@ exports.getHeliTailBoomHealth = getHeliTailBoomHealth;
  * @param vehicle
  */
 function getHeliTailRotorHealth(vehicle) {
-    return _in(0xae8ce82a, 0x4219ac8c, vehicle, _r, _ri);
+    return _in(0xae8ce82a, 0x4219ac8c, vehicle, _r, _rf);
 }
 exports.getHeliTailRotorHealth = getHeliTailRotorHealth;
 function getHudColour(hudColorIndex) {
@@ -10354,7 +10354,7 @@ function getHudScreenPositionFromWorldPosition(worldX, worldY, worldZ) {
 }
 exports.getHudScreenPositionFromWorldPosition = getHudScreenPositionFromWorldPosition;
 function getHydraulicSuspensionRaiseFactor(vehicle, wheelId) {
-    return _in(0x0bb5cbdd, 0xd0f25ae3, vehicle, wheelId, _r, _ri);
+    return _in(0x0bb5cbdd, 0xd0f25ae3, vehicle, wheelId, _r, _rf);
 }
 exports.getHydraulicSuspensionRaiseFactor = getHydraulicSuspensionRaiseFactor;
 function getIdOfThisThread() {
@@ -10456,7 +10456,7 @@ function getInteriorGroupId(interior) {
 }
 exports.getInteriorGroupId = getInteriorGroupId;
 function getInteriorHeading(interior) {
-    return _in(0xf49b5863, 0x1d9e22d9, interior, _r, _ri);
+    return _in(0xf49b5863, 0x1d9e22d9, interior, _r, _rf);
 }
 exports.getInteriorHeading = getInteriorHeading;
 function getInteriorLocationAndNamehash(interior) {
@@ -10763,7 +10763,7 @@ function getLengthOfStringWithThisTextLabel(gxt) {
 }
 exports.getLengthOfStringWithThisTextLabel = getLengthOfStringWithThisTextLabel;
 function getLightOverrideMaxIntensityScale() {
-    return _in(0x393bd227, 0x5ceb7793, _r, _ri);
+    return _in(0x393bd227, 0x5ceb7793, _r, _rf);
 }
 exports.getLightOverrideMaxIntensityScale = getLightOverrideMaxIntensityScale;
 function getLinePlaneIntersection(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12) {
@@ -10853,11 +10853,11 @@ function getLocalTime() {
 }
 exports.getLocalTime = getLocalTime;
 function getLockonDistanceOfCurrentPedWeapon(ped) {
-    return _in(0x840f03e9, 0x041e2c9c, ped, _r, _ri);
+    return _in(0x840f03e9, 0x041e2c9c, ped, _r, _rf);
 }
 exports.getLockonDistanceOfCurrentPedWeapon = getLockonDistanceOfCurrentPedWeapon;
 function getLodscale() {
-    return _in(0x0c15b0e4, 0x43b2349d, _r, _ri);
+    return _in(0x0c15b0e4, 0x43b2349d, _r, _rf);
 }
 exports.getLodscale = getLodscale;
 function getMainPlayerBlipId() {
@@ -10925,7 +10925,7 @@ function getMaxNumNetworkVehicles() {
 }
 exports.getMaxNumNetworkVehicles = getMaxNumNetworkVehicles;
 function getMaxRangeOfCurrentPedWeapon(ped) {
-    return _in(0x814c9d19, 0xdfd69679, ped, _r, _ri);
+    return _in(0x814c9d19, 0xdfd69679, ped, _r, _rf);
 }
 exports.getMaxRangeOfCurrentPedWeapon = getMaxRangeOfCurrentPedWeapon;
 /**
@@ -10998,7 +10998,7 @@ function getMenuPedFloatStat(statHash, outValue) {
 }
 exports.getMenuPedFloatStat = getMenuPedFloatStat;
 function getMenuPedIntStat(p0, p1) {
-    const [retval, p1_out] = _in(0xef4ced81, 0xcebedc6d, p0, _i, _r);
+    const [retval, p1_out] = _in(0xef4ced81, 0xcebedc6d, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.getMenuPedIntStat = getMenuPedIntStat;
@@ -11021,7 +11021,7 @@ function getMinimapFowCoordinateIsRevealed(x, y, z) {
 }
 exports.getMinimapFowCoordinateIsRevealed = getMinimapFowCoordinateIsRevealed;
 function getMinimapFowDiscoveryRatio() {
-    return _in(0xe0130b41, 0xd3cf4574, _r, _ri);
+    return _in(0xe0130b41, 0xd3cf4574, _r, _rf);
 }
 exports.getMinimapFowDiscoveryRatio = getMinimapFowDiscoveryRatio;
 function getMissionFlag() {
@@ -11084,7 +11084,7 @@ exports.getModelDimensions = getModelDimensions;
  * Getter for SET_MOTIONBLUR_MAX_VEL_SCALER
  */
 function getMotionblurMaxVelScaler() {
-    return _in(0xe59343e9, 0xe96529e7, _r, _ri);
+    return _in(0xe59343e9, 0xe96529e7, _r, _rf);
 }
 exports.getMotionblurMaxVelScaler = getMotionblurMaxVelScaler;
 /**
@@ -11654,7 +11654,7 @@ function getNumberResourcesAllocatedToWantedLevel(dispatchService) {
 }
 exports.getNumberResourcesAllocatedToWantedLevel = getNumberResourcesAllocatedToWantedLevel;
 function getObjectFragmentDamageHealth(p0, p1) {
-    return _in(0xb6fbfd07, 0x9b8d0596, p0, p1, _r, _ri);
+    return _in(0xb6fbfd07, 0x9b8d0596, p0, p1, _r, _rf);
 }
 exports.getObjectFragmentDamageHealth = getObjectFragmentDamageHealth;
 /**
@@ -11662,7 +11662,7 @@ exports.getObjectFragmentDamageHealth = getObjectFragmentDamageHealth;
  * @param entity
  */
 function getObjectIndexFromEntityIndex(entity) {
-    return _in(0xd7e3b973, 0x5c0f89d6, entity, _r, _ri);
+    return _in(0xd7e3b973, 0x5c0f89d6, entity, _r, _ro);
 }
 exports.getObjectIndexFromEntityIndex = getObjectIndexFromEntityIndex;
 function getObjectTintIndex(object) {
@@ -12098,7 +12098,7 @@ function getPedDefensiveAreaPosition(ped, p1) {
 }
 exports.getPedDefensiveAreaPosition = getPedDefensiveAreaPosition;
 function getPedDesiredMoveBlendRatio(ped) {
-    return _in(0x8517d4a6, 0xca8513ed, ped, _r, _ri);
+    return _in(0x8517d4a6, 0xca8513ed, ped, _r, _rf);
 }
 exports.getPedDesiredMoveBlendRatio = getPedDesiredMoveBlendRatio;
 function getPedDiesInWater(ped) {
@@ -12132,11 +12132,11 @@ exports.getPedDrawableVariation = getPedDrawableVariation;
  * @param ped
  */
 function getPedEmissiveScale(ped) {
-    return _in(0x1461b28a, 0x06717d68, ped, _r, _ri);
+    return _in(0x1461b28a, 0x06717d68, ped, _r, _rf);
 }
 exports.getPedEmissiveScale = getPedEmissiveScale;
 function getPedEnveffScale(ped) {
-    return _in(0x9c14d303, 0x95a51a3c, ped, _r, _ri);
+    return _in(0x9c14d303, 0x95a51a3c, ped, _r, _rf);
 }
 exports.getPedEnveffScale = getPedEnveffScale;
 /**
@@ -12205,7 +12205,7 @@ exports.getPedHairTintColor = getPedHairTintColor;
  * @param headBlendData
  */
 function getPedHeadBlendData(ped, headBlendData) {
-    const [retval, headBlendData_out] = _in(0x2746bd9d, 0x88c5c5d0, ped, _i, _r);
+    const [retval, headBlendData_out] = _in(0x2746bd9d, 0x88c5c5d0, ped, _ii(headBlendData), _r);
     return [retval, headBlendData_out];
 }
 exports.getPedHeadBlendData = getPedHeadBlendData;
@@ -12377,7 +12377,7 @@ exports.getPedNearbyPeds = getPedNearbyPeds;
  * @param sizeAndVehs
  */
 function getPedNearbyVehicles(ped, sizeAndVehs) {
-    const [retval, sizeAndVehs_out] = _in(0xcff869cb, 0xfa210d82, ped, _i, _r, _ri);
+    const [retval, sizeAndVehs_out] = _in(0xcff869cb, 0xfa210d82, ped, _ii(sizeAndVehs), _r, _ri);
     return [retval, sizeAndVehs_out];
 }
 exports.getPedNearbyVehicles = getPedNearbyVehicles;
@@ -12526,11 +12526,11 @@ function getPedUsingVehicleDoor(vehicle, doord) {
 }
 exports.getPedUsingVehicleDoor = getPedUsingVehicleDoor;
 function getPedVisualFieldCenterAngle(ped) {
-    return _in(0xef2c71a3, 0x2cad5fbd, ped, _r, _ri);
+    return _in(0xef2c71a3, 0x2cad5fbd, ped, _r, _rf);
 }
 exports.getPedVisualFieldCenterAngle = getPedVisualFieldCenterAngle;
 function getPedWaypointDistance(p0) {
-    return _in(0xe6a877c6, 0x4caf1bc5, p0, _r, _ri);
+    return _in(0xe6a877c6, 0x4caf1bc5, p0, _r, _rf);
 }
 exports.getPedWaypointDistance = getPedWaypointDistance;
 function getPedWaypointProgress(ped) {
@@ -12578,11 +12578,11 @@ function getPedsJacker(ped) {
 }
 exports.getPedsJacker = getPedsJacker;
 function getPhoneGestureAnimCurrentTime(ped) {
-    return _in(0x47619abe, 0x8b268c60, ped, _r, _ri);
+    return _in(0x47619abe, 0x8b268c60, ped, _r, _rf);
 }
 exports.getPhoneGestureAnimCurrentTime = getPhoneGestureAnimCurrentTime;
 function getPhoneGestureAnimTotalTime(ped) {
-    return _in(0x1ee0f68a, 0x7c25dec6, ped, _r, _ri);
+    return _in(0x1ee0f68a, 0x7c25dec6, ped, _r, _rf);
 }
 exports.getPhoneGestureAnimTotalTime = getPhoneGestureAnimTotalTime;
 function getPickupCoords(pickup) {
@@ -12590,11 +12590,11 @@ function getPickupCoords(pickup) {
 }
 exports.getPickupCoords = getPickupCoords;
 function getPickupGenerationRangeMultiplier() {
-    return _in(0xb3eca65c, 0x7317f174, _r, _ri);
+    return _in(0xb3eca65c, 0x7317f174, _r, _rf);
 }
 exports.getPickupGenerationRangeMultiplier = getPickupGenerationRangeMultiplier;
 function getPickupObject(pickup) {
-    return _in(0x5099bc55, 0x630b25ae, pickup, _r, _ri);
+    return _in(0x5099bc55, 0x630b25ae, pickup, _r, _ro);
 }
 exports.getPickupObject = getPickupObject;
 /**
@@ -12606,7 +12606,7 @@ function getPickupTypeFromWeaponHash(weaponHash) {
 }
 exports.getPickupTypeFromWeaponHash = getPickupTypeFromWeaponHash;
 function getPlayerCurrentStealthNoise(player) {
-    return _in(0x2f395d61, 0xf3a1f877, player, _r, _ri);
+    return _in(0x2f395d61, 0xf3a1f877, player, _r, _rf);
 }
 exports.getPlayerCurrentStealthNoise = getPlayerCurrentStealthNoise;
 /**
@@ -12638,7 +12638,7 @@ function getPlayerHasReserveParachute(player) {
 }
 exports.getPlayerHasReserveParachute = getPlayerHasReserveParachute;
 function getPlayerHealthRechargeMaxPercent(player) {
-    return _in(0x8bc515ba, 0xe4aaf8ff, player, _r, _ri);
+    return _in(0x8bc515ba, 0xe4aaf8ff, player, _r, _rf);
 }
 exports.getPlayerHealthRechargeMaxPercent = getPlayerHealthRechargeMaxPercent;
 /**
@@ -12801,11 +12801,11 @@ function getPlayerShortSwitchState() {
 }
 exports.getPlayerShortSwitchState = getPlayerShortSwitchState;
 function getPlayerSprintStaminaRemaining(player) {
-    return _in(0x3f9f16f8, 0xe65a7ed7, player, _r, _ri);
+    return _in(0x3f9f16f8, 0xe65a7ed7, player, _r, _rf);
 }
 exports.getPlayerSprintStaminaRemaining = getPlayerSprintStaminaRemaining;
 function getPlayerSprintTimeRemaining(player) {
-    return _in(0x1885bc9b, 0x108b4c99, player, _r, _ri);
+    return _in(0x1885bc9b, 0x108b4c99, player, _r, _rf);
 }
 exports.getPlayerSprintTimeRemaining = getPlayerSprintTimeRemaining;
 function getPlayerSwitchInterpOutCurrentTime() {
@@ -12849,7 +12849,7 @@ function getPlayerTeam(player) {
 }
 exports.getPlayerTeam = getPlayerTeam;
 function getPlayerUnderwaterTimeRemaining(player) {
-    return _in(0xa1fcf8e6, 0xaf40b731, player, _r, _ri);
+    return _in(0xa1fcf8e6, 0xaf40b731, player, _r, _rf);
 }
 exports.getPlayerUnderwaterTimeRemaining = getPlayerUnderwaterTimeRemaining;
 function getPlayerWantedCentrePosition(player) {
@@ -12889,7 +12889,7 @@ function getPosAlongGpsTypeRoute(p1, p2, p3) {
 }
 exports.getPosAlongGpsTypeRoute = getPosAlongGpsTypeRoute;
 function getPosFromFiredEvent(ped, eventType, outData) {
-    const [retval, outData_out] = _in(0xba656a3b, 0xb01bdea3, ped, eventType, _i, _r);
+    const [retval, outData_out] = _in(0xba656a3b, 0xb01bdea3, ped, eventType, _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getPosFromFiredEvent = getPosFromFiredEvent;
@@ -12903,7 +12903,7 @@ exports.getPositionBySideOfRoad = getPositionBySideOfRoad;
  * @param vehicle
  */
 function getPositionInRecording(vehicle) {
-    return _in(0x2dacd605, 0xfc681475, vehicle, _r, _ri);
+    return _in(0x2dacd605, 0xfc681475, vehicle, _r, _rf);
 }
 exports.getPositionInRecording = getPositionInRecording;
 /**
@@ -12973,7 +12973,7 @@ function getRadioStationName(radioStation) {
 }
 exports.getRadioStationName = getRadioStationName;
 function getRainLevel() {
-    return _in(0x96695e36, 0x8ad855f3, _r, _ri);
+    return _in(0x96695e36, 0x8ad855f3, _r, _rf);
 }
 exports.getRainLevel = getRainLevel;
 function getRandomEventFlag() {
@@ -12981,7 +12981,7 @@ function getRandomEventFlag() {
 }
 exports.getRandomEventFlag = getRandomEventFlag;
 function getRandomFloatInRange(startRange, endRange) {
-    return _in(0x313ce587, 0x9ceb6fcd, _fv(startRange), _fv(endRange), _r, _ri);
+    return _in(0x313ce587, 0x9ceb6fcd, _fv(startRange), _fv(endRange), _r, _rf);
 }
 exports.getRandomFloatInRange = getRandomFloatInRange;
 function getRandomIntInRange(startRange, endRange) {
@@ -13080,7 +13080,7 @@ exports.getRandomVehicleNode = getRandomVehicleNode;
  * @param clamp
  */
 function getRatioOfClosestPointOnLine(x1, y1, z1, x2, y2, z2, x3, y3, z3, clamp) {
-    return _in(0x7f8f6405, 0xf4777af6, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _fv(x3), _fv(y3), _fv(z3), clamp, _r, _ri);
+    return _in(0x7f8f6405, 0xf4777af6, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _fv(x3), _fv(y3), _fv(z3), clamp, _r, _rf);
 }
 exports.getRatioOfClosestPointOnLine = getRatioOfClosestPointOnLine;
 /**
@@ -13093,7 +13093,7 @@ exports.getRatioOfClosestPointOnLine = getRatioOfClosestPointOnLine;
  * @param name
  */
 function getRayfireMapObject(x, y, z, radius, name) {
-    return _in(0xb48fced8, 0x98292e52, _fv(x), _fv(y), _fv(z), _fv(radius), _ts(name), _r, _ri);
+    return _in(0xb48fced8, 0x98292e52, _fv(x), _fv(y), _fv(z), _fv(radius), _ts(name), _r, _ro);
 }
 exports.getRayfireMapObject = getRayfireMapObject;
 /**
@@ -13102,7 +13102,7 @@ exports.getRayfireMapObject = getRayfireMapObject;
  * @param object
  */
 function getRayfireMapObjectAnimPhase(object) {
-    return _in(0x260ee4fd, 0xbdf4db01, object, _r, _ri);
+    return _in(0x260ee4fd, 0xbdf4db01, object, _r, _rf);
 }
 exports.getRayfireMapObjectAnimPhase = getRayfireMapObjectAnimPhase;
 /**
@@ -13163,7 +13163,7 @@ exports.getRelationshipBetweenPeds = getRelationshipBetweenPeds;
  * @param font
  */
 function getRenderedCharacterHeight(size, font) {
-    return _in(0xdb88a374, 0x83346780, _fv(size), font, _r, _ri);
+    return _in(0xdb88a374, 0x83346780, _fv(size), font, _r, _rf);
 }
 exports.getRenderedCharacterHeight = getRenderedCharacterHeight;
 function getRenderingCam() {
@@ -13274,7 +13274,7 @@ exports.getSafePickupCoords = getSafePickupCoords;
  * Gets the scale of safe zone. if the safe zone size scale is max, it will return 1.0.
  */
 function getSafeZoneSize() {
-    return _in(0xbaf107b6, 0xbb2c97f0, _r, _ri);
+    return _in(0xbaf107b6, 0xbb2c97f0, _r, _rf);
 }
 exports.getSafeZoneSize = getSafeZoneSize;
 function getSaveHouseDetailsAfterSuccessfulLoad() {
@@ -13309,7 +13309,7 @@ function getScaleformMovieMethodReturnValueString(methodReturn) {
 }
 exports.getScaleformMovieMethodReturnValueString = getScaleformMovieMethodReturnValueString;
 function getScreenAspectRatio() {
-    return _in(0xb2ebe8cb, 0xc58b90e9, _r, _ri);
+    return _in(0xb2ebe8cb, 0xc58b90e9, _r, _rf);
 }
 exports.getScreenAspectRatio = getScreenAspectRatio;
 function getScreenCodeWantsScriptToControl() {
@@ -13371,7 +13371,7 @@ function getScreenResolution() {
 }
 exports.getScreenResolution = getScreenResolution;
 function getScreenblurFadeCurrentTime() {
-    return _in(0x5ccabffc, 0xa31dde33, _r, _ri);
+    return _in(0x5ccabffc, 0xa31dde33, _r, _rf);
 }
 exports.getScreenblurFadeCurrentTime = getScreenblurFadeCurrentTime;
 /**
@@ -13503,12 +13503,12 @@ exports.getShopPedApparelVariantPropCount = getShopPedApparelVariantPropCount;
  * @param outComponent
  */
 function getShopPedComponent(componentHash, outComponent) {
-    const [outComponent_out] = _in(0x74c0e2a5, 0x7ec66760, _ch(componentHash), _i);
+    const [outComponent_out] = _in(0x74c0e2a5, 0x7ec66760, _ch(componentHash), _ii(outComponent));
     return [outComponent_out];
 }
 exports.getShopPedComponent = getShopPedComponent;
 function getShopPedOutfit(p0, p1) {
-    const [p1_out] = _in(0xb7952076, 0xe444979d, p0, _i);
+    const [p1_out] = _in(0xb7952076, 0xe444979d, p0, _ii(p1));
     return [p1_out];
 }
 exports.getShopPedOutfit = getShopPedOutfit;
@@ -13519,7 +13519,7 @@ exports.getShopPedOutfit = getShopPedOutfit;
  * @param outComponentVariant
  */
 function getShopPedOutfitComponentVariant(outfitHash, unkVariantIndex, outComponentVariant) {
-    const [retval, outComponentVariant_out] = _in(0x19f2a026, 0xedf0013f, _ch(outfitHash), unkVariantIndex, _i, _r);
+    const [retval, outComponentVariant_out] = _in(0x19f2a026, 0xedf0013f, _ch(outfitHash), unkVariantIndex, _ii(outComponentVariant), _r);
     return [retval, outComponentVariant_out];
 }
 exports.getShopPedOutfitComponentVariant = getShopPedOutfitComponentVariant;
@@ -13534,7 +13534,7 @@ exports.getShopPedOutfitLocate = getShopPedOutfitLocate;
  * @param outPropVariant
  */
 function getShopPedOutfitPropVariant(outfitHash, unkVariantIndex, outPropVariant) {
-    const [retval, outPropVariant_out] = _in(0xa9f9c2e0, 0xfde11cbb, _ch(outfitHash), unkVariantIndex, _i, _r);
+    const [retval, outPropVariant_out] = _in(0xa9f9c2e0, 0xfde11cbb, _ch(outfitHash), unkVariantIndex, _ii(outPropVariant), _r);
     return [retval, outPropVariant_out];
 }
 exports.getShopPedOutfitPropVariant = getShopPedOutfitPropVariant;
@@ -13544,7 +13544,7 @@ exports.getShopPedOutfitPropVariant = getShopPedOutfitPropVariant;
  * @param outProp
  */
 function getShopPedProp(componentHash, outProp) {
-    const [outProp_out] = _in(0x5d5caff6, 0x61ddf6fc, _ch(componentHash), _i);
+    const [outProp_out] = _in(0x5d5caff6, 0x61ddf6fc, _ch(componentHash), _ii(outProp));
     return [outProp_out];
 }
 exports.getShopPedProp = getShopPedProp;
@@ -13554,7 +13554,7 @@ exports.getShopPedProp = getShopPedProp;
  * @param outComponent
  */
 function getShopPedQueryComponent(componentId, outComponent) {
-    const [outComponent_out] = _in(0x249e310b, 0x2d920699, componentId, _i);
+    const [outComponent_out] = _in(0x249e310b, 0x2d920699, componentId, _ii(outComponent));
     return [outComponent_out];
 }
 exports.getShopPedQueryComponent = getShopPedQueryComponent;
@@ -13574,7 +13574,7 @@ exports.getShopPedQueryComponentIndex = getShopPedQueryComponentIndex;
  * @param outfit
  */
 function getShopPedQueryOutfit(outfitIndex, outfit) {
-    const [outfit_out] = _in(0x6d793f03, 0xa631fe56, outfitIndex, _i);
+    const [outfit_out] = _in(0x6d793f03, 0xa631fe56, outfitIndex, _ii(outfit));
     return [outfit_out];
 }
 exports.getShopPedQueryOutfit = getShopPedQueryOutfit;
@@ -13584,7 +13584,7 @@ exports.getShopPedQueryOutfit = getShopPedQueryOutfit;
  * @param outProp
  */
 function getShopPedQueryProp(componentId, outProp) {
-    const [outProp_out] = _in(0xde44a009, 0x99b2837d, componentId, _i);
+    const [outProp_out] = _in(0xde44a009, 0x99b2837d, componentId, _ii(outProp));
     return [outProp_out];
 }
 exports.getShopPedQueryProp = getShopPedQueryProp;
@@ -13602,7 +13602,7 @@ function getSizeOfSaveData(p0) {
 }
 exports.getSizeOfSaveData = getSizeOfSaveData;
 function getSnowLevel() {
-    return _in(0xc5868a96, 0x6e5be3ae, _r, _ri);
+    return _in(0xc5868a96, 0x6e5be3ae, _r, _rf);
 }
 exports.getSnowLevel = getSnowLevel;
 function getSoundId() {
@@ -13656,7 +13656,7 @@ function getStatusOfCreateMissionCreatorPhotoPreview() {
 }
 exports.getStatusOfCreateMissionCreatorPhotoPreview = getStatusOfCreateMissionCreatorPhotoPreview;
 function getStatusOfLoadMissionCreatorPhoto(p0) {
-    const [retval, p0_out] = _in(0x1670f8d0, 0x5056f257, _i, _r, _ri);
+    const [retval, p0_out] = _in(0x1670f8d0, 0x5056f257, _ii(p0), _r, _ri);
     return [retval, p0_out];
 }
 exports.getStatusOfLoadMissionCreatorPhoto = getStatusOfLoadMissionCreatorPhoto;
@@ -13741,15 +13741,15 @@ function getSubmarineNumberOfAirLeaks(submarine) {
 }
 exports.getSubmarineNumberOfAirLeaks = getSubmarineNumberOfAirLeaks;
 function getSynchronizedScenePhase(sceneID) {
-    return _in(0xe4a310b1, 0xd7fa73cc, sceneID, _r, _ri);
+    return _in(0xe4a310b1, 0xd7fa73cc, sceneID, _r, _rf);
 }
 exports.getSynchronizedScenePhase = getSynchronizedScenePhase;
 function getSynchronizedSceneRate(sceneID) {
-    return _in(0xd80932d5, 0x77274d40, sceneID, _r, _ri);
+    return _in(0xd80932d5, 0x77274d40, sceneID, _r, _rf);
 }
 exports.getSynchronizedSceneRate = getSynchronizedSceneRate;
 function getSystemTimeStep() {
-    return _in(0xe599a503, 0xb3837e1b, _r, _ri);
+    return _in(0xe599a503, 0xb3837e1b, _r, _rf);
 }
 exports.getSystemTimeStep = getSystemTimeStep;
 function getTaskMoveNetworkEvent(ped, eventName) {
@@ -13761,7 +13761,7 @@ function getTaskMoveNetworkSignalBool(ped, signalName) {
 }
 exports.getTaskMoveNetworkSignalBool = getTaskMoveNetworkSignalBool;
 function getTaskMoveNetworkSignalFloat(ped, signalName) {
-    return _in(0x44ab0b3a, 0xfecce242, ped, _ts(signalName), _r, _ri);
+    return _in(0x44ab0b3a, 0xfecce242, ped, _ts(signalName), _r, _rf);
 }
 exports.getTaskMoveNetworkSignalFloat = getTaskMoveNetworkSignalFloat;
 function getTaskMoveNetworkState(ped) {
@@ -13810,7 +13810,7 @@ exports.getTaskRappelDownWallState = getTaskRappelDownWallState;
  * @param outComponent
  */
 function getTattooShopDlcItemData(characterType, decorationIndex, outComponent) {
-    const [retval, outComponent_out] = _in(0xff563818, 0x74f82086, characterType, decorationIndex, _i, _r);
+    const [retval, outComponent_out] = _in(0xff563818, 0x74f82086, characterType, decorationIndex, _ii(outComponent), _r);
     return [retval, outComponent_out];
 }
 exports.getTattooShopDlcItemData = getTattooShopDlcItemData;
@@ -13889,7 +13889,7 @@ exports.getTimePedDamagedByWeapon = getTimePedDamagedByWeapon;
  * @param vehicle
  */
 function getTimePositionInRecording(vehicle) {
-    return _in(0x5746f3a7, 0xab7fe544, vehicle, _r, _ri);
+    return _in(0x5746f3a7, 0xab7fe544, vehicle, _r, _rf);
 }
 exports.getTimePositionInRecording = getTimePositionInRecording;
 /**
@@ -13965,11 +13965,11 @@ exports.getTogglePausedRenderphasesStatus = getTogglePausedRenderphasesStatus;
  * @param script
  */
 function getTotalDurationOfVehicleRecording(recording, script) {
-    return _in(0x0e48d1c2, 0x62390950, recording, _ts(script), _r, _ri);
+    return _in(0x0e48d1c2, 0x62390950, recording, _ts(script), _r, _rf);
 }
 exports.getTotalDurationOfVehicleRecording = getTotalDurationOfVehicleRecording;
 function getTotalDurationOfVehicleRecordingId(id) {
-    return _in(0x102d1254, 0x11a7b6e6, id, _r, _ri);
+    return _in(0x102d1254, 0x11a7b6e6, id, _r, _rf);
 }
 exports.getTotalDurationOfVehicleRecordingId = getTotalDurationOfVehicleRecordingId;
 function getTotalSuccessfulStuntJumps() {
@@ -13994,7 +13994,7 @@ function getTvChannel() {
 }
 exports.getTvChannel = getTvChannel;
 function getTvVolume() {
-    return _in(0x2170813d, 0x3dd8661b, _r, _ri);
+    return _in(0x2170813d, 0x3dd8661b, _r, _rf);
 }
 exports.getTvVolume = getTvVolume;
 /**
@@ -14009,7 +14009,7 @@ exports.getTvVolume = getTvVolume;
  * @param wheelIndex
  */
 function getTyreHealth(vehicle, wheelIndex) {
-    return _in(0x55eab010, 0xfaee9380, vehicle, wheelIndex, _r, _ri);
+    return _in(0x55eab010, 0xfaee9380, vehicle, wheelIndex, _r, _rf);
 }
 exports.getTyreHealth = getTyreHealth;
 /**
@@ -14026,7 +14026,7 @@ exports.getTyreHealth = getTyreHealth;
  * @param wheelIndex
  */
 function getTyreWearRate(vehicle, wheelIndex) {
-    return _in(0x6e387895, 0x952f4f71, vehicle, wheelIndex, _r, _ri);
+    return _in(0x6e387895, 0x952f4f71, vehicle, wheelIndex, _r, _rf);
 }
 exports.getTyreWearRate = getTyreWearRate;
 /**
@@ -14036,7 +14036,7 @@ exports.getTyreWearRate = getTyreWearRate;
  * Maximum model memory (as defined in common\data\missioncreatordata.meta) is 100 MiB
  */
 function getUsedCreatorBudget() {
-    return _in(0x3d3d8b3b, 0xe5a83d35, _r, _ri);
+    return _in(0x3d3d8b3b, 0xe5a83d35, _r, _rf);
 }
 exports.getUsedCreatorBudget = getUsedCreatorBudget;
 /**
@@ -14086,7 +14086,7 @@ function getVariantProp(componentHash, unkVariantPropIndex) {
 }
 exports.getVariantProp = getVariantProp;
 function getVariationChosenForScriptedLine(p0) {
-    const [retval, p0_out] = _in(0xaa19f557, 0x2c38b564, _i, _r, _ri);
+    const [retval, p0_out] = _in(0xaa19f557, 0x2c38b564, _ii(p0), _r, _ri);
     return [retval, p0_out];
 }
 exports.getVariationChosenForScriptedLine = getVariationChosenForScriptedLine;
@@ -14095,7 +14095,7 @@ exports.getVariationChosenForScriptedLine = getVariationChosenForScriptedLine;
  * @param vehicle
  */
 function getVehicleAcceleration(vehicle) {
-    return _in(0x5dd35c8d, 0x074e57ae, vehicle, _r, _ri);
+    return _in(0x5dd35c8d, 0x074e57ae, vehicle, _r, _rf);
 }
 exports.getVehicleAcceleration = getVehicleAcceleration;
 /**
@@ -14113,7 +14113,7 @@ exports.getVehicleAttachedToCargobob = getVehicleAttachedToCargobob;
  * @param vehicle
  */
 function getVehicleBodyHealth(vehicle) {
-    return _in(0xf271147e, 0xb7b40f12, vehicle, _r, _ri);
+    return _in(0xf271147e, 0xb7b40f12, vehicle, _r, _rf);
 }
 exports.getVehicleBodyHealth = getVehicleBodyHealth;
 /**
@@ -14179,7 +14179,7 @@ function getVehicleClass(vehicle) {
 }
 exports.getVehicleClass = getVehicleClass;
 function getVehicleClassEstimatedMaxSpeed(vehicleClass) {
-    return _in(0x00c09f24, 0x6abedd82, vehicleClass, _r, _ri);
+    return _in(0x00c09f24, 0x6abedd82, vehicleClass, _r, _rf);
 }
 exports.getVehicleClassEstimatedMaxSpeed = getVehicleClassEstimatedMaxSpeed;
 /**
@@ -14196,19 +14196,19 @@ function getVehicleClassFromName(modelHash) {
 }
 exports.getVehicleClassFromName = getVehicleClassFromName;
 function getVehicleClassMaxAcceleration(vehicleClass) {
-    return _in(0x2f83e7e4, 0x5d9ea7ae, vehicleClass, _r, _ri);
+    return _in(0x2f83e7e4, 0x5d9ea7ae, vehicleClass, _r, _rf);
 }
 exports.getVehicleClassMaxAcceleration = getVehicleClassMaxAcceleration;
 function getVehicleClassMaxAgility(vehicleClass) {
-    return _in(0x4f930ad0, 0x22d6de3b, vehicleClass, _r, _ri);
+    return _in(0x4f930ad0, 0x22d6de3b, vehicleClass, _r, _rf);
 }
 exports.getVehicleClassMaxAgility = getVehicleClassMaxAgility;
 function getVehicleClassMaxBraking(vehicleClass) {
-    return _in(0x4bf54c16, 0xec8fec03, vehicleClass, _r, _ri);
+    return _in(0x4bf54c16, 0xec8fec03, vehicleClass, _r, _rf);
 }
 exports.getVehicleClassMaxBraking = getVehicleClassMaxBraking;
 function getVehicleClassMaxTraction(vehicleClass) {
-    return _in(0xdbc86d85, 0xc5059461, vehicleClass, _r, _ri);
+    return _in(0xdbc86d85, 0xc5059461, vehicleClass, _r, _rf);
 }
 exports.getVehicleClassMaxTraction = getVehicleClassMaxTraction;
 /**
@@ -14262,7 +14262,7 @@ exports.getVehicleCrewEmblemRequestState = getVehicleCrewEmblemRequestState;
  * @param vehicle
  */
 function getVehicleCurrentTimeInSlipStream(vehicle) {
-    return _in(0x36492c2f, 0x0d134c56, vehicle, _r, _ri);
+    return _in(0x36492c2f, 0x0d134c56, vehicle, _r, _rf);
 }
 exports.getVehicleCurrentTimeInSlipStream = getVehicleCurrentTimeInSlipStream;
 function getVehicleCustomPrimaryColour(vehicle) {
@@ -14312,7 +14312,7 @@ exports.getVehicleDeformationAtPos = getVehicleDeformationAtPos;
  * @param vehicle
  */
 function getVehicleDirtLevel(vehicle) {
-    return _in(0x8f17bc8b, 0xa08da62b, vehicle, _r, _ri);
+    return _in(0x8f17bc8b, 0xa08da62b, vehicle, _r, _rf);
 }
 exports.getVehicleDirtLevel = getVehicleDirtLevel;
 /**
@@ -14321,7 +14321,7 @@ exports.getVehicleDirtLevel = getVehicleDirtLevel;
  * @param doorId
  */
 function getVehicleDoorAngleRatio(vehicle, doorId) {
-    return _in(0xfe3f9c29, 0xf7b32bd5, vehicle, doorId, _r, _ri);
+    return _in(0xfe3f9c29, 0xf7b32bd5, vehicle, doorId, _r, _rf);
 }
 exports.getVehicleDoorAngleRatio = getVehicleDoorAngleRatio;
 /**
@@ -14358,7 +14358,7 @@ exports.getVehicleDoorsLockedForPlayer = getVehicleDoorsLockedForPlayer;
  * @param vehicle
  */
 function getVehicleEngineHealth(vehicle) {
-    return _in(0xc45d23ba, 0xf168aab8, vehicle, _r, _ri);
+    return _in(0xc45d23ba, 0xf168aab8, vehicle, _r, _rf);
 }
 exports.getVehicleEngineHealth = getVehicleEngineHealth;
 /**
@@ -14366,11 +14366,11 @@ exports.getVehicleEngineHealth = getVehicleEngineHealth;
  * @param vehicle
  */
 function getVehicleEnveffScale(vehicle) {
-    return _in(0xa82819ca, 0xc9c4c403, vehicle, _r, _ri);
+    return _in(0xa82819ca, 0xc9c4c403, vehicle, _r, _rf);
 }
 exports.getVehicleEnveffScale = getVehicleEnveffScale;
 function getVehicleEstimatedMaxSpeed(vehicle) {
-    return _in(0x53af99ba, 0xa671ca47, vehicle, _r, _ri);
+    return _in(0x53af99ba, 0xa671ca47, vehicle, _r, _rf);
 }
 exports.getVehicleEstimatedMaxSpeed = getVehicleEstimatedMaxSpeed;
 function getVehicleExtraColour5(vehicle, color) {
@@ -14389,7 +14389,7 @@ function getVehicleExtraColours(vehicle) {
 }
 exports.getVehicleExtraColours = getVehicleExtraColours;
 function getVehicleFlightNozzlePosition(plane) {
-    return _in(0xda62027c, 0x8bdb326e, plane, _r, _ri);
+    return _in(0xda62027c, 0x8bdb326e, plane, _r, _rf);
 }
 exports.getVehicleFlightNozzlePosition = getVehicleFlightNozzlePosition;
 /**
@@ -14438,7 +14438,7 @@ exports.getVehicleHasParachute = getVehicleHasParachute;
  * @param maxUnkHealth
  */
 function getVehicleHealthPercentage(vehicle, maxEngineHealth, maxPetrolTankHealth, maxBodyHealth, maxMainRotorHealth, maxTailRotorHealth, maxUnkHealth) {
-    return _in(0xb8ef6120, 0x7c2393a9, vehicle, _fv(maxEngineHealth), _fv(maxPetrolTankHealth), _fv(maxBodyHealth), _fv(maxMainRotorHealth), _fv(maxTailRotorHealth), _fv(maxUnkHealth), _r, _ri);
+    return _in(0xb8ef6120, 0x7c2393a9, vehicle, _fv(maxEngineHealth), _fv(maxPetrolTankHealth), _fv(maxBodyHealth), _fv(maxMainRotorHealth), _fv(maxTailRotorHealth), _fv(maxUnkHealth), _r, _rf);
 }
 exports.getVehicleHealthPercentage = getVehicleHealthPercentage;
 function getVehicleHomingLockedontoState(p0) {
@@ -14536,7 +14536,7 @@ function getVehicleLockOnTarget(vehicle, entity) {
 }
 exports.getVehicleLockOnTarget = getVehicleLockOnTarget;
 function getVehicleMaxBraking(vehicle) {
-    return _in(0xad7e85fc, 0x227197c4, vehicle, _r, _ri);
+    return _in(0xad7e85fc, 0x227197c4, vehicle, _r, _rf);
 }
 exports.getVehicleMaxBraking = getVehicleMaxBraking;
 function getVehicleMaxNumberOfPassengers(vehicle) {
@@ -14544,7 +14544,7 @@ function getVehicleMaxNumberOfPassengers(vehicle) {
 }
 exports.getVehicleMaxNumberOfPassengers = getVehicleMaxNumberOfPassengers;
 function getVehicleMaxTraction(vehicle) {
-    return _in(0xa132fb53, 0x70554db0, vehicle, _r, _ri);
+    return _in(0xa132fb53, 0x70554db0, vehicle, _r, _rf);
 }
 exports.getVehicleMaxTraction = getVehicleMaxTraction;
 /**
@@ -14625,7 +14625,7 @@ exports.getVehicleModVariation = getVehicleModVariation;
  * @param modelHash
  */
 function getVehicleModelAcceleration(modelHash) {
-    return _in(0x8c044c5c, 0x84505b6a, _ch(modelHash), _r, _ri);
+    return _in(0x8c044c5c, 0x84505b6a, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelAcceleration = getVehicleModelAcceleration;
 /**
@@ -14635,7 +14635,7 @@ exports.getVehicleModelAcceleration = getVehicleModelAcceleration;
  * @param modelHash
  */
 function getVehicleModelAccelerationMaxMods(modelHash) {
-    return _in(0x53409b51, 0x63d5b846, _ch(modelHash), _r, _ri);
+    return _in(0x53409b51, 0x63d5b846, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelAccelerationMaxMods = getVehicleModelAccelerationMaxMods;
 /**
@@ -14645,7 +14645,7 @@ exports.getVehicleModelAccelerationMaxMods = getVehicleModelAccelerationMaxMods;
  * @param modelHash
  */
 function getVehicleModelEstimatedMaxSpeed(modelHash) {
-    return _in(0xf417c250, 0x2fffed43, _ch(modelHash), _r, _ri);
+    return _in(0xf417c250, 0x2fffed43, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelEstimatedMaxSpeed = getVehicleModelEstimatedMaxSpeed;
 /**
@@ -14655,7 +14655,7 @@ exports.getVehicleModelEstimatedMaxSpeed = getVehicleModelEstimatedMaxSpeed;
  * @param modelHash
  */
 function getVehicleModelMaxBraking(modelHash) {
-    return _in(0xdc53fd41, 0xb4ed944c, _ch(modelHash), _r, _ri);
+    return _in(0xdc53fd41, 0xb4ed944c, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelMaxBraking = getVehicleModelMaxBraking;
 /**
@@ -14663,7 +14663,7 @@ exports.getVehicleModelMaxBraking = getVehicleModelMaxBraking;
  * @param modelHash
  */
 function getVehicleModelMaxBrakingMaxMods(modelHash) {
-    return _in(0xbfba3ba7, 0x9cff7ebf, _ch(modelHash), _r, _ri);
+    return _in(0xbfba3ba7, 0x9cff7ebf, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelMaxBrakingMaxMods = getVehicleModelMaxBrakingMaxMods;
 /**
@@ -14673,7 +14673,7 @@ exports.getVehicleModelMaxBrakingMaxMods = getVehicleModelMaxBrakingMaxMods;
  * @param modelHash
  */
 function getVehicleModelMaxTraction(modelHash) {
-    return _in(0x539de94d, 0x44fdfd0d, _ch(modelHash), _r, _ri);
+    return _in(0x539de94d, 0x44fdfd0d, _ch(modelHash), _r, _rf);
 }
 exports.getVehicleModelMaxTraction = getVehicleModelMaxTraction;
 /**
@@ -14847,7 +14847,7 @@ exports.getVehiclePedIsUsing = getVehiclePedIsUsing;
  * @param vehicle
  */
 function getVehiclePetrolTankHealth(vehicle) {
-    return _in(0x7d5dabe8, 0x88d2d074, vehicle, _r, _ri);
+    return _in(0x7d5dabe8, 0x88d2d074, vehicle, _r, _rf);
 }
 exports.getVehiclePetrolTankHealth = getVehiclePetrolTankHealth;
 function getVehiclePlateType(vehicle) {
@@ -14957,7 +14957,7 @@ exports.getVehicleXenonLightColorIndex = getVehicleXenonLightColorIndex;
  * @param player
  */
 function getWantedLevelRadius(player) {
-    return _in(0x085deb49, 0x3be80812, player, _r, _ri);
+    return _in(0x085deb49, 0x3be80812, player, _r, _rf);
 }
 exports.getWantedLevelRadius = getWantedLevelRadius;
 /**
@@ -15005,7 +15005,7 @@ function getWaypointBlipEnumId() {
 }
 exports.getWaypointBlipEnumId = getWaypointBlipEnumId;
 function getWaypointDistanceAlongRoute(name, point) {
-    return _in(0xa5b76905, 0x8763e497, _ts(name), point, _r, _ri);
+    return _in(0xa5b76905, 0x8763e497, _ts(name), point, _r, _rf);
 }
 exports.getWaypointDistanceAlongRoute = getWaypointDistanceAlongRoute;
 /**
@@ -15032,7 +15032,7 @@ function getWeaponClipSize(weaponHash) {
 }
 exports.getWeaponClipSize = getWeaponClipSize;
 function getWeaponComponentHudStats(componentHash, outData) {
-    const [retval, outData_out] = _in(0xb3caf387, 0xae12e9f8, _ch(componentHash), _i, _r);
+    const [retval, outData_out] = _in(0xb3caf387, 0xae12e9f8, _ch(componentHash), _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getWeaponComponentHudStats = getWeaponComponentHudStats;
@@ -15065,7 +15065,7 @@ exports.getWeaponComponentVariantExtraModel = getWeaponComponentVariantExtraMode
  * @param componentHash
  */
 function getWeaponDamage(weaponHash, componentHash) {
-    return _in(0x3133b907, 0xd8b32053, _ch(weaponHash), _ch(componentHash), _r, _ri);
+    return _in(0x3133b907, 0xd8b32053, _ch(weaponHash), _ch(componentHash), _r, _rf);
 }
 exports.getWeaponDamage = getWeaponDamage;
 /**
@@ -15122,7 +15122,7 @@ exports.getWeaponDamageType = getWeaponDamageType;
  * @param outData
  */
 function getWeaponHudStats(weaponHash, outData) {
-    const [retval, outData_out] = _in(0xd92c739e, 0xe34c9eba, _ch(weaponHash), _i, _r);
+    const [retval, outData_out] = _in(0xd92c739e, 0xe34c9eba, _ch(weaponHash), _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.getWeaponHudStats = getWeaponHudStats;
@@ -15144,7 +15144,7 @@ exports.getWeaponObjectComponentTintIndex = getWeaponObjectComponentTintIndex;
  * @param p1
  */
 function getWeaponObjectFromPed(ped, p1) {
-    return _in(0xcae1dc9a, 0x0e22a16d, ped, p1, _r, _ri);
+    return _in(0xcae1dc9a, 0x0e22a16d, ped, p1, _r, _ro);
 }
 exports.getWeaponObjectFromPed = getWeaponObjectFromPed;
 function getWeaponObjectTintIndex(weapon) {
@@ -15156,7 +15156,7 @@ exports.getWeaponObjectTintIndex = getWeaponObjectTintIndex;
  * @param weaponHash
  */
 function getWeaponTimeBetweenShots(weaponHash) {
-    return _in(0x065d2aac, 0xad8cf7a4, _ch(weaponHash), _r, _ri);
+    return _in(0x065d2aac, 0xad8cf7a4, _ch(weaponHash), _r, _rf);
 }
 exports.getWeaponTimeBetweenShots = getWeaponTimeBetweenShots;
 /**
@@ -15199,7 +15199,7 @@ function getWindDirection() {
 }
 exports.getWindDirection = getWindDirection;
 function getWindSpeed() {
-    return _in(0xa8cf1cc0, 0xafcd3f12, _r, _ri);
+    return _in(0xa8cf1cc0, 0xafcd3f12, _r, _rf);
 }
 exports.getWindSpeed = getWindSpeed;
 /**
@@ -15529,7 +15529,7 @@ function giveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
 }
 exports.giveWeaponToPed = giveWeaponToPed;
 function golfTrailGetMaxHeight() {
-    return _in(0xa4819f5e, 0x23e2ffad, _r, _ri);
+    return _in(0xa4819f5e, 0x23e2ffad, _r, _rf);
 }
 exports.golfTrailGetMaxHeight = golfTrailGetMaxHeight;
 function golfTrailGetVisualControlPoint(p0) {
@@ -16433,12 +16433,12 @@ function initPcScriptedControls(schemeName) {
 }
 exports.initPcScriptedControls = initPcScriptedControls;
 function initShopPedComponent(outComponent) {
-    const [outComponent_out] = _in(0x1e8c308f, 0xd312c036, _i);
+    const [outComponent_out] = _in(0x1e8c308f, 0xd312c036, _ii(outComponent));
     return [outComponent_out];
 }
 exports.initShopPedComponent = initShopPedComponent;
 function initShopPedProp(outProp) {
-    const [outProp_out] = _in(0xeb0a2b75, 0x8f7b850f, _i);
+    const [outProp_out] = _in(0xeb0a2b75, 0x8f7b850f, _ii(outProp));
     return [outProp_out];
 }
 exports.initShopPedProp = initShopPedProp;
@@ -19791,11 +19791,11 @@ function leaderboards2ReadGetRowDataEnd() {
 }
 exports.leaderboards2ReadGetRowDataEnd = leaderboards2ReadGetRowDataEnd;
 function leaderboards2ReadGetRowDataFloat(p0, p1) {
-    return _in(0x38491439, 0xb6ba7f7d, p0, p1, _r, _ri);
+    return _in(0x38491439, 0xb6ba7f7d, p0, p1, _r, _rf);
 }
 exports.leaderboards2ReadGetRowDataFloat = leaderboards2ReadGetRowDataFloat;
 function leaderboards2ReadGetRowDataInfo(p0, p1) {
-    const [retval, p1_out] = _in(0x34770b9c, 0xe0e03b91, p0, _i, _r);
+    const [retval, p1_out] = _in(0x34770b9c, 0xe0e03b91, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.leaderboards2ReadGetRowDataInfo = leaderboards2ReadGetRowDataInfo;
@@ -19804,7 +19804,7 @@ function leaderboards2ReadGetRowDataInt(p0, p1) {
 }
 exports.leaderboards2ReadGetRowDataInt = leaderboards2ReadGetRowDataInt;
 function leaderboards2ReadGetRowDataStart(p0) {
-    const [retval, p0_out] = _in(0xa0f93d54, 0x65b3094d, _i, _r);
+    const [retval, p0_out] = _in(0xa0f93d54, 0x65b3094d, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.leaderboards2ReadGetRowDataStart = leaderboards2ReadGetRowDataStart;
@@ -19814,7 +19814,7 @@ function leaderboards2ReadRankPrediction() {
 }
 exports.leaderboards2ReadRankPrediction = leaderboards2ReadRankPrediction;
 function leaderboards2WriteData(p0) {
-    const [retval, p0_out] = _in(0xae220654, 0x5888ae49, _i, _r);
+    const [retval, p0_out] = _in(0xae220654, 0x5888ae49, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.leaderboards2WriteData = leaderboards2WriteData;
@@ -19824,7 +19824,7 @@ function leaderboards2WriteDataForEventType() {
 }
 exports.leaderboards2WriteDataForEventType = leaderboards2WriteDataForEventType;
 function leaderboardsCacheDataRow(p0) {
-    const [retval, p0_out] = _in(0xb9bb18e2, 0xc40142ed, _i, _r);
+    const [retval, p0_out] = _in(0xb9bb18e2, 0xc40142ed, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.leaderboardsCacheDataRow = leaderboardsCacheDataRow;
@@ -19837,7 +19837,7 @@ function leaderboardsClearCacheDataId(p0) {
 }
 exports.leaderboardsClearCacheDataId = leaderboardsClearCacheDataId;
 function leaderboardsGetCacheDataRow(p0, p1, p2) {
-    const [retval, p2_out] = _in(0x9120e8db, 0xa3d69273, p0, p1, _i, _r);
+    const [retval, p2_out] = _in(0x9120e8db, 0xa3d69273, p0, p1, _ii(p2), _r);
     return [retval, p2_out];
 }
 exports.leaderboardsGetCacheDataRow = leaderboardsGetCacheDataRow;
@@ -20098,7 +20098,7 @@ function lockRadioStationTrackList(radioStation, trackListName) {
 }
 exports.lockRadioStationTrackList = lockRadioStationTrackList;
 function log10(value) {
-    return _in(0xe816e655, 0xde37fe20, _fv(value), _r, _ri);
+    return _in(0xe816e655, 0xde37fe20, _fv(value), _r, _rf);
 }
 exports.log10 = log10;
 function lowerConvertibleRoof(vehicle, instantlyLower) {
@@ -20159,7 +20159,7 @@ function netGameserverBasketAddItem(quantity) {
 }
 exports.netGameserverBasketAddItem = netGameserverBasketAddItem;
 function netGameserverBasketApplyServerData(p0, p1) {
-    const [retval, p1_out] = _in(0xe1a0450e, 0xd46a7812, p0, _i, _r);
+    const [retval, p1_out] = _in(0xe1a0450e, 0xd46a7812, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.netGameserverBasketApplyServerData = netGameserverBasketApplyServerData;
@@ -20355,7 +20355,7 @@ exports.netToEnt = netToEnt;
  * @param netHandle
  */
 function netToObj(netHandle) {
-    return _in(0xd8515f5f, 0xea14cb3f, netHandle, _r, _ri);
+    return _in(0xd8515f5f, 0xea14cb3f, netHandle, _r, _ro);
 }
 exports.netToObj = netToObj;
 /**
@@ -20531,7 +20531,7 @@ function networkAllowRemoteSyncedSceneLocalPlayerRequests(p0) {
 }
 exports.networkAllowRemoteSyncedSceneLocalPlayerRequests = networkAllowRemoteSyncedSceneLocalPlayerRequests;
 function networkAmIBlockedByGamer(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x15337c7c, 0x268a27b2, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x15337c7c, 0x268a27b2, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkAmIBlockedByGamer = networkAmIBlockedByGamer;
@@ -20540,7 +20540,7 @@ function networkAmIBlockedByPlayer(player) {
 }
 exports.networkAmIBlockedByPlayer = networkAmIBlockedByPlayer;
 function networkAmIMutedByGamer(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xdf02a2c9, 0x3f1f26da, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xdf02a2c9, 0x3f1f26da, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkAmIMutedByGamer = networkAmIMutedByGamer;
@@ -20711,7 +20711,7 @@ function networkCanBet(amount) {
 }
 exports.networkCanBet = networkCanBet;
 function networkCanCommunicateWithGamer(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x8f5d1ad8, 0x32aeb06c, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x8f5d1ad8, 0x32aeb06c, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanCommunicateWithGamer = networkCanCommunicateWithGamer;
@@ -20720,12 +20720,12 @@ function networkCanEnterMultiplayer() {
 }
 exports.networkCanEnterMultiplayer = networkCanEnterMultiplayer;
 function networkCanGamerPlayMultiplayerWithMe(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x135f9b7b, 0x7add2185, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x135f9b7b, 0x7add2185, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanGamerPlayMultiplayerWithMe = networkCanGamerPlayMultiplayerWithMe;
 function networkCanPlayMultiplayerWithGamer(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x07dd29d5, 0xe22763f1, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x07dd29d5, 0xe22763f1, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanPlayMultiplayerWithGamer = networkCanPlayMultiplayerWithGamer;
@@ -20734,7 +20734,7 @@ function networkCanQueueForPreviousSessionJoin() {
 }
 exports.networkCanQueueForPreviousSessionJoin = networkCanQueueForPreviousSessionJoin;
 function networkCanReceiveLocalInvite(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x421e34c5, 0x5f125964, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x421e34c5, 0x5f125964, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanReceiveLocalInvite = networkCanReceiveLocalInvite;
@@ -20743,7 +20743,7 @@ function networkCanReceivePlayerCash(p0, p1, p2, p3) {
 }
 exports.networkCanReceivePlayerCash = networkCanReceivePlayerCash;
 function networkCanSendLocalInvite(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x021abcbd, 0x98ec4320, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x021abcbd, 0x98ec4320, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanSendLocalInvite = networkCanSendLocalInvite;
@@ -20769,12 +20769,12 @@ function networkCanSpendMoney2(p0, p1, p2, p3, p5, p6) {
 }
 exports.networkCanSpendMoney2 = networkCanSpendMoney2;
 function networkCanTextChatWithGamer(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xa150a4f0, 0x65806b1f, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xa150a4f0, 0x65806b1f, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanTextChatWithGamer = networkCanTextChatWithGamer;
 function networkCanViewGamerUserContent(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xb57a4954, 0x5ba53ce7, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xb57a4954, 0x5ba53ce7, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCanViewGamerUserContent = networkCanViewGamerUserContent;
@@ -20839,12 +20839,12 @@ function networkCheckCommunicationPrivileges(p0, p1, p2) {
 }
 exports.networkCheckCommunicationPrivileges = networkCheckCommunicationPrivileges;
 function networkCheckDataManagerForHandle(p0, gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x4ad490ae, 0x1536933b, p0, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x4ad490ae, 0x1536933b, p0, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCheckDataManagerForHandle = networkCheckDataManagerForHandle;
 function networkCheckDataManagerSucceededForHandle(p0, gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x44b37cdc, 0xae765aae, p0, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x44b37cdc, 0xae765aae, p0, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkCheckDataManagerSucceededForHandle = networkCheckDataManagerSucceededForHandle;
@@ -20891,12 +20891,12 @@ function networkClanCrewinfoGetStringValue(animDict, animName) {
 }
 exports.networkClanCrewinfoGetStringValue = networkClanCrewinfoGetStringValue;
 function networkClanDownloadMembership(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xa989044e, 0x70010abe, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xa989044e, 0x70010abe, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkClanDownloadMembership = networkClanDownloadMembership;
 function networkClanDownloadMembershipPending(p0) {
-    const [retval, p0_out] = _in(0x5b9e023d, 0xc6ebedc0, _i, _r);
+    const [retval, p0_out] = _in(0x5b9e023d, 0xc6ebedc0, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkClanDownloadMembershipPending = networkClanDownloadMembershipPending;
@@ -20945,7 +20945,7 @@ function networkClanHasCrewinfoMetadataBeenReceived() {
 }
 exports.networkClanHasCrewinfoMetadataBeenReceived = networkClanHasCrewinfoMetadataBeenReceived;
 function networkClanIsEmblemReady(p0, p1) {
-    const [retval, p1_out] = _in(0xa134777f, 0xf7f33331, p0, _i, _r);
+    const [retval, p1_out] = _in(0xa134777f, 0xf7f33331, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.networkClanIsEmblemReady = networkClanIsEmblemReady;
@@ -20981,7 +20981,7 @@ function networkClanPlayerGetDesc(bufferSize) {
 }
 exports.networkClanPlayerGetDesc = networkClanPlayerGetDesc;
 function networkClanPlayerIsActive(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xb124b57f, 0x571d8f18, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xb124b57f, 0x571d8f18, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkClanPlayerIsActive = networkClanPlayerIsActive;
@@ -21458,7 +21458,7 @@ exports.networkEarnFromAiTargetKill = networkEarnFromAiTargetKill;
  * @param p2
  */
 function networkEarnFromAmbientJob(p0, p1, p2) {
-    const [p2_out] = _in(0xfb6db092, 0xfbae29e6, p0, _ts(p1), _i);
+    const [p2_out] = _in(0xfb6db092, 0xfbae29e6, p0, _ts(p1), _ii(p2));
     return [p2_out];
 }
 exports.networkEarnFromAmbientJob = networkEarnFromAmbientJob;
@@ -21929,7 +21929,7 @@ function networkForceLocalUseOfSyncedSceneCamera(netScene) {
 }
 exports.networkForceLocalUseOfSyncedSceneCamera = networkForceLocalUseOfSyncedSceneCamera;
 function networkGamerHasHeadset(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xf2fd55cb, 0x574bcc55, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xf2fd55cb, 0x574bcc55, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkGamerHasHeadset = networkGamerHasHeadset;
@@ -21938,7 +21938,7 @@ function networkGamertagFromHandlePending() {
 }
 exports.networkGamertagFromHandlePending = networkGamertagFromHandlePending;
 function networkGamertagFromHandleStart(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x9f0c0a98, 0x1d73fa56, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x9f0c0a98, 0x1d73fa56, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkGamertagFromHandleStart = networkGamertagFromHandleStart;
@@ -21971,11 +21971,11 @@ function networkGetAssistedKillOfEntity(player, entity, p2) {
 }
 exports.networkGetAssistedKillOfEntity = networkGetAssistedKillOfEntity;
 function networkGetAverageLatency(player) {
-    return _in(0xd414be12, 0x9bb81b32, player, _r, _ri);
+    return _in(0xd414be12, 0x9bb81b32, player, _r, _rf);
 }
 exports.networkGetAverageLatency = networkGetAverageLatency;
 function networkGetAveragePacketLoss(player) {
-    return _in(0x350c2394, 0x9e43686c, player, _r, _ri);
+    return _in(0x350c2394, 0x9e43686c, player, _r, _rf);
 }
 exports.networkGetAveragePacketLoss = networkGetAveragePacketLoss;
 /**
@@ -21983,7 +21983,7 @@ exports.networkGetAveragePacketLoss = networkGetAveragePacketLoss;
  * @param player
  */
 function networkGetAveragePing(player) {
-    return _in(0x0e3a041e, 0xd6ac2b45, player, _r, _ri);
+    return _in(0x0e3a041e, 0xd6ac2b45, player, _r, _rf);
 }
 exports.networkGetAveragePing = networkGetAveragePing;
 function networkGetBoneIdOfFatalHit() {
@@ -22040,7 +22040,7 @@ function networkGetContentModifierListId(contentHash) {
 }
 exports.networkGetContentModifierListId = networkGetContentModifierListId;
 function networkGetCurrentlySelectedGamerHandleFromInviteMenu(p0) {
-    const [retval, p0_out] = _in(0x74881e6b, 0xcae2327c, _i, _r);
+    const [retval, p0_out] = _in(0x74881e6b, 0xcae2327c, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkGetCurrentlySelectedGamerHandleFromInviteMenu = networkGetCurrentlySelectedGamerHandleFromInviteMenu;
@@ -22129,7 +22129,7 @@ function networkGetGamerStatusResult(p1) {
 }
 exports.networkGetGamerStatusResult = networkGetGamerStatusResult;
 function networkGetGamertagFromHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x42614116, 0x2ebe5cdb, _i, _r, _s);
+    const [retval, gamerHandle_out] = _in(0x42614116, 0x2ebe5cdb, _ii(gamerHandle), _r, _s);
     return [retval, gamerHandle_out];
 }
 exports.networkGetGamertagFromHandle = networkGetGamertagFromHandle;
@@ -22232,7 +22232,7 @@ exports.networkGetMuteCountForPlayer = networkGetMuteCountForPlayer;
  * @param p0
  */
 function networkGetNetStatisticsInfo(p0) {
-    const [p0_out] = _in(0x6fd992c4, 0xa1c1b986, _i);
+    const [p0_out] = _in(0x6fd992c4, 0xa1c1b986, _ii(p0));
     return [p0_out];
 }
 exports.networkGetNetStatisticsInfo = networkGetNetStatisticsInfo;
@@ -22313,7 +22313,7 @@ function networkGetPlayerAccountId(player) {
 }
 exports.networkGetPlayerAccountId = networkGetPlayerAccountId;
 function networkGetPlayerFromGamerHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xce5f689c, 0xf5a0a49d, _i, _r, _ri);
+    const [retval, gamerHandle_out] = _in(0xce5f689c, 0xf5a0a49d, _ii(gamerHandle), _r, _ri);
     return [retval, gamerHandle_out];
 }
 exports.networkGetPlayerFromGamerHandle = networkGetPlayerFromGamerHandle;
@@ -22334,7 +22334,7 @@ function networkGetPlayerIsHighEarner() {
 }
 exports.networkGetPlayerIsHighEarner = networkGetPlayerIsHighEarner;
 function networkGetPlayerLoudness(player) {
-    return _in(0x21a1684a, 0x25c2867f, player, _r, _ri);
+    return _in(0x21a1684a, 0x25c2867f, player, _r, _rf);
 }
 exports.networkGetPlayerLoudness = networkGetPlayerLoudness;
 function networkGetPlayerOwnsWaypoint(player) {
@@ -22362,7 +22362,7 @@ function networkGetPresenceInviteFromAdmin(p0) {
 }
 exports.networkGetPresenceInviteFromAdmin = networkGetPresenceInviteFromAdmin;
 function networkGetPresenceInviteHandle(p0, p1) {
-    const [retval, p1_out] = _in(0x38d5b0fe, 0xbb086f75, p0, _i, _r);
+    const [retval, p1_out] = _in(0x38d5b0fe, 0xbb086f75, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.networkGetPresenceInviteHandle = networkGetPresenceInviteHandle;
@@ -22432,7 +22432,7 @@ function networkGetPvcTransferBalance() {
 }
 exports.networkGetPvcTransferBalance = networkGetPvcTransferBalance;
 function networkGetRandomFloatRanged(rangeStart, rangeEnd) {
-    return _in(0x04bd27b5, 0xacb67067, _fv(rangeStart), _fv(rangeEnd), _r, _ri);
+    return _in(0x04bd27b5, 0xacb67067, _fv(rangeStart), _fv(rangeEnd), _r, _rf);
 }
 exports.networkGetRandomFloatRanged = networkGetRandomFloatRanged;
 function networkGetRandomInt() {
@@ -22479,7 +22479,7 @@ exports.networkGetScriptStatus = networkGetScriptStatus;
  * @param p0
  */
 function networkGetSignallingInfo(p0) {
-    const [p0_out] = _in(0x2555cf7d, 0xa5473794, _i);
+    const [p0_out] = _in(0x2555cf7d, 0xa5473794, _ii(p0));
     return [p0_out];
 }
 exports.networkGetSignallingInfo = networkGetSignallingInfo;
@@ -22496,7 +22496,7 @@ function networkGetStringWalletBalance(characterSlot) {
 }
 exports.networkGetStringWalletBalance = networkGetStringWalletBalance;
 function networkGetTalkerProximity() {
-    return _in(0x84f0f131, 0x20b4e098, _r, _ri);
+    return _in(0x84f0f131, 0x20b4e098, _r, _rf);
 }
 exports.networkGetTalkerProximity = networkGetTalkerProximity;
 function networkGetThisScriptIsNetworkScript() {
@@ -22512,7 +22512,7 @@ function networkGetTotalNumPlayers() {
 }
 exports.networkGetTotalNumPlayers = networkGetTotalNumPlayers;
 function networkGetTransitionHost(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x65042b97, 0x74c4435e, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x65042b97, 0x74c4435e, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkGetTransitionHost = networkGetTransitionHost;
@@ -22550,7 +22550,7 @@ function networkGetVcWalletBalance(characterSlot) {
 }
 exports.networkGetVcWalletBalance = networkGetVcWalletBalance;
 function networkGivePlayerJobshareCash(amount, gamerHandle) {
-    const [gamerHandle_out] = _in(0xfb18df9c, 0xb95e0105, amount, _i);
+    const [gamerHandle_out] = _in(0xfb18df9c, 0xb95e0105, amount, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkGivePlayerJobshareCash = networkGivePlayerJobshareCash;
@@ -22623,17 +22623,17 @@ function networkHasHeadset() {
 }
 exports.networkHasHeadset = networkHasHeadset;
 function networkHasInvitedGamer(p0) {
-    const [retval, p0_out] = _in(0x4d86cd31, 0xe8976ece, _i, _r);
+    const [retval, p0_out] = _in(0x4d86cd31, 0xe8976ece, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkHasInvitedGamer = networkHasInvitedGamer;
 function networkHasInvitedGamerToTransition(p0) {
-    const [retval, p0_out] = _in(0x7284a47b, 0x3540e6cf, _i, _r);
+    const [retval, p0_out] = _in(0x7284a47b, 0x3540e6cf, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkHasInvitedGamerToTransition = networkHasInvitedGamerToTransition;
 function networkHasMadeInviteDecision(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x71dc455f, 0x5cd1c2b1, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x71dc455f, 0x5cd1c2b1, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkHasMadeInviteDecision = networkHasMadeInviteDecision;
@@ -22679,7 +22679,7 @@ function networkHasSocialNetworkingSharingPriv() {
 }
 exports.networkHasSocialNetworkingSharingPriv = networkHasSocialNetworkingSharingPriv;
 function networkHasTransitionInviteBeenAcked(p0) {
-    const [retval, p0_out] = _in(0x3f9990bf, 0x5f22759c, _i, _r);
+    const [retval, p0_out] = _in(0x3f9990bf, 0x5f22759c, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkHasTransitionInviteBeenAcked = networkHasTransitionInviteBeenAcked;
@@ -22691,12 +22691,12 @@ function networkHasValidRosCredentials() {
 }
 exports.networkHasValidRosCredentials = networkHasValidRosCredentials;
 function networkHasViewGamerUserContentResult(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xcca4318e, 0x1ab03f1f, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xcca4318e, 0x1ab03f1f, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkHasViewGamerUserContentResult = networkHasViewGamerUserContentResult;
 function networkHashFromGamerHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x58575ac3, 0xcf2ca8ec, _i, _r, _ri);
+    const [retval, gamerHandle_out] = _in(0x58575ac3, 0xcf2ca8ec, _ii(gamerHandle), _r, _ri);
     return [retval, gamerHandle_out];
 }
 exports.networkHashFromGamerHandle = networkHashFromGamerHandle;
@@ -22805,7 +22805,7 @@ function networkIsActivitySpectator() {
 }
 exports.networkIsActivitySpectator = networkIsActivitySpectator;
 function networkIsActivitySpectatorFromHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x2763bbaa, 0x72a7bcb9, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x2763bbaa, 0x72a7bcb9, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsActivitySpectatorFromHandle = networkIsActivitySpectatorFromHandle;
@@ -22828,7 +22828,7 @@ exports.networkIsCableConnected = networkIsCableConnected;
  * @param gamerHandle
  */
 function networkIsChattingInPlatformParty(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x8de9945b, 0xcc9aec52, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x8de9945b, 0xcc9aec52, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsChattingInPlatformParty = networkIsChattingInPlatformParty;
@@ -22876,12 +22876,12 @@ function networkIsFindingGamers() {
 }
 exports.networkIsFindingGamers = networkIsFindingGamers;
 function networkIsFriend(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x1a24a179, 0xf9b31654, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x1a24a179, 0xf9b31654, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsFriend = networkIsFriend;
 function networkIsFriendHandleOnline(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x87eb7a3f, 0xfcb314db, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x87eb7a3f, 0xfcb314db, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsFriendHandleOnline = networkIsFriendHandleOnline;
@@ -22910,22 +22910,22 @@ function networkIsGameInProgress() {
 }
 exports.networkIsGameInProgress = networkIsGameInProgress;
 function networkIsGamerBlockedByMe(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xe944c4f5, 0xaf1b5883, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xe944c4f5, 0xaf1b5883, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsGamerBlockedByMe = networkIsGamerBlockedByMe;
 function networkIsGamerInMySession(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x0f10b05d, 0xdf8d16e9, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x0f10b05d, 0xdf8d16e9, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsGamerInMySession = networkIsGamerInMySession;
 function networkIsGamerMutedByMe(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xce60de01, 0x1b6c7978, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xce60de01, 0x1b6c7978, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsGamerMutedByMe = networkIsGamerMutedByMe;
 function networkIsGamerTalking(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x71c33b22, 0x606cd88a, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x71c33b22, 0x606cd88a, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsGamerTalking = networkIsGamerTalking;
@@ -22984,7 +22984,7 @@ function networkIsInTutorialSession() {
 }
 exports.networkIsInTutorialSession = networkIsInTutorialSession;
 function networkIsInactiveProfile(p0) {
-    const [retval, p0_out] = _in(0x7e587455, 0x04313a2e, _i, _r);
+    const [retval, p0_out] = _in(0x7e587455, 0x04313a2e, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkIsInactiveProfile = networkIsInactiveProfile;
@@ -23082,7 +23082,7 @@ function networkIsPlayerMutedByMe(player) {
 }
 exports.networkIsPlayerMutedByMe = networkIsPlayerMutedByMe;
 function networkIsPlayerOnBlocklist(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xad4326fc, 0xa30d62f8, _i, _r);
+    const [retval, gamerHandle_out] = _in(0xad4326fc, 0xa30d62f8, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsPlayerOnBlocklist = networkIsPlayerOnBlocklist;
@@ -23185,7 +23185,7 @@ function networkIsTransitionHost() {
 }
 exports.networkIsTransitionHost = networkIsTransitionHost;
 function networkIsTransitionHostFromHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x6b5c83ba, 0x3efe6a10, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x6b5c83ba, 0x3efe6a10, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkIsTransitionHostFromHandle = networkIsTransitionHostFromHandle;
@@ -23299,12 +23299,12 @@ function networkMarkAsWaitingAsync(p0) {
 }
 exports.networkMarkAsWaitingAsync = networkMarkAsWaitingAsync;
 function networkMarkTransitionGamerAsFullyJoined(p0) {
-    const [retval, p0_out] = _in(0x5728bb6d, 0x63e3ff1d, _i, _r);
+    const [retval, p0_out] = _in(0x5728bb6d, 0x63e3ff1d, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkMarkTransitionGamerAsFullyJoined = networkMarkTransitionGamerAsFullyJoined;
 function networkMemberIdFromGamerHandle(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0xc8263013, 0x2081bb6f, _i, _r, _s);
+    const [retval, gamerHandle_out] = _in(0xc8263013, 0x2081bb6f, _ii(gamerHandle), _r, _s);
     return [retval, gamerHandle_out];
 }
 exports.networkMemberIdFromGamerHandle = networkMemberIdFromGamerHandle;
@@ -23405,7 +23405,7 @@ function networkPayMatchEntryFee(amount, matchId, p2, p3) {
 }
 exports.networkPayMatchEntryFee = networkPayMatchEntryFee;
 function networkPermissionsHasGamerRecord(gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x559ebf90, 0x1a8c68e0, _i, _r);
+    const [retval, gamerHandle_out] = _in(0x559ebf90, 0x1a8c68e0, _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkPermissionsHasGamerRecord = networkPermissionsHasGamerRecord;
@@ -23473,12 +23473,12 @@ function networkPreventScriptHostMigration() {
 }
 exports.networkPreventScriptHostMigration = networkPreventScriptHostMigration;
 function networkQueryRespawnResults(p0) {
-    const [retval, p0_out] = _in(0x3c891a25, 0x1567dfce, _i, _r, _ri);
+    const [retval, p0_out] = _in(0x3c891a25, 0x1567dfce, _ii(p0), _r, _ri);
     return [retval, p0_out];
 }
 exports.networkQueryRespawnResults = networkQueryRespawnResults;
 function networkQueueGamerForStatus(p0) {
-    const [retval, p0_out] = _in(0x85a0ef54, 0xa500882c, _i, _r);
+    const [retval, p0_out] = _in(0x85a0ef54, 0xa500882c, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkQueueGamerForStatus = networkQueueGamerForStatus;
@@ -23487,7 +23487,7 @@ function networkQuitMpToDesktop() {
 }
 exports.networkQuitMpToDesktop = networkQuitMpToDesktop;
 function networkReceivePlayerJobshareCash(value, gamerHandle) {
-    const [gamerHandle_out] = _in(0x56a3b519, 0x44c50598, value, _i);
+    const [gamerHandle_out] = _in(0x56a3b519, 0x44c50598, value, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkReceivePlayerJobshareCash = networkReceivePlayerJobshareCash;
@@ -23593,7 +23593,7 @@ function networkRemovePresenceInvite(p0) {
 }
 exports.networkRemovePresenceInvite = networkRemovePresenceInvite;
 function networkRemoveTransitionInvite(p0) {
-    const [p0_out] = _in(0x7524b431, 0xb2e6f7ee, _i);
+    const [p0_out] = _in(0x7524b431, 0xb2e6f7ee, _ii(p0));
     return [p0_out];
 }
 exports.networkRemoveTransitionInvite = networkRemoveTransitionInvite;
@@ -23682,7 +23682,7 @@ exports.networkSendQueuedJoinRequest = networkSendQueuedJoinRequest;
  * @param gamerHandle
  */
 function networkSendTextMessage(message, gamerHandle) {
-    const [retval, gamerHandle_out] = _in(0x3a214f2e, 0xc889b100, _ts(message), _i, _r);
+    const [retval, gamerHandle_out] = _in(0x3a214f2e, 0xc889b100, _ts(message), _ii(gamerHandle), _r);
     return [retval, gamerHandle_out];
 }
 exports.networkSendTextMessage = networkSendTextMessage;
@@ -23769,7 +23769,7 @@ function networkSessionGetHostAimPreference() {
 }
 exports.networkSessionGetHostAimPreference = networkSessionGetHostAimPreference;
 function networkSessionGetInviter(gamerHandle) {
-    const [gamerHandle_out] = _in(0xe57397b4, 0xa3429dd0, _i);
+    const [gamerHandle_out] = _in(0xe57397b4, 0xa3429dd0, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkSessionGetInviter = networkSessionGetInviter;
@@ -23951,7 +23951,7 @@ function networkSessionValidateJoin(p0) {
 }
 exports.networkSessionValidateJoin = networkSessionValidateJoin;
 function networkSessionVoiceConnectToPlayer(gamerHandle) {
-    const [gamerHandle_out] = _in(0xabd5e88b, 0x8a2d3db2, _i);
+    const [gamerHandle_out] = _in(0xabd5e88b, 0x8a2d3db2, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkSessionVoiceConnectToPlayer = networkSessionVoiceConnectToPlayer;
@@ -24004,7 +24004,7 @@ function networkSetCurrentChatOption(newChatOption) {
 }
 exports.networkSetCurrentChatOption = networkSetCurrentChatOption;
 function networkSetCurrentDataManagerHandle(p0) {
-    const [retval, p0_out] = _in(0x796a87b3, 0xb68d1f3d, _i, _r);
+    const [retval, p0_out] = _in(0x796a87b3, 0xb68d1f3d, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkSetCurrentDataManagerHandle = networkSetCurrentDataManagerHandle;
@@ -24046,7 +24046,7 @@ function networkSetCurrentSpawnLocationOption(mpSettingSpawn) {
 }
 exports.networkSetCurrentSpawnLocationOption = networkSetCurrentSpawnLocationOption;
 function networkSetCurrentlySelectedGamerHandleFromInviteMenu(p0) {
-    const [retval, p0_out] = _in(0x7206f674, 0xf2a3b1bb, _i, _r);
+    const [retval, p0_out] = _in(0x7206f674, 0xf2a3b1bb, _ii(p0), _r);
     return [retval, p0_out];
 }
 exports.networkSetCurrentlySelectedGamerHandleFromInviteMenu = networkSetCurrentlySelectedGamerHandleFromInviteMenu;
@@ -24087,7 +24087,7 @@ function networkSetFriendlyFireOption(toggle) {
 }
 exports.networkSetFriendlyFireOption = networkSetFriendlyFireOption;
 function networkSetGamerInvitedToTransition(gamerHandle) {
-    const [gamerHandle_out] = _in(0xca2c8073, 0x411ecdb6, _i);
+    const [gamerHandle_out] = _in(0xca2c8073, 0x411ecdb6, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkSetGamerInvitedToTransition = networkSetGamerInvitedToTransition;
@@ -24121,7 +24121,7 @@ function networkSetInviteFailedMessageForInviteMenu() {
 }
 exports.networkSetInviteFailedMessageForInviteMenu = networkSetInviteFailedMessageForInviteMenu;
 function networkSetInviteOnCallForInviteMenu(p0) {
-    const [p0_out] = _in(0x66f010a4, 0xb031a331, _i);
+    const [p0_out] = _in(0x66f010a4, 0xb031a331, _ii(p0));
     return [p0_out];
 }
 exports.networkSetInviteOnCallForInviteMenu = networkSetInviteOnCallForInviteMenu;
@@ -24287,7 +24287,7 @@ function networkSetTransitionActivityId(p0) {
 }
 exports.networkSetTransitionActivityId = networkSetTransitionActivityId;
 function networkSetTransitionCreatorHandle(p0) {
-    const [p0_out] = _in(0xef26739b, 0xcd9907d5, _i);
+    const [p0_out] = _in(0xef26739b, 0xcd9907d5, _ii(p0));
     return [p0_out];
 }
 exports.networkSetTransitionCreatorHandle = networkSetTransitionCreatorHandle;
@@ -24335,7 +24335,7 @@ function networkShowChatRestrictionMsc(player) {
 }
 exports.networkShowChatRestrictionMsc = networkShowChatRestrictionMsc;
 function networkShowProfileUi(gamerHandle) {
-    const [gamerHandle_out] = _in(0x859ed1ce, 0xa343fca8, _i);
+    const [gamerHandle_out] = _in(0x859ed1ce, 0xa343fca8, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.networkShowProfileUi = networkShowProfileUi;
@@ -24367,7 +24367,7 @@ function networkSpendAgency(p0, p1, p2, p3, p4) {
 }
 exports.networkSpendAgency = networkSpendAgency;
 function networkSpendApartmentUtilities(amount, p1, p2, data) {
-    const [data_out] = _in(0x1254b5b3, 0x925efd3d, amount, p1, p2, _i);
+    const [data_out] = _in(0x1254b5b3, 0x925efd3d, amount, p1, p2, _ii(data));
     return [data_out];
 }
 exports.networkSpendApartmentUtilities = networkSpendApartmentUtilities;
@@ -24439,7 +24439,7 @@ function networkSpendBuyAutoshop(p0, p1, p2, p3) {
 }
 exports.networkSpendBuyAutoshop = networkSpendBuyAutoshop;
 function networkSpendBuyCasino(amount, p1, p2, data) {
-    const [data_out] = _in(0x34a6fc4d, 0x06c4da0f, amount, p1, p2, _i);
+    const [data_out] = _in(0x34a6fc4d, 0x06c4da0f, amount, p1, p2, _ii(data));
     return [data_out];
 }
 exports.networkSpendBuyCasino = networkSpendBuyCasino;
@@ -24624,7 +24624,7 @@ function networkSpendUpgradeAutoshop(p0, p1, p2, p3) {
 }
 exports.networkSpendUpgradeAutoshop = networkSpendUpgradeAutoshop;
 function networkSpendUpgradeCasino(amount, p1, p2, data) {
-    const [data_out] = _in(0x4740d62b, 0xc1b4ebea, amount, p1, p2, _i);
+    const [data_out] = _in(0x4740d62b, 0xc1b4ebea, amount, p1, p2, _ii(data));
     return [data_out];
 }
 exports.networkSpendUpgradeCasino = networkSpendUpgradeCasino;
@@ -25073,7 +25073,7 @@ exports.networkStartSynchronisedScene = networkStartSynchronisedScene;
  * @param netHandle
  */
 function networkStartUserContentPermissionsCheck(netHandle) {
-    const [retval, netHandle_out] = _in(0xdeb2b99a, 0x1af1a2a6, _i, _r, _ri);
+    const [retval, netHandle_out] = _in(0xdeb2b99a, 0x1af1a2a6, _ii(netHandle), _r, _ri);
     return [retval, netHandle_out];
 }
 exports.networkStartUserContentPermissionsCheck = networkStartUserContentPermissionsCheck;
@@ -26175,7 +26175,7 @@ function playstatsActivityDone(p0, activityId) {
 }
 exports.playstatsActivityDone = playstatsActivityDone;
 function playstatsAppendDirectorMetric(p0) {
-    const [p0_out] = _in(0x46326e13, 0xda4e0546, _i);
+    const [p0_out] = _in(0x46326e13, 0xda4e0546, _ii(p0));
     return [p0_out];
 }
 exports.playstatsAppendDirectorMetric = playstatsAppendDirectorMetric;
@@ -26192,7 +26192,7 @@ function playstatsArcadeLoveMatch(p0, p1) {
 }
 exports.playstatsArcadeLoveMatch = playstatsArcadeLoveMatch;
 function playstatsArenaWarsEnded(data) {
-    const [data_out] = _in(0xb479d9f0, 0xd48a1bc5, _i);
+    const [data_out] = _in(0xb479d9f0, 0xd48a1bc5, _ii(data));
     return [data_out];
 }
 exports.playstatsArenaWarsEnded = playstatsArenaWarsEnded;
@@ -26257,7 +26257,7 @@ function playstatsBusinessBattleEnded(p0) {
 }
 exports.playstatsBusinessBattleEnded = playstatsBusinessBattleEnded;
 function playstatsBuyContrabandMission(data) {
-    const [data_out] = _in(0xd6781e42, 0x755531f7, _i);
+    const [data_out] = _in(0xd6781e42, 0x755531f7, _ii(data));
     return [data_out];
 }
 exports.playstatsBuyContrabandMission = playstatsBuyContrabandMission;
@@ -26399,12 +26399,12 @@ function playstatsCreateMatchHistoryId2() {
 }
 exports.playstatsCreateMatchHistoryId2 = playstatsCreateMatchHistoryId2;
 function playstatsDarCheckpoint(data) {
-    const [data_out] = _in(0x0bc254ff, 0x3a911501, _i);
+    const [data_out] = _in(0x0bc254ff, 0x3a911501, _ii(data));
     return [data_out];
 }
 exports.playstatsDarCheckpoint = playstatsDarCheckpoint;
 function playstatsDefendContrabandMission(data) {
-    const [data_out] = _in(0x2605663b, 0xd4f23b5d, _i);
+    const [data_out] = _in(0x2605663b, 0xd4f23b5d, _ii(data));
     return [data_out];
 }
 exports.playstatsDefendContrabandMission = playstatsDefendContrabandMission;
@@ -26421,7 +26421,7 @@ function playstatsDroneUsage(p0, p1, p2) {
 }
 exports.playstatsDroneUsage = playstatsDroneUsage;
 function playstatsDupeDetected(data) {
-    const [data_out] = _in(0x848b6610, 0x0ee33b05, _i);
+    const [data_out] = _in(0x848b6610, 0x0ee33b05, _ii(data));
     return [data_out];
 }
 exports.playstatsDupeDetected = playstatsDupeDetected;
@@ -26430,7 +26430,7 @@ function playstatsEarnedMcPoints(p0, p1, p2, p3, p4, p5) {
 }
 exports.playstatsEarnedMcPoints = playstatsEarnedMcPoints;
 function playstatsEnterSessionPack(data) {
-    const [data_out] = _in(0x878ff156, 0xd36e9956, _i);
+    const [data_out] = _in(0x878ff156, 0xd36e9956, _ii(data));
     return [data_out];
 }
 exports.playstatsEnterSessionPack = playstatsEnterSessionPack;
@@ -26495,7 +26495,7 @@ function playstatsFmEventVehicletarget(p0) {
 }
 exports.playstatsFmEventVehicletarget = playstatsFmEventVehicletarget;
 function playstatsFmHeistPrepEnded(data) {
-    const [data_out] = _in(0xd8afb345, 0xa9c5ccbb, _i);
+    const [data_out] = _in(0xd8afb345, 0xa9c5ccbb, _ii(data));
     return [data_out];
 }
 exports.playstatsFmHeistPrepEnded = playstatsFmHeistPrepEnded;
@@ -26504,7 +26504,7 @@ function playstatsFmMissionEnd(p0, p1, p2) {
 }
 exports.playstatsFmMissionEnd = playstatsFmMissionEnd;
 function playstatsFreemodeCasinoMissionEnded(data) {
-    const [data_out] = _in(0x1a0d4a6c, 0x336b7bc5, _i);
+    const [data_out] = _in(0x1a0d4a6c, 0x336b7bc5, _ii(data));
     return [data_out];
 }
 exports.playstatsFreemodeCasinoMissionEnded = playstatsFreemodeCasinoMissionEnded;
@@ -26513,7 +26513,7 @@ function playstatsFriendActivity(p0, p1) {
 }
 exports.playstatsFriendActivity = playstatsFriendActivity;
 function playstatsGunrunningMissionEnded(data) {
-    const [data_out] = _in(0x0eacdf84, 0x87d5155a, _i);
+    const [data_out] = _in(0x0eacdf84, 0x87d5155a, _ii(data));
     return [data_out];
 }
 exports.playstatsGunrunningMissionEnded = playstatsGunrunningMissionEnded;
@@ -26705,7 +26705,7 @@ function playstatsPegasusAsPersonalAircraft(modelHash) {
 }
 exports.playstatsPegasusAsPersonalAircraft = playstatsPegasusAsPersonalAircraft;
 function playstatsPimenuHideOptions(data) {
-    const [data_out] = _in(0x203b3811, 0x33817079, _i);
+    const [data_out] = _in(0x203b3811, 0x33817079, _ii(data));
     return [data_out];
 }
 exports.playstatsPimenuHideOptions = playstatsPimenuHideOptions;
@@ -26742,7 +26742,7 @@ function playstatsRankUp(rank) {
 }
 exports.playstatsRankUp = playstatsRankUp;
 function playstatsRecoverContrabandMission(data) {
-    const [data_out] = _in(0x04d90ba8, 0x207ada2d, _i);
+    const [data_out] = _in(0x04d90ba8, 0x207ada2d, _ii(data));
     return [data_out];
 }
 exports.playstatsRecoverContrabandMission = playstatsRecoverContrabandMission;
@@ -26763,7 +26763,7 @@ function playstatsRosBet(amount, act, player, cm) {
 }
 exports.playstatsRosBet = playstatsRosBet;
 function playstatsSellContrabandMission(data) {
-    const [data_out] = _in(0xc729991a, 0x9065376e, _i);
+    const [data_out] = _in(0xc729991a, 0x9065376e, _ii(data));
     return [data_out];
 }
 exports.playstatsSellContrabandMission = playstatsSellContrabandMission;
@@ -26780,7 +26780,7 @@ function playstatsShopmenuNav(p0, p1, p2) {
 }
 exports.playstatsShopmenuNav = playstatsShopmenuNav;
 function playstatsSmugglerMissionEnded(data) {
-    const [data_out] = _in(0x320c3514, 0x7d5b5ddd, _i);
+    const [data_out] = _in(0x320c3514, 0x7d5b5ddd, _ii(data));
     return [data_out];
 }
 exports.playstatsSmugglerMissionEnded = playstatsSmugglerMissionEnded;
@@ -26804,7 +26804,7 @@ function playstatsStartedSessionInOfflinemode() {
 }
 exports.playstatsStartedSessionInOfflinemode = playstatsStartedSessionInOfflinemode;
 function playstatsStoneHatchetEnded(data) {
-    const [data_out] = _in(0x35e39e55, 0x70358630, _i);
+    const [data_out] = _in(0x35e39e55, 0x70358630, _ii(data));
     return [data_out];
 }
 exports.playstatsStoneHatchetEnded = playstatsStoneHatchetEnded;
@@ -26922,7 +26922,7 @@ function populateNow() {
 }
 exports.populateNow = populateNow;
 function pow(base, exponent) {
-    return _in(0xe3621cc4, 0x0f31fe2e, _fv(base), _fv(exponent), _r, _ri);
+    return _in(0xe3621cc4, 0x0f31fe2e, _fv(base), _fv(exponent), _r, _rf);
 }
 exports.pow = pow;
 /**
@@ -27317,7 +27317,7 @@ exports.registerSaveHouse = registerSaveHouse;
  * @param unkVariable
  */
 function registerScriptVariable(unkVariable) {
-    const [unkVariable_out] = _in(0x40eb1efd, 0x921822bc, _i);
+    const [unkVariable_out] = _in(0x40eb1efd, 0x921822bc, _ii(unkVariable));
     return [unkVariable_out];
 }
 exports.registerScriptVariable = registerScriptVariable;
@@ -28140,7 +28140,7 @@ function replayDisableCameraMovementThisFrame() {
 }
 exports.replayDisableCameraMovementThisFrame = replayDisableCameraMovementThisFrame;
 function replayGetMaxDistanceAllowedFromPlayer() {
-    return _in(0x8bfceb5e, 0xa1b161b6, _r, _ri);
+    return _in(0x8bfceb5e, 0xa1b161b6, _r, _rf);
 }
 exports.replayGetMaxDistanceAllowedFromPlayer = replayGetMaxDistanceAllowedFromPlayer;
 /**
@@ -29068,7 +29068,7 @@ function ropeForceLength(ropeId, length) {
 }
 exports.ropeForceLength = ropeForceLength;
 function ropeGetDistanceBetweenEnds(ropeId) {
-    return _in(0x73040398, 0xdff9a4a6, ropeId, _r, _ri);
+    return _in(0x73040398, 0xdff9a4a6, ropeId, _r, _rf);
 }
 exports.ropeGetDistanceBetweenEnds = ropeGetDistanceBetweenEnds;
 /**
@@ -29143,7 +29143,7 @@ function savemigrationIsMpEnabled() {
 }
 exports.savemigrationIsMpEnabled = savemigrationIsMpEnabled;
 function savemigrationMpGetAccount(p0, p1) {
-    const [retval, p1_out] = _in(0xfce2747e, 0xef1d05fc, p0, _i, _r);
+    const [retval, p1_out] = _in(0xfce2747e, 0xef1d05fc, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.savemigrationMpGetAccount = savemigrationMpGetAccount;
@@ -29269,7 +29269,7 @@ function scEmailDeleteEmails(p1) {
 }
 exports.scEmailDeleteEmails = scEmailDeleteEmails;
 function scEmailGetEmailAtIndex(p0, p1) {
-    const [retval, p1_out] = _in(0x4737980e, 0x8a283806, p0, _i, _r);
+    const [retval, p1_out] = _in(0x4737980e, 0x8a283806, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.scEmailGetEmailAtIndex = scEmailGetEmailAtIndex;
@@ -29286,7 +29286,7 @@ function scEmailMessageClearRecipList() {
 }
 exports.scEmailMessageClearRecipList = scEmailMessageClearRecipList;
 function scEmailMessagePushGamerToRecipList(gamerHandle) {
-    const [gamerHandle_out] = _in(0x2330c12a, 0x7a605d16, _i);
+    const [gamerHandle_out] = _in(0x2330c12a, 0x7a605d16, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.scEmailMessagePushGamerToRecipList = scEmailMessagePushGamerToRecipList;
@@ -29343,7 +29343,7 @@ function scHasNewRockstarMsg() {
 }
 exports.scHasNewRockstarMsg = scHasNewRockstarMsg;
 function scInboxGetBountyDataAtIndex(index, outData) {
-    const [retval, outData_out] = _in(0x87e0052f, 0x08bd64e6, index, _i, _r);
+    const [retval, outData_out] = _in(0x87e0052f, 0x08bd64e6, index, _ii(outData), _r);
     return [retval, outData_out];
 }
 exports.scInboxGetBountyDataAtIndex = scInboxGetBountyDataAtIndex;
@@ -29382,22 +29382,22 @@ function scInboxMessageGetRawTypeAtIndex(p0) {
 }
 exports.scInboxMessageGetRawTypeAtIndex = scInboxMessageGetRawTypeAtIndex;
 function scInboxMessageGetUgcdata(p0, p1) {
-    const [retval, p1_out] = _in(0x69d82604, 0xa1a5a254, p0, _i, _r);
+    const [retval, p1_out] = _in(0x69d82604, 0xa1a5a254, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.scInboxMessageGetUgcdata = scInboxMessageGetUgcdata;
 function scInboxMessagePushGamerT0RecipList(gamerHandle) {
-    const [gamerHandle_out] = _in(0xda024bdb, 0xd600f44a, _i);
+    const [gamerHandle_out] = _in(0xda024bdb, 0xd600f44a, _ii(gamerHandle));
     return [gamerHandle_out];
 }
 exports.scInboxMessagePushGamerT0RecipList = scInboxMessagePushGamerT0RecipList;
 function scInboxSendBountyToRecipList(data) {
-    const [retval, data_out] = _in(0x6afd2cd7, 0x53feef83, _i, _r);
+    const [retval, data_out] = _in(0x6afd2cd7, 0x53feef83, _ii(data), _r);
     return [retval, data_out];
 }
 exports.scInboxSendBountyToRecipList = scInboxSendBountyToRecipList;
 function scInboxSendUgcstatupdateToRecipList(data) {
-    const [data_out] = _in(0xa68d3d22, 0x9f4f3b06, _i);
+    const [data_out] = _in(0xa68d3d22, 0x9f4f3b06, _ii(data));
     return [data_out];
 }
 exports.scInboxSendUgcstatupdateToRecipList = scInboxSendUgcstatupdateToRecipList;
@@ -29457,7 +29457,7 @@ function scLicenseplateIsvalid(plateText, token) {
 }
 exports.scLicenseplateIsvalid = scLicenseplateIsvalid;
 function scLicenseplateSetPlateData(oldPlateText, newPlateText, plateData) {
-    const [retval, plateData_out] = _in(0xd0ee05fe, 0x193646ea, _ts(oldPlateText), _ts(newPlateText), _i, _r);
+    const [retval, plateData_out] = _in(0xd0ee05fe, 0x193646ea, _ts(oldPlateText), _ts(newPlateText), _ii(plateData), _r);
     return [retval, plateData_out];
 }
 exports.scLicenseplateSetPlateData = scLicenseplateSetPlateData;
@@ -29642,7 +29642,7 @@ function scriptThreadIteratorReset() {
 }
 exports.scriptThreadIteratorReset = scriptThreadIteratorReset;
 function seethroughGetMaxThickness() {
-    return _in(0x43dbae39, 0x626ce83f, _r, _ri);
+    return _in(0x43dbae39, 0x626ce83f, _r, _rf);
 }
 exports.seethroughGetMaxThickness = seethroughGetMaxThickness;
 function seethroughReset() {
@@ -34197,7 +34197,7 @@ exports.setObjectAllowLowLodBuoyancy = setObjectAllowLowLodBuoyancy;
  * @param object
  */
 function setObjectAsNoLongerNeeded(object) {
-    const [object_out] = _in(0x3ae22deb, 0x5ba5a3e6, _ii(object));
+    const [object_out] = _in(0x3ae22deb, 0x5ba5a3e6, _i);
     return [object_out];
 }
 exports.setObjectAsNoLongerNeeded = setObjectAsNoLongerNeeded;
@@ -36613,7 +36613,7 @@ exports.setPedSeeingRange = setPedSeeingRange;
  * @param p1
  */
 function setPedShootOrdnanceWeapon(ped, p1) {
-    return _in(0xb4c8d77c, 0x80c0421e, ped, _fv(p1), _r, _ri);
+    return _in(0xb4c8d77c, 0x80c0421e, ped, _fv(p1), _r, _ro);
 }
 exports.setPedShootOrdnanceWeapon = setPedShootOrdnanceWeapon;
 /**
@@ -37654,7 +37654,7 @@ function setPlayerTeam(player, team) {
 }
 exports.setPlayerTeam = setPlayerTeam;
 function setPlayerUnderwaterBreathPercentRemaining(player, time) {
-    return _in(0xa0d3e4f7, 0xaafb7e78, player, _fv(time), _r, _ri);
+    return _in(0xa0d3e4f7, 0xaafb7e78, player, _fv(time), _r, _rf);
 }
 exports.setPlayerUnderwaterBreathPercentRemaining = setPlayerUnderwaterBreathPercentRemaining;
 function setPlayerVehicleAlarmAudioActive(vehicle, toggle) {
@@ -42015,7 +42015,7 @@ function simulatePlayerInputGait(player, amount, gaitType, speed, p4, p5) {
 }
 exports.simulatePlayerInputGait = simulatePlayerInputGait;
 function sin(value) {
-    return _in(0x0badbfa3, 0xb172435f, _fv(value), _r, _ri);
+    return _in(0x0badbfa3, 0xb172435f, _fv(value), _r, _rf);
 }
 exports.sin = sin;
 function skipRadioForward() {
@@ -42277,7 +42277,7 @@ function specialFunctionDoNotUse(ped, p1) {
 }
 exports.specialFunctionDoNotUse = specialFunctionDoNotUse;
 function sqrt(value) {
-    return _in(0x71d93b57, 0xd07f9804, _fv(value), _r, _ri);
+    return _in(0x71d93b57, 0xd07f9804, _fv(value), _r, _rf);
 }
 exports.sqrt = sqrt;
 function stabiliseEntityAttachedToHeli(vehicle, entity, p2) {
@@ -43124,35 +43124,35 @@ exports.statGetCancelSaveMigrationStatus = statGetCancelSaveMigrationStatus;
  * Fly low to the ground for the longest distance
  */
 function statGetChallengeFlyingDist() {
-    return _in(0x6e0a5253, 0x375c4584, _r, _ri);
+    return _in(0x6e0a5253, 0x375c4584, _r, _rf);
 }
 exports.statGetChallengeFlyingDist = statGetChallengeFlyingDist;
 /**
  * Drive the furthest distance in a land vehicle without crashing
  */
 function statGetCurrentDriveNocrashDistance() {
-    return _in(0xba9749cc, 0x94c1fd85, _r, _ri);
+    return _in(0xba9749cc, 0x94c1fd85, _r, _rf);
 }
 exports.statGetCurrentDriveNocrashDistance = statGetCurrentDriveNocrashDistance;
 /**
  * Reverse the longest distance without crashing
  */
 function statGetCurrentDrivingReverseDistance() {
-    return _in(0x32cac93c, 0x9de73d32, _r, _ri);
+    return _in(0x32cac93c, 0x9de73d32, _r, _rf);
 }
 exports.statGetCurrentDrivingReverseDistance = statGetCurrentDrivingReverseDistance;
 /**
  * Perform the longest stoppie on a motorcycle
  */
 function statGetCurrentFrontWheelDistance() {
-    return _in(0x84a810b3, 0x75e69c0e, _r, _ri);
+    return _in(0x84a810b3, 0x75e69c0e, _r, _rf);
 }
 exports.statGetCurrentFrontWheelDistance = statGetCurrentFrontWheelDistance;
 /**
  * Perform the longest jump in a land vehicle
  */
 function statGetCurrentJumpDistance() {
-    return _in(0x9ec88581, 0x84cd253a, _r, _ri);
+    return _in(0x9ec88581, 0x84cd253a, _r, _rf);
 }
 exports.statGetCurrentJumpDistance = statGetCurrentJumpDistance;
 /**
@@ -43166,21 +43166,21 @@ exports.statGetCurrentNearMissNocrashPrecise = statGetCurrentNearMissNocrashPrec
  * Perform the longest wheelie on a motorcycle
  */
 function statGetCurrentRearWheelDistance() {
-    return _in(0xa943fd17, 0x22e11efd, _r, _ri);
+    return _in(0xa943fd17, 0x22e11efd, _r, _rf);
 }
 exports.statGetCurrentRearWheelDistance = statGetCurrentRearWheelDistance;
 /**
  * Fall the longest distance with a parachute before opening it
  */
 function statGetCurrentSkydivingDistance() {
-    return _in(0xaff47709, 0xf1d5dcce, _r, _ri);
+    return _in(0xaff47709, 0xf1d5dcce, _r, _rf);
 }
 exports.statGetCurrentSkydivingDistance = statGetCurrentSkydivingDistance;
 /**
  * Achieve the highest speed in a land vehicle
  */
 function statGetCurrentSpeed() {
-    return _in(0x55a8beca, 0xf28a4eb7, _r, _ri);
+    return _in(0x55a8beca, 0xf28a4eb7, _r, _rf);
 }
 exports.statGetCurrentSpeed = statGetCurrentSpeed;
 /**
@@ -43278,7 +43278,7 @@ function statGetSaveMigrationConsumeContentStatus(p0) {
 }
 exports.statGetSaveMigrationConsumeContentStatus = statGetSaveMigrationConsumeContentStatus;
 function statGetSaveMigrationStatus(data) {
-    const [retval, data_out] = _in(0x886913bb, 0xeaca68c1, _i, _r, _ri);
+    const [retval, data_out] = _in(0x886913bb, 0xeaca68c1, _ii(data), _r, _ri);
     return [retval, data_out];
 }
 exports.statGetSaveMigrationStatus = statGetSaveMigrationStatus;
@@ -43303,7 +43303,7 @@ exports.statGetUserId = statGetUserId;
  * Travel the furthest distance when bailing from a vehicle
  */
 function statGetVehicleBailDistance() {
-    return _in(0x0b8b7f74, 0xbf061c6d, _r, _ri);
+    return _in(0x0b8b7f74, 0xbf061c6d, _r, _rf);
 }
 exports.statGetVehicleBailDistance = statGetVehicleBailDistance;
 function statIncrement(statName, value) {
@@ -43354,7 +43354,7 @@ function statMigrateCheckGetIsPlatformAvailable(p0) {
 }
 exports.statMigrateCheckGetIsPlatformAvailable = statMigrateCheckGetIsPlatformAvailable;
 function statMigrateCheckGetPlatformStatus(p0, p1) {
-    const [retval, p1_out] = _in(0xdeaaf77e, 0xb3687e97, p0, _i, _r, _ri);
+    const [retval, p1_out] = _in(0xdeaaf77e, 0xb3687e97, p0, _ii(p1), _r, _ri);
     return [retval, p1_out];
 }
 exports.statMigrateCheckGetPlatformStatus = statMigrateCheckGetPlatformStatus;
@@ -44212,7 +44212,7 @@ function takeOwnershipOfSynchronizedScene(scene) {
 }
 exports.takeOwnershipOfSynchronizedScene = takeOwnershipOfSynchronizedScene;
 function tan(p0) {
-    return _in(0x632106cc, 0x96e82e91, _fv(p0), _r, _ri);
+    return _in(0x632106cc, 0x96e82e91, _fv(p0), _r, _rf);
 }
 exports.tan = tan;
 /**
@@ -46641,7 +46641,7 @@ exports.timerb = timerb;
  * Gets the current frame time.
  */
 function timestep() {
-    return _in(0x00000000, 0x50597ee2, _r, _ri);
+    return _in(0x00000000, 0x50597ee2, _r, _rf);
 }
 exports.timestep = timestep;
 function titleTextureDownloadRequest(filePath, name, p2) {
@@ -46649,7 +46649,7 @@ function titleTextureDownloadRequest(filePath, name, p2) {
 }
 exports.titleTextureDownloadRequest = titleTextureDownloadRequest;
 function toFloat(value) {
-    return _in(0xbbda7924, 0x48db5a89, value, _r, _ri);
+    return _in(0xbbda7924, 0x48db5a89, value, _r, _rf);
 }
 exports.toFloat = toFloat;
 function togglePausedRenderphases(toggle) {
@@ -46875,7 +46875,7 @@ function ugcDidQueryCreatorsSucceed() {
 }
 exports.ugcDidQueryCreatorsSucceed = ugcDidQueryCreatorsSucceed;
 function ugcGetBookmarkedContent(p0, p1, p2, p3) {
-    const [retval, p3_out] = _in(0xd5a4b599, 0x80401588, p0, p1, _ts(p2), _i, _r);
+    const [retval, p3_out] = _in(0xd5a4b599, 0x80401588, p0, p1, _ts(p2), _ii(p3), _r);
     return [retval, p3_out];
 }
 exports.ugcGetBookmarkedContent = ugcGetBookmarkedContent;
@@ -46892,7 +46892,7 @@ function ugcGetContentCreatedByLocalPlayer(p0) {
 }
 exports.ugcGetContentCreatedByLocalPlayer = ugcGetContentCreatedByLocalPlayer;
 function ugcGetContentCreatorGamerHandle(p0, p1) {
-    const [retval, p1_out] = _in(0x58477079, 0x4d758c18, p0, _i, _r);
+    const [retval, p1_out] = _in(0x58477079, 0x4d758c18, p0, _ii(p1), _r);
     return [retval, p1_out];
 }
 exports.ugcGetContentCreatorGamerHandle = ugcGetContentCreatorGamerHandle;
@@ -46961,7 +46961,7 @@ function ugcGetContentPath(p0, p1) {
 }
 exports.ugcGetContentPath = ugcGetContentPath;
 function ugcGetContentRating(p0, p1) {
-    return _in(0x1accfba3, 0xd8dab2ee, p0, p1, _r, _ri);
+    return _in(0x1accfba3, 0xd8dab2ee, p0, p1, _r, _rf);
 }
 exports.ugcGetContentRating = ugcGetContentRating;
 function ugcGetContentRatingCount(p0, p1) {
@@ -46981,7 +46981,7 @@ function ugcGetContentTotal() {
 }
 exports.ugcGetContentTotal = ugcGetContentTotal;
 function ugcGetContentUpdatedDate(p0, p1) {
-    const [p1_out] = _in(0xcfd115b3, 0x73c0df63, p0, _i);
+    const [p1_out] = _in(0xcfd115b3, 0x73c0df63, p0, _ii(p1));
     return [p1_out];
 }
 exports.ugcGetContentUpdatedDate = ugcGetContentUpdatedDate;
@@ -47011,17 +47011,17 @@ function ugcGetCreatorsByUserId() {
 }
 exports.ugcGetCreatorsByUserId = ugcGetCreatorsByUserId;
 function ugcGetCrewContent(p0, p1, p2, p3, p4) {
-    const [retval, p4_out] = _in(0x9f6e2821, 0x885caee2, p0, p1, p2, _ts(p3), _i, _r);
+    const [retval, p4_out] = _in(0x9f6e2821, 0x885caee2, p0, p1, p2, _ts(p3), _ii(p4), _r);
     return [retval, p4_out];
 }
 exports.ugcGetCrewContent = ugcGetCrewContent;
 function ugcGetFriendContent(p0, p1, p2, p3) {
-    const [retval, p3_out] = _in(0xf9e1ccae, 0x8ba4c281, p0, p1, _ts(p2), _i, _r);
+    const [retval, p3_out] = _in(0xf9e1ccae, 0x8ba4c281, p0, p1, _ts(p2), _ii(p3), _r);
     return [retval, p3_out];
 }
 exports.ugcGetFriendContent = ugcGetFriendContent;
 function ugcGetGetByCategory(p0, p1, p2, p3, p4) {
-    const [retval, p4_out] = _in(0x678bb03c, 0x1a3bd51e, p0, p1, p2, _ts(p3), _i, _r);
+    const [retval, p4_out] = _in(0x678bb03c, 0x1a3bd51e, p0, p1, p2, _ts(p3), _ii(p4), _r);
     return [retval, p4_out];
 }
 exports.ugcGetGetByCategory = ugcGetGetByCategory;
@@ -47049,7 +47049,7 @@ function ugcGetMostRecentlyPlayedContent(p0, p1) {
 }
 exports.ugcGetMostRecentlyPlayedContent = ugcGetMostRecentlyPlayedContent;
 function ugcGetMyContent(p0, p1, p2, p3) {
-    const [retval, p3_out] = _in(0x3195f8dd, 0x0d531052, p0, p1, _ts(p2), _i, _r);
+    const [retval, p3_out] = _in(0x3195f8dd, 0x0d531052, p0, p1, _ts(p2), _ii(p3), _r);
     return [retval, p3_out];
 }
 exports.ugcGetMyContent = ugcGetMyContent;
@@ -47338,7 +47338,7 @@ function unregisterPedheadshot(id) {
 }
 exports.unregisterPedheadshot = unregisterPedheadshot;
 function unregisterScriptVariable(unkVariable) {
-    const [unkVariable_out] = _in(0x340a36a7, 0x00e99699, _i);
+    const [unkVariable_out] = _in(0x340a36a7, 0x00e99699, _ii(unkVariable));
     return [unkVariable_out];
 }
 exports.unregisterScriptVariable = unregisterScriptVariable;
@@ -47537,7 +47537,7 @@ exports.usingMissionCreator = usingMissionCreator;
  * @param z2
  */
 function vdist(x1, y1, z1, x2, y2, z2) {
-    return _in(0x2a488c17, 0x6d52cca5, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _ri);
+    return _in(0x2a488c17, 0x6d52cca5, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _rf);
 }
 exports.vdist = vdist;
 /**
@@ -47550,7 +47550,7 @@ exports.vdist = vdist;
  * @param z2
  */
 function vdist2(x1, y1, z1, x2, y2, z2) {
-    return _in(0xb7a62832, 0x0eff8e47, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _ri);
+    return _in(0xb7a62832, 0x0eff8e47, _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), _r, _rf);
 }
 exports.vdist2 = vdist2;
 /**
@@ -47646,7 +47646,7 @@ exports.vehicleWaypointPlaybackUseDefaultSpeed = vehicleWaypointPlaybackUseDefau
  * @param z
  */
 function vmag(x, y, z) {
-    return _in(0x652d2eee, 0xf1d3e62c, _fv(x), _fv(y), _fv(z), _r, _ri);
+    return _in(0x652d2eee, 0xf1d3e62c, _fv(x), _fv(y), _fv(z), _r, _rf);
 }
 exports.vmag = vmag;
 /**
@@ -47656,7 +47656,7 @@ exports.vmag = vmag;
  * @param z
  */
 function vmag2(x, y, z) {
-    return _in(0xa8ceacb4, 0xf35ae058, _fv(x), _fv(y), _fv(z), _r, _ri);
+    return _in(0xa8ceacb4, 0xf35ae058, _fv(x), _fv(y), _fv(z), _r, _rf);
 }
 exports.vmag2 = vmag2;
 /**
@@ -47862,7 +47862,7 @@ exports.waypointRecordingGetNumPoints = waypointRecordingGetNumPoints;
  * @param point
  */
 function waypointRecordingGetSpeedAtPoint(name, point) {
-    return _in(0x005622ae, 0xbc33aca9, _ts(name), point, _r, _ri);
+    return _in(0x005622ae, 0xbc33aca9, _ts(name), point, _r, _rf);
 }
 exports.waypointRecordingGetSpeedAtPoint = waypointRecordingGetSpeedAtPoint;
 /**
