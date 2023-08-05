@@ -3978,7 +3978,7 @@ exports.createAirDefenceSphere = createAirDefenceSphere;
  * @param p8
  */
 function createAmbientPickup(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8) {
-    return _in(0x673966a0, 0xc0fd7171, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ro);
+    return _in(0x673966a0, 0xc0fd7171, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ri);
 }
 exports.createAmbientPickup = createAmbientPickup;
 /**
@@ -4327,7 +4327,7 @@ function createNmMessage(startImmediately, messageId) {
 }
 exports.createNmMessage = createNmMessage;
 function createNonNetworkedAmbientPickup(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8) {
-    return _in(0x9c937642, 0x23e29c50, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ro);
+    return _in(0x9c937642, 0x23e29c50, _ch(pickupHash), _fv(posX), _fv(posY), _fv(posZ), flags, value, _ch(modelHash), p7, p8, _r, _ri);
 }
 exports.createNonNetworkedAmbientPickup = createNonNetworkedAmbientPickup;
 /**
@@ -4340,7 +4340,7 @@ exports.createNonNetworkedAmbientPickup = createNonNetworkedAmbientPickup;
  * @param modelHash
  */
 function createNonNetworkedPortablePickup(pickupHash, x, y, z, placeOnGround, modelHash) {
-    return _in(0x125494b9, 0x8a21aaf7, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ro);
+    return _in(0x125494b9, 0x8a21aaf7, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ri);
 }
 exports.createNonNetworkedPortablePickup = createNonNetworkedPortablePickup;
 /**
@@ -4354,7 +4354,7 @@ exports.createNonNetworkedPortablePickup = createNonNetworkedPortablePickup;
  * @param dynamic
  */
 function createObject(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic) {
-    return _in(0x509d5878, 0xeb39e842, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ro);
+    return _in(0x509d5878, 0xeb39e842, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ri);
 }
 exports.createObject = createObject;
 /**
@@ -4368,11 +4368,11 @@ exports.createObject = createObject;
  * @param dynamic
  */
 function createObjectNoOffset(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic) {
-    return _in(0x9a294b21, 0x38abb884, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ro);
+    return _in(0x9a294b21, 0x38abb884, _ch(modelHash), _fv(x), _fv(y), _fv(z), isNetwork, bScriptHostObj, dynamic, _r, _ri);
 }
 exports.createObjectNoOffset = createObjectNoOffset;
 function createParachuteBagObject(ped, p1, p2) {
-    return _in(0x8c4f3bf2, 0x3b6237db, ped, p1, p2, _r, _ro);
+    return _in(0x8c4f3bf2, 0x3b6237db, ped, p1, p2, _r, _ri);
 }
 exports.createParachuteBagObject = createParachuteBagObject;
 function createPatrolRoute() {
@@ -4475,7 +4475,7 @@ exports.createPickupRotate = createPickupRotate;
  * @param modelHash
  */
 function createPortablePickup(pickupHash, x, y, z, placeOnGround, modelHash) {
-    return _in(0x2eaf1fdb, 0x2fb55698, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ro);
+    return _in(0x2eaf1fdb, 0x2fb55698, _ch(pickupHash), _fv(x), _fv(y), _fv(z), placeOnGround, _ch(modelHash), _r, _ri);
 }
 exports.createPortablePickup = createPortablePickup;
 /**
@@ -4597,7 +4597,7 @@ exports.createVehicle = createVehicle;
  * @param p9
  */
 function createWeaponObject(weaponHash, ammoCount, x, y, z, showWorldModel, scale, p7, p8, p9) {
-    return _in(0x9541d3cf, 0x0d398f36, _ch(weaponHash), ammoCount, _fv(x), _fv(y), _fv(z), showWorldModel, _fv(scale), p7, p8, p9, _r, _ro);
+    return _in(0x9541d3cf, 0x0d398f36, _ch(weaponHash), ammoCount, _fv(x), _fv(y), _fv(z), showWorldModel, _fv(scale), p7, p8, p9, _r, _ri);
 }
 exports.createWeaponObject = createWeaponObject;
 function customMinimapClearBlips() {
@@ -5056,7 +5056,7 @@ exports.deleteMissionTrain = deleteMissionTrain;
  * @param object
  */
 function deleteObject(object) {
-    const [object_out] = _in(0x539e0ae3, 0xe6634b9f, _i);
+    const [object_out] = _in(0x539e0ae3, 0xe6634b9f, _ii(object));
     return [object_out];
 }
 exports.deleteObject = deleteObject;
@@ -8722,7 +8722,7 @@ exports.getClosestMajorVehicleNode = getClosestMajorVehicleNode;
  * @param p7
  */
 function getClosestObjectOfType(x, y, z, radius, modelHash, isMission, p6, p7) {
-    return _in(0xe143fa22, 0x49364369, _fv(x), _fv(y), _fv(z), _fv(radius), _ch(modelHash), isMission, p6, p7, _r, _ro);
+    return _in(0xe143fa22, 0x49364369, _fv(x), _fv(y), _fv(z), _fv(radius), _ch(modelHash), isMission, p6, p7, _r, _ri);
 }
 exports.getClosestObjectOfType = getClosestObjectOfType;
 /**
@@ -11662,7 +11662,7 @@ exports.getObjectFragmentDamageHealth = getObjectFragmentDamageHealth;
  * @param entity
  */
 function getObjectIndexFromEntityIndex(entity) {
-    return _in(0xd7e3b973, 0x5c0f89d6, entity, _r, _ro);
+    return _in(0xd7e3b973, 0x5c0f89d6, entity, _r, _ri);
 }
 exports.getObjectIndexFromEntityIndex = getObjectIndexFromEntityIndex;
 function getObjectTintIndex(object) {
@@ -12594,7 +12594,7 @@ function getPickupGenerationRangeMultiplier() {
 }
 exports.getPickupGenerationRangeMultiplier = getPickupGenerationRangeMultiplier;
 function getPickupObject(pickup) {
-    return _in(0x5099bc55, 0x630b25ae, pickup, _r, _ro);
+    return _in(0x5099bc55, 0x630b25ae, pickup, _r, _ri);
 }
 exports.getPickupObject = getPickupObject;
 /**
@@ -13093,7 +13093,7 @@ exports.getRatioOfClosestPointOnLine = getRatioOfClosestPointOnLine;
  * @param name
  */
 function getRayfireMapObject(x, y, z, radius, name) {
-    return _in(0xb48fced8, 0x98292e52, _fv(x), _fv(y), _fv(z), _fv(radius), _ts(name), _r, _ro);
+    return _in(0xb48fced8, 0x98292e52, _fv(x), _fv(y), _fv(z), _fv(radius), _ts(name), _r, _ri);
 }
 exports.getRayfireMapObject = getRayfireMapObject;
 /**
@@ -15144,7 +15144,7 @@ exports.getWeaponObjectComponentTintIndex = getWeaponObjectComponentTintIndex;
  * @param p1
  */
 function getWeaponObjectFromPed(ped, p1) {
-    return _in(0xcae1dc9a, 0x0e22a16d, ped, p1, _r, _ro);
+    return _in(0xcae1dc9a, 0x0e22a16d, ped, p1, _r, _ri);
 }
 exports.getWeaponObjectFromPed = getWeaponObjectFromPed;
 function getWeaponObjectTintIndex(weapon) {
@@ -20355,7 +20355,7 @@ exports.netToEnt = netToEnt;
  * @param netHandle
  */
 function netToObj(netHandle) {
-    return _in(0xd8515f5f, 0xea14cb3f, netHandle, _r, _ro);
+    return _in(0xd8515f5f, 0xea14cb3f, netHandle, _r, _ri);
 }
 exports.netToObj = netToObj;
 /**
@@ -34197,7 +34197,7 @@ exports.setObjectAllowLowLodBuoyancy = setObjectAllowLowLodBuoyancy;
  * @param object
  */
 function setObjectAsNoLongerNeeded(object) {
-    const [object_out] = _in(0x3ae22deb, 0x5ba5a3e6, _i);
+    const [object_out] = _in(0x3ae22deb, 0x5ba5a3e6, _ii(object));
     return [object_out];
 }
 exports.setObjectAsNoLongerNeeded = setObjectAsNoLongerNeeded;
@@ -36613,7 +36613,7 @@ exports.setPedSeeingRange = setPedSeeingRange;
  * @param p1
  */
 function setPedShootOrdnanceWeapon(ped, p1) {
-    return _in(0xb4c8d77c, 0x80c0421e, ped, _fv(p1), _r, _ro);
+    return _in(0xb4c8d77c, 0x80c0421e, ped, _fv(p1), _r, _ri);
 }
 exports.setPedShootOrdnanceWeapon = setPedShootOrdnanceWeapon;
 /**

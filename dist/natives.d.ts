@@ -1271,7 +1271,7 @@ export declare function attachEntityToEntity(entity1: number, entity2: number, b
  * @param p18
  */
 export declare function attachEntityToEntityPhysically(entity1: number, entity2: number, boneIndex1: number, boneIndex2: number, xPos1: number, yPos1: number, zPos1: number, xPos2: number, yPos2: number, zPos2: number, xRot: number, yRot: number, zRot: number, breakForce: number, fixedRot: boolean, p15: boolean, collision: boolean, p17: boolean, p18: number): void;
-export declare function attachPortablePickupToPed(pickupObject: any, ped: number): void;
+export declare function attachPortablePickupToPed(pickupObject: number, ped: number): void;
 /**
  * The position supplied can be anywhere, and the entity should anchor relative to that point from it's origin.
  * @param ropeId
@@ -1564,7 +1564,7 @@ export declare function blockPedFromGeneratingDeadBodyEventsWhenDead(ped: number
 export declare function blockPlayersForAmbientPickup(p0: number, p1: number): void;
 export declare function blockSpeechContextGroup(p0: string, p1: number): void;
 export declare function breakEntityGlass(entity: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: boolean): void;
-export declare function breakObjectFragmentChild(p0: any, p1: number, p2: boolean): void;
+export declare function breakObjectFragmentChild(p0: number, p1: number, p2: boolean): void;
 /**
  * This native makes the vehicle stop immediately, as happens when we enter a MP garage.
  *
@@ -2330,7 +2330,7 @@ export declare function createAirDefenceSphere(x: number, y: number, z: number, 
  * @param p7
  * @param p8
  */
-export declare function createAmbientPickup(pickupHash: number, posX: number, posY: number, posZ: number, flags: number, value: number, modelHash: number, p7: boolean, p8: boolean): any;
+export declare function createAmbientPickup(pickupHash: number, posX: number, posY: number, posZ: number, flags: number, value: number, modelHash: number, p7: boolean, p8: boolean): number;
 /**
  * "DEFAULT_SCRIPTED_CAMERA"
  * "DEFAULT_ANIMATED_CAMERA"
@@ -2611,7 +2611,7 @@ export declare function createNewScriptedConversation(): void;
  * @param messageId
  */
 export declare function createNmMessage(startImmediately: boolean, messageId: number): void;
-export declare function createNonNetworkedAmbientPickup(pickupHash: number, posX: number, posY: number, posZ: number, flags: number, value: number, modelHash: number, p7: boolean, p8: boolean): any;
+export declare function createNonNetworkedAmbientPickup(pickupHash: number, posX: number, posY: number, posZ: number, flags: number, value: number, modelHash: number, p7: boolean, p8: boolean): number;
 /**
  * Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
  * @param pickupHash
@@ -2621,7 +2621,7 @@ export declare function createNonNetworkedAmbientPickup(pickupHash: number, posX
  * @param placeOnGround
  * @param modelHash
  */
-export declare function createNonNetworkedPortablePickup(pickupHash: number, x: number, y: number, z: number, placeOnGround: boolean, modelHash: number): any;
+export declare function createNonNetworkedPortablePickup(pickupHash: number, x: number, y: number, z: number, placeOnGround: boolean, modelHash: number): number;
 /**
  * List of object models that can be created without any additional effort like making sure ytyp is loaded etc: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ObjectList.ini
  * @param modelHash
@@ -2632,7 +2632,7 @@ export declare function createNonNetworkedPortablePickup(pickupHash: number, x: 
  * @param bScriptHostObj
  * @param dynamic
  */
-export declare function createObject(modelHash: number, x: number, y: number, z: number, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): any;
+export declare function createObject(modelHash: number, x: number, y: number, z: number, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): number;
 /**
  * List of object models that can be created without any additional effort like making sure ytyp is loaded etc: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ObjectList.ini
  * @param modelHash
@@ -2643,8 +2643,8 @@ export declare function createObject(modelHash: number, x: number, y: number, z:
  * @param bScriptHostObj
  * @param dynamic
  */
-export declare function createObjectNoOffset(modelHash: number, x: number, y: number, z: number, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): any;
-export declare function createParachuteBagObject(ped: number, p1: boolean, p2: boolean): any;
+export declare function createObjectNoOffset(modelHash: number, x: number, y: number, z: number, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): number;
+export declare function createParachuteBagObject(ped: number, p1: boolean, p2: boolean): number;
 export declare function createPatrolRoute(): void;
 /**
  * https://alloc8or.re/gta5/doc/enums/ePedType.txt
@@ -2726,7 +2726,7 @@ export declare function createPickupRotate(pickupHash: number, posX: number, pos
  * @param placeOnGround
  * @param modelHash
  */
-export declare function createPortablePickup(pickupHash: number, x: number, y: number, z: number, placeOnGround: boolean, modelHash: number): any;
+export declare function createPortablePickup(pickupHash: number, x: number, y: number, z: number, placeOnGround: boolean, modelHash: number): number;
 /**
  * vb.net
  * Dim ped_handle As Integer
@@ -2824,7 +2824,7 @@ export declare function createVehicle(modelHash: number, x: number, y: number, z
  * @param p8
  * @param p9
  */
-export declare function createWeaponObject(weaponHash: number, ammoCount: number, x: number, y: number, z: number, showWorldModel: boolean, scale: number, p7: number, p8: number, p9: number): any;
+export declare function createWeaponObject(weaponHash: number, ammoCount: number, x: number, y: number, z: number, showWorldModel: boolean, scale: number, p7: number, p8: number, p9: number): number;
 export declare function customMinimapClearBlips(): void;
 /**
  * Add a BLIP_GALLERY at the specific coordinate. Used in fm_maintain_transition_players to display race track points.
@@ -3014,7 +3014,7 @@ export declare function deleteMissionTrain(train: number): [number];
  * Deletes the specified object, then sets the handle pointed to by the pointer to NULL.
  * @param object
  */
-export declare function deleteObject(object: any): [any];
+export declare function deleteObject(object: number): [number];
 /**
  * From the b617d scripts:
  *
@@ -3079,7 +3079,7 @@ export declare function detachContainerFromHandlerFrame(vehicle: number): void;
  */
 export declare function detachEntity(entity: number, dynamic: boolean, collision: boolean): void;
 export declare function detachEntityFromCargobob(cargobob: number, entity: number): boolean;
-export declare function detachPortablePickupFromPed(pickupObject: any): void;
+export declare function detachPortablePickupFromPed(pickupObject: number): void;
 export declare function detachRopeFromEntity(ropeId: number, entity: number): void;
 export declare function detachSynchronizedScene(sceneID: number): void;
 export declare function detachVehicleFromAnyCargobob(vehicle: number): boolean;
@@ -3440,7 +3440,7 @@ export declare function doesObjectOfTypeExistAtCoords(x: number, y: number, z: n
 export declare function doesParticleFxLoopedExist(ptfxHandle: number): boolean;
 export declare function doesPedHaveAiBlip(ped: number): boolean;
 export declare function doesPickupExist(pickup: number): boolean;
-export declare function doesPickupObjectExist(pickupObject: any): boolean;
+export declare function doesPickupObjectExist(pickupObject: number): boolean;
 /**
  * Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
  * @param pickupHash
@@ -3457,7 +3457,7 @@ export declare function doesPopMultiplierSphereExist(id: number): boolean;
  * Returns true if a destructible object with this handle exists, false otherwise.
  * @param object
  */
-export declare function doesRayfireMapObjectExist(object: any): boolean;
+export declare function doesRayfireMapObjectExist(object: number): boolean;
 export declare function doesRelationshipGroupExist(groupHash: number): boolean;
 export declare function doesRopeExist(ropeId: number): [boolean, number];
 export declare function doesScenarioBlockingAreaExists(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
@@ -4728,7 +4728,7 @@ export declare function findSpawnCoordinatesForHeli(ped: number): Vector3;
  */
 export declare function findSpawnPointInDirection(posX: number, posY: number, posZ: number, fwdVecX: number, fwdVecY: number, fwdVecZ: number, distance: number, spawnPoint: Vector3): [boolean, Vector3];
 export declare function fireAirDefenceSphereWeaponAtPosition(zoneId: number, x: number, y: number, z: number): void;
-export declare function fixObjectFragment(object: any): void;
+export declare function fixObjectFragment(object: number): void;
 /**
  * windowIndex:
  * 0 = Front Left Window
@@ -4866,7 +4866,7 @@ export declare function forcePickupRotateFaceUp(): void;
  * @param p1
  */
 export declare function forcePlaybackRecordedVehicleUpdate(vehicle: number, p1: boolean): void;
-export declare function forcePortablePickupLastAccessiblePositionSetting(object: any): void;
+export declare function forcePortablePickupLastAccessiblePositionSetting(object: number): void;
 export declare function forcePostfxBulletImpactsAfterHud(p0: boolean): void;
 export declare function forceRenderInGameUi(toggle: boolean): void;
 export declare function forceRoomForEntity(entity: number, interior: number, roomHashKey: number): void;
@@ -5333,7 +5333,7 @@ export declare function getClosestMajorVehicleNode(x: number, y: number, z: numb
  * @param p6
  * @param p7
  */
-export declare function getClosestObjectOfType(x: number, y: number, z: number, radius: number, modelHash: number, isMission: boolean, p6: boolean, p7: boolean): any;
+export declare function getClosestObjectOfType(x: number, y: number, z: number, radius: number, modelHash: number, isMission: boolean, p6: boolean, p7: boolean): number;
 /**
  * Gets the closest ped in a radius.
  *
@@ -6437,7 +6437,7 @@ export declare function getInteriorGroupId(interior: number): number;
 export declare function getInteriorHeading(interior: number): number;
 export declare function getInteriorLocationAndNamehash(interior: number): [Vector3, number];
 export declare function getIsArticulatedJointAtMaxAngle(p0: number, p1: number): boolean;
-export declare function getIsArticulatedJointAtMinAngle(object: any, p1: number): boolean;
+export declare function getIsArticulatedJointAtMinAngle(object: number, p1: number): boolean;
 /**
  * Returns true if profile setting 208 is equal to 0.
  */
@@ -6449,7 +6449,7 @@ export declare function getIsBoatCapsized(vehicle: number): boolean;
  * @param doorId
  */
 export declare function getIsDoorValid(vehicle: number, doorId: number): boolean;
-export declare function getIsEntityAFrag(object: any): boolean;
+export declare function getIsEntityAFrag(object: number): boolean;
 /**
  * false = Any resolution < 1280x720
  * true = Any resolution >= 1280x720
@@ -7152,8 +7152,8 @@ export declare function getObjectFragmentDamageHealth(p0: number, p1: boolean): 
  * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
  * @param entity
  */
-export declare function getObjectIndexFromEntityIndex(entity: number): any;
-export declare function getObjectTintIndex(object: any): number;
+export declare function getObjectIndexFromEntityIndex(entity: number): number;
+export declare function getObjectTintIndex(object: number): number;
 export declare function getOffsetFromCoordAndHeadingInWorldCoords(xPos: number, yPos: number, zPos: number, heading: number, xOffset: number, yOffset: number, zOffset: number): Vector3;
 /**
  * Converts world coords (posX - Z) to coords relative to the entity
@@ -7801,7 +7801,7 @@ export declare function getPhoneGestureAnimCurrentTime(ped: number): number;
 export declare function getPhoneGestureAnimTotalTime(ped: number): number;
 export declare function getPickupCoords(pickup: number): Vector3;
 export declare function getPickupGenerationRangeMultiplier(): number;
-export declare function getPickupObject(pickup: number): any;
+export declare function getPickupObject(pickup: number): number;
 /**
  * Returns the pickup hash for the given weapon hash
  * @param weaponHash
@@ -8000,7 +8000,7 @@ export declare function getPosixTime(): [number, number, number, number, number,
  */
 export declare function getPrevWeatherTypeHashName(): number;
 export declare function getProfileSetting(profileSetting: number): number;
-export declare function getProjectileOfProjectileTypeWithinDistance(ped: number, weaponHash: number, distance: number, p5: boolean): [boolean, Vector3, any];
+export declare function getProjectileOfProjectileTypeWithinDistance(ped: number, weaponHash: number, distance: number, p5: boolean): [boolean, Vector3, number];
 /**
  * Converts radio station index to string. Use HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION to get the user-readable text.
  * @param radioStation
@@ -8088,13 +8088,13 @@ export declare function getRatioOfClosestPointOnLine(x1: number, y1: number, z1:
  * @param radius
  * @param name
  */
-export declare function getRayfireMapObject(x: number, y: number, z: number, radius: number, name: string): any;
+export declare function getRayfireMapObject(x: number, y: number, z: number, radius: number, name: string): number;
 /**
  * `object`: The des-object handle to get the animation progress from.
  * Return value is a float between 0.0 and 1.0, 0.0 is the beginning of the animation, 1.0 is the end. Value resets to 0.0 instantly after reaching 1.0.
  * @param object
  */
-export declare function getRayfireMapObjectAnimPhase(object: any): number;
+export declare function getRayfireMapObjectAnimPhase(object: number): number;
 /**
  * GET_GAME_TIMER() / 1000
  */
@@ -8435,7 +8435,7 @@ export declare function getStateOfClosestDoorOfType(type: number, x: number, y: 
  * For example, if the object just spawned (state 2), the native will return 3.
  * @param object
  */
-export declare function getStateOfRayfireMapObject(object: any): number;
+export declare function getStateOfRayfireMapObject(object: number): number;
 export declare function getStatusOfCreateLowQualityCopyOfPhoto(p0: number): number;
 export declare function getStatusOfCreateMissionCreatorPhotoPreview(): number;
 export declare function getStatusOfLoadMissionCreatorPhoto(p0: number): [number, number];
@@ -9344,7 +9344,7 @@ export declare function getWeaponHudStats(weaponHash: number, outData: number): 
  * @param weaponObject
  * @param camoComponentHash
  */
-export declare function getWeaponObjectComponentTintIndex(weaponObject: any, camoComponentHash: number): number;
+export declare function getWeaponObjectComponentTintIndex(weaponObject: number, camoComponentHash: number): number;
 /**
  * Drops the current weapon and returns the object
  *
@@ -9352,8 +9352,8 @@ export declare function getWeaponObjectComponentTintIndex(weaponObject: any, cam
  * @param ped
  * @param p1
  */
-export declare function getWeaponObjectFromPed(ped: number, p1: boolean): any;
-export declare function getWeaponObjectTintIndex(weapon: any): number;
+export declare function getWeaponObjectFromPed(ped: number, p1: boolean): number;
+export declare function getWeaponObjectTintIndex(weapon: number): number;
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  * @param weaponHash
@@ -9648,8 +9648,8 @@ export declare function giveWeaponComponentToPed(ped: number, weaponHash: number
  * @param weaponObject
  * @param componentHash
  */
-export declare function giveWeaponComponentToWeaponObject(weaponObject: any, componentHash: number): void;
-export declare function giveWeaponObjectToPed(weaponObject: any, ped: number): void;
+export declare function giveWeaponComponentToWeaponObject(weaponObject: number, componentHash: number): void;
+export declare function giveWeaponObjectToPed(weaponObject: number, ped: number): void;
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  * @param ped
@@ -9901,7 +9901,7 @@ export declare function hasMenuTriggerEventOccurred(): boolean;
 export declare function hasModelLoaded(model: number): boolean;
 export declare function hasNamedPtfxAssetLoaded(fxName: string): boolean;
 export declare function hasNetworkTimeStarted(): boolean;
-export declare function hasObjectBeenBroken(object: any, p1: number): boolean;
+export declare function hasObjectBeenBroken(object: number, p1: number): boolean;
 /**
  * Get inputted "Cheat code", for example:
  *
@@ -10027,7 +10027,7 @@ export declare function hasWeaponAssetLoaded(weaponHash: number): boolean;
  * @param weapon
  * @param componentHash
  */
-export declare function hasWeaponGotWeaponComponent(weapon: any, componentHash: number): boolean;
+export declare function hasWeaponGotWeaponComponent(weapon: number, componentHash: number): boolean;
 export declare function haveAllStreamingRequestsCompleted(ped: number): boolean;
 /**
  * control: unused parameter
@@ -10084,7 +10084,7 @@ export declare function hidePedBloodDamageByZone(ped: number, p1: number, p2: bo
  * @param toggle
  */
 export declare function hidePedWeaponForScriptedCutscene(ped: number, toggle: boolean): void;
-export declare function hidePortablePickupWhenDetached(pickupObject: any, toggle: boolean): void;
+export declare function hidePortablePickupWhenDetached(pickupObject: number, toggle: boolean): void;
 export declare function hideScriptedHudComponentThisFrame(id: number): void;
 /**
  * Hides area and vehicle name HUD components for one frame.
@@ -10810,8 +10810,8 @@ export declare function isNetworkVehicleRunningRespotTimer(networkID: number): b
 export declare function isNewLoadSceneActive(): boolean;
 export declare function isNewLoadSceneLoaded(): boolean;
 export declare function isNextWeatherType(weatherType: string): boolean;
-export declare function isObjectAPickup(object: any): boolean;
-export declare function isObjectAPortablePickup(object: any): boolean;
+export declare function isObjectAPickup(object: number): boolean;
+export declare function isObjectAPortablePickup(object: number): boolean;
 /**
  * Despite the name, it does work for any entity type.
  * @param garageHash
@@ -10828,8 +10828,8 @@ export declare function isObjectNearPoint(objectHash: number, x: number, y: numb
  * @param p2
  */
 export declare function isObjectPartiallyInsideGarage(garageHash: number, entity: number, p2: number): boolean;
-export declare function isObjectVisible(object: any): boolean;
-export declare function isObjectWithinBrainActivationRange(object: any): boolean;
+export declare function isObjectVisible(object: number): boolean;
+export declare function isObjectWithinBrainActivationRange(object: number): boolean;
 /**
  * Returns the same as IS_SOCIAL_CLUB_ACTIVE
  */
@@ -11185,7 +11185,7 @@ export declare function isPedheadshotReady(id: number): boolean;
  * @param id
  */
 export declare function isPedheadshotValid(id: number): boolean;
-export declare function isPickupWeaponObjectValid(object: any): boolean;
+export declare function isPickupWeaponObjectValid(object: number): boolean;
 export declare function isPlaneLandingGearIntact(plane: number): boolean;
 export declare function isPlaybackGoingOnForVehicle(vehicle: number): boolean;
 export declare function isPlaybackUsingAiGoingOnForVehicle(vehicle: number): boolean;
@@ -11370,7 +11370,7 @@ export declare function isProjectileTypeInAngledArea(x1: number, y1: number, z1:
  */
 export declare function isProjectileTypeInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, type: number, ownedByPlayer: boolean): boolean;
 export declare function isProjectileTypeWithinDistance(x: number, y: number, z: number, projectileHash: number, radius: number, ownedByPlayer: boolean): boolean;
-export declare function isPropLightOverriden(object: any): boolean;
+export declare function isPropLightOverriden(object: number): boolean;
 /**
  * PS5 (Prospero) version...
  */
@@ -12095,7 +12095,7 @@ export declare function netToEnt(netHandle: number): number;
  * gets the object id of a network id
  * @param netHandle
  */
-export declare function netToObj(netHandle: number): any;
+export declare function netToObj(netHandle: number): number;
 /**
  * gets the ped id of a network id
  * @param netHandle
@@ -13571,8 +13571,8 @@ export declare function networkSetMissionFinished(): void;
 export declare function networkSetMocapCutsceneCanBeSkipped(p0: boolean): void;
 export declare function networkSetNoLongerNeeded(entity: number, toggle: boolean): void;
 export declare function networkSetNoSpectatorChat(toggle: boolean): void;
-export declare function networkSetObjectCanBlendWhenFixed(object: any, toggle: boolean): void;
-export declare function networkSetObjectScopeDistance(object: any, range: number): void;
+export declare function networkSetObjectCanBlendWhenFixed(object: number, toggle: boolean): void;
+export declare function networkSetObjectScopeDistance(object: number, range: number): void;
 export declare function networkSetOverrideSpectatorMode(toggle: boolean): void;
 export declare function networkSetOverrideTutorialSessionChat(toggle: boolean): void;
 export declare function networkSetPlayerIsPassive(toggle: boolean): void;
@@ -13957,7 +13957,7 @@ export declare function nextOnscreenKeyboardResultWillDisplayUsingTheseFonts(p0:
  * int createdObject = OBJ_TO_NET(CREATE_OBJECT_NO_OFFSET(oball, pCoords.x, pCoords.y, pCoords.z, 1, 0, 0));
  * @param object
  */
-export declare function objToNet(object: any): number;
+export declare function objToNet(object: number): number;
 /**
  * This loads the GTA:O dlc map parts (high end garages, apartments).
  * Works in singleplayer.
@@ -13973,7 +13973,7 @@ export declare function onEnterSp(): void;
  * is this like setting is as no longer needed?
  * @param object
  */
-export declare function onlyCleanUpObjectWhenOutOfRange(object: any): void;
+export declare function onlyCleanUpObjectWhenOutOfRange(object: number): void;
 export declare function openAllBarriersForRace(p0: boolean): void;
 export declare function openBombBayDoors(vehicle: number): void;
 export declare function openCommerceStore(p0: string, p1: string, p2: number): void;
@@ -14160,8 +14160,8 @@ export declare function phonephotoeditorSetFrameTxd(textureDict: string, p1: boo
 export declare function phonephotoeditorToggle(p0: boolean): boolean;
 export declare function pinInteriorInMemory(interior: number): void;
 export declare function pinRopeVertex(ropeId: number, vertex: number, x: number, y: number, z: number): void;
-export declare function placeObjectOnGroundOrObjectProperly(object: any): boolean;
-export declare function placeObjectOnGroundProperly(object: any): boolean;
+export declare function placeObjectOnGroundOrObjectProperly(object: number): boolean;
+export declare function placeObjectOnGroundProperly(object: number): boolean;
 /**
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  * @param speechName
@@ -14460,7 +14460,7 @@ export declare function playSoundFrontend(soundId: number, audioName: string, au
  * }
  * @param object
  */
-export declare function playStreamFromObject(object: any): void;
+export declare function playStreamFromObject(object: number): void;
 export declare function playStreamFromPed(ped: number): void;
 export declare function playStreamFromPosition(x: number, y: number, z: number): void;
 export declare function playStreamFromVehicle(vehicle: number): void;
@@ -14838,7 +14838,7 @@ export declare function presenceEventUpdatestatIntWithString(statHash: number, v
  */
 export declare function presetInteriorAmbientCache(timecycleModifierName: string): void;
 export declare function preventArrestStateThisFrame(): void;
-export declare function preventCollectionOfPortablePickup(object: any, p1: boolean, p2: boolean): void;
+export declare function preventCollectionOfPortablePickup(object: number, p1: boolean, p2: boolean): void;
 /**
  * This isn't a hash collision.
  * @param p0
@@ -15184,8 +15184,8 @@ export declare function removeCoverPoint(coverpoint: number): void;
 export declare function removeCutFile(cutsceneName: string): void;
 export declare function removeCutscene(): void;
 export declare function removeDecal(decal: number): void;
-export declare function removeDecalsFromObject(obj: any): void;
-export declare function removeDecalsFromObjectFacing(obj: any, x: number, y: number, z: number): void;
+export declare function removeDecalsFromObject(obj: number): void;
+export declare function removeDecalsFromObjectFacing(obj: number, x: number, y: number, z: number): void;
 export declare function removeDecalsFromVehicle(vehicle: number): void;
 /**
  * Removes all decals in range from a position, it includes the bullet holes, blood pools, petrol...
@@ -15257,7 +15257,7 @@ export declare function removeMultiplayerWalletCash(): void;
 export declare function removeNamedPtfxAsset(fxName: string): void;
 export declare function removeNavmeshBlockingObject(p0: number): void;
 export declare function removeNavmeshRequiredRegions(): void;
-export declare function removeObjectHighDetailModel(object: any): void;
+export declare function removeObjectHighDetailModel(object: number): void;
 export declare function removeParticleFx(ptfxHandle: number, p1: boolean): void;
 export declare function removeParticleFxFromEntity(entity: number): void;
 export declare function removeParticleFxInRange(X: number, Y: number, Z: number, radius: number): void;
@@ -15365,7 +15365,7 @@ export declare function removeWeaponComponentFromPed(ped: number, weaponHash: nu
  * @param object
  * @param componentHash
  */
-export declare function removeWeaponComponentFromWeaponObject(object: any, componentHash: number): void;
+export declare function removeWeaponComponentFromWeaponObject(object: number, componentHash: number): void;
 /**
  * This native removes a specified weapon from your selected ped.
  *
@@ -15776,7 +15776,7 @@ export declare function resetAiWeaponDamageModifier(): void;
  * Sets the waves intensity back to original (1.0 in most cases).
  */
 export declare function resetDeepOceanScaler(): void;
-export declare function resetDisableBreaking(object: any): void;
+export declare function resetDisableBreaking(object: number): void;
 export declare function resetDispatchIdealSpawnDistance(): void;
 export declare function resetDispatchSpawnBlockingAreas(): void;
 export declare function resetDispatchSpawnLocation(): void;
@@ -16001,7 +16001,7 @@ export declare function ropeSetUpdatePinverts(ropeId: number): void;
  * Unloads rope textures for all ropes in the current scene.
  */
 export declare function ropeUnloadTextures(): void;
-export declare function rotateObject(object: any, p1: number, p2: number, p3: boolean): boolean;
+export declare function rotateObject(object: number, p1: number, p2: number, p3: boolean): boolean;
 export declare function round(value: number): number;
 /**
  * Saves the benchmark recording to %USERPROFILE%\Documents\Rockstar Games\GTA V\Benchmarks and submits some metrics.
@@ -16209,7 +16209,7 @@ export declare function setAbilityBarVisibility(visible: boolean): void;
  * @param progress
  */
 export declare function setAchievementProgress(achievementId: number, progress: number): boolean;
-export declare function setActivateObjectPhysicsAsSoonAsItIsUnfrozen(object: any, toggle: boolean): void;
+export declare function setActivateObjectPhysicsAsSoonAsItIsUnfrozen(object: number, toggle: boolean): void;
 export declare function setAdditionalRotationForRecordedVehiclePlayback(vehicle: number, x: number, y: number, z: number, p4: number): void;
 /**
  * Makes pedestrians sound their horn longer, faster and more agressive when they use their horn.
@@ -17252,7 +17252,7 @@ export declare function setCutsceneTriggerArea(x1: number, y1: number, z1: numbe
  * @param object
  * @param toggle
  */
-export declare function setCutscenesWeaponFlashlightOnThisFrame(object: any, toggle: boolean): void;
+export declare function setCutscenesWeaponFlashlightOnThisFrame(object: number, toggle: boolean): void;
 export declare function setDamping(entity: number, vertex: number, value: number): void;
 /**
  * NOTE: Debugging functions are not present in the retail version of the game.
@@ -17288,12 +17288,12 @@ export declare function setDisableAmbientMeleeMove(player: number, toggle: boole
  */
 export declare function setDisableAutomaticCrashTask(vehicle: number, toggle: boolean): void;
 export declare function setDisableBmxExtraTrickForces(p0: number): void;
-export declare function setDisableBreaking(object: any, toggle: boolean): void;
+export declare function setDisableBreaking(object: number, toggle: boolean): void;
 export declare function setDisableCollisionsBetweenCarsAndCarParachute(p0: number): void;
 export declare function setDisableDamageWithPickedUpEntity(p0: number, p1: number): boolean;
 export declare function setDisableDecalRenderingThisFrame(): void;
 export declare function setDisableExplodeFromBodyDamageOnCollision(vehicle: number, value: number): void;
-export declare function setDisableFragDamage(object: any, toggle: boolean): void;
+export declare function setDisableFragDamage(object: number, toggle: boolean): void;
 export declare function setDisableHeliExplodeFromBodyDamage(p0: number, p1: number): void;
 export declare function setDisableHighFallDeath(ped: number, toggle: boolean): void;
 /**
@@ -17404,8 +17404,8 @@ export declare function setDriftTyres(vehicle: number, toggle: boolean): void;
  * @param toggle
  * @param p2
  */
-export declare function setDriveArticulatedJoint(object: any, toggle: boolean, p2: number): void;
-export declare function setDriveArticulatedJointWithInflictor(object: any, toggle: boolean, p2: number, ped: number): void;
+export declare function setDriveArticulatedJoint(object: number, toggle: boolean, p2: number): void;
+export declare function setDriveArticulatedJointWithInflictor(object: number, toggle: boolean, p2: number, ped: number): void;
 export declare function setDriveTaskCruiseSpeed(driver: number, cruiseSpeed: number): void;
 /**
  * This native is used to set the driving style for specific ped.
@@ -17580,7 +17580,7 @@ export declare function setEntityCoords(entity: number, xPos: number, yPos: numb
 export declare function setEntityCoordsNoOffset(entity: number, xPos: number, yPos: number, zPos: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): void;
 export declare function setEntityCoordsWithoutPlantsReset(entity: number, xPos: number, yPos: number, zPos: number, alive: boolean, deadFlag: boolean, ragdollFlag: boolean, clearArea: boolean): void;
 export declare function setEntityDynamic(entity: number, toggle: boolean): void;
-export declare function setEntityFlagRenderSmallShadow(object: any, toggle: boolean): void;
+export declare function setEntityFlagRenderSmallShadow(object: number, toggle: boolean): void;
 /**
  * Sets entity+38 to C (when false) or 0xFF3f (when true)
  * @param entity
@@ -18069,7 +18069,7 @@ export declare function setGameplayHintCameraRelativeSideOffset(xOffset: number)
 export declare function setGameplayHintCameraRelativeVerticalOffset(yOffset: number): void;
 export declare function setGameplayHintFollowDistanceScalar(value: number): void;
 export declare function setGameplayHintFov(FOV: number): void;
-export declare function setGameplayObjectHint(object: any, xOffset: number, yOffset: number, zOffset: number, p4: boolean, time: number, easeInTime: number, easeOutTime: number): void;
+export declare function setGameplayObjectHint(object: number, xOffset: number, yOffset: number, zOffset: number, p4: boolean, time: number, easeInTime: number, easeOutTime: number): void;
 export declare function setGameplayPedHint(ped: number, x1: number, y1: number, z1: number, p4: boolean, duration: number, blendOutDuration: number, blendInDuration: number): void;
 /**
  * Focuses the camera on the specified vehicle.
@@ -18401,8 +18401,8 @@ export declare function setInvertVehicleControls(vehicle: number, state: boolean
  * @param toggle
  */
 export declare function setIsExteriorOnly(entity: number, toggle: boolean): void;
-export declare function setIsObjectArticulated(object: any, toggle: boolean): void;
-export declare function setIsObjectBall(object: any, toggle: boolean): void;
+export declare function setIsObjectArticulated(object: number, toggle: boolean): void;
+export declare function setIsObjectBall(object: number, toggle: boolean): void;
 /**
  * Enables the specified island. For more information, see islandhopper.meta
  * @param name
@@ -18776,22 +18776,22 @@ export declare function setNumberOfParkedVehicles(value: number): void;
  * @param object
  * @param toggle
  */
-export declare function setObjectAllowLowLodBuoyancy(object: any, toggle: boolean): void;
+export declare function setObjectAllowLowLodBuoyancy(object: number, toggle: boolean): void;
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  * @param object
  */
-export declare function setObjectAsNoLongerNeeded(object: any): [any];
+export declare function setObjectAsNoLongerNeeded(object: number): [number];
 /**
  * Overrides a flag on the object which determines if the object should be avoided by a vehicle in task CTaskVehicleGoToPointWithAvoidanceAutomobile.
  * @param object
  * @param toggle
  */
-export declare function setObjectForceVehiclesToAvoid(object: any, toggle: boolean): void;
+export declare function setObjectForceVehiclesToAvoid(object: number, toggle: boolean): void;
 export declare function setObjectGlowInSameTeam(pickup: number): void;
-export declare function setObjectIsAPressurePlate(object: any, toggle: boolean): void;
-export declare function setObjectIsSpecialGolfball(object: any, toggle: boolean): void;
-export declare function setObjectIsVisibleInMirrors(object: any, toggle: boolean): void;
+export declare function setObjectIsAPressurePlate(object: number, toggle: boolean): void;
+export declare function setObjectIsSpecialGolfball(object: number, toggle: boolean): void;
+export declare function setObjectIsVisibleInMirrors(object: number, toggle: boolean): void;
 /**
  * Adjust the physics parameters of a prop, or otherwise known as "object". This is useful for simulated gravity.
  *
@@ -18814,11 +18814,11 @@ export declare function setObjectIsVisibleInMirrors(object: any, toggle: boolean
  * @param p10
  * @param buoyancy
  */
-export declare function setObjectPhysicsParams(object: any, weight: number, p2: number, p3: number, p4: number, p5: number, gravity: number, p7: number, p8: number, p9: number, p10: number, buoyancy: number): void;
-export declare function setObjectSpeedBoostAmount(object: any, p1: number): void;
-export declare function setObjectSpeedBoostDuration(object: any, duration: number): void;
+export declare function setObjectPhysicsParams(object: number, weight: number, p2: number, p3: number, p4: number, p5: number, gravity: number, p7: number, p8: number, p9: number, p10: number, buoyancy: number): void;
+export declare function setObjectSpeedBoostAmount(object: number, p1: number): void;
+export declare function setObjectSpeedBoostDuration(object: number, duration: number): void;
 export declare function setObjectTakesDamageFromCollidingWithBuildings(p0: number, p1: boolean): void;
-export declare function setObjectTargettable(object: any, targettable: boolean): void;
+export declare function setObjectTargettable(object: number, targettable: boolean): void;
 /**
  * enum ObjectPaintVariants
  * {
@@ -18842,7 +18842,7 @@ export declare function setObjectTargettable(object: any, targettable: boolean):
  * @param object
  * @param textureVariation
  */
-export declare function setObjectTintIndex(object: any, textureVariation: number): void;
+export declare function setObjectTintIndex(object: number, textureVariation: number): void;
 export declare function setOnIslandXForTakenPhoto(p0: number): void;
 export declare function setOnlyAllowAmmoCollectionWhenLow(p0: boolean): void;
 export declare function setOpenRearDoorsOnExplosion(vehicle: number, toggle: boolean): void;
@@ -20478,7 +20478,7 @@ export declare function setPedSeeingRange(ped: number, value: number): void;
  * @param ped
  * @param p1
  */
-export declare function setPedShootOrdnanceWeapon(ped: number, p1: number): any;
+export declare function setPedShootOrdnanceWeapon(ped: number, p1: number): number;
 /**
  * shootRate 0-1000
  * @param ped
@@ -21257,7 +21257,7 @@ export declare function setProfileSettingPrologueComplete(): void;
  */
 export declare function setProfileSettingSpChopMissionComplete(): void;
 export declare function setProjectilesShouldExplodeOnContact(entity: number, p1: number): void;
-export declare function setPropLightColor(object: any, p1: boolean, r: number, g: number, b: number): boolean;
+export declare function setPropLightColor(object: number, p1: boolean, r: number, g: number, b: number): boolean;
 export declare function setPropTintIndex(p0: number, p1: number): void;
 export declare function setPtfxForceVehicleInteriorFlag(p0: number): void;
 export declare function setRaceTrackRender(toggle: boolean): void;
@@ -21797,7 +21797,7 @@ export declare function setStateOfClosestDoorOfType(type: number, x: number, y: 
  * @param object
  * @param state
  */
-export declare function setStateOfRayfireMapObject(object: any, state: number): void;
+export declare function setStateOfRayfireMapObject(object: number, state: number): void;
 /**
  * Example:
  * AUDIO::SET_STATIC_EMITTER_ENABLED((Any*)"LOS_SANTOS_VANILLA_UNICORN_01_STAGE", false);    AUDIO::SET_STATIC_EMITTER_ENABLED((Any*)"LOS_SANTOS_VANILLA_UNICORN_02_MAIN_ROOM", false);    AUDIO::SET_STATIC_EMITTER_ENABLED((Any*)"LOS_SANTOS_VANILLA_UNICORN_03_BACK_ROOM", false);
@@ -21885,7 +21885,7 @@ export declare function setTaskVehicleGotoPlaneMinHeightAboveTerrain(plane: numb
  * @param state
  */
 export declare function setTaxiLights(vehicle: number, state: boolean): void;
-export declare function setTeamPickupObject(object: any, p1: number, p2: boolean): void;
+export declare function setTeamPickupObject(object: number, p1: number, p2: boolean): void;
 /**
  * From the scripts:
  *
@@ -23520,8 +23520,8 @@ export declare function setWeaponDamageModifier(weaponHash: number, damageMultip
  * @param p1
  */
 export declare function setWeaponEffectDurationModifier(p0: number, p1: number): void;
-export declare function setWeaponImpactsApplyGreaterForce(object: any, p1: boolean): void;
-export declare function setWeaponObjectCamoIndex(weaponObject: any, p1: number): void;
+export declare function setWeaponImpactsApplyGreaterForce(object: number, p1: boolean): void;
+export declare function setWeaponObjectCamoIndex(weaponObject: number, p1: number): void;
 /**
  * Colors:
  * 0 = Gray
@@ -23561,13 +23561,13 @@ export declare function setWeaponObjectCamoIndex(weaponObject: any, p1: number):
  * @param camoComponentHash
  * @param colorIndex
  */
-export declare function setWeaponObjectComponentTintIndex(weaponObject: any, camoComponentHash: number, colorIndex: number): void;
+export declare function setWeaponObjectComponentTintIndex(weaponObject: number, camoComponentHash: number, colorIndex: number): void;
 /**
  * Full list of weapons, components & tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  * @param weapon
  * @param tintIndex
  */
-export declare function setWeaponObjectTintIndex(weapon: any, tintIndex: number): void;
+export declare function setWeaponObjectTintIndex(weapon: number, tintIndex: number): void;
 export declare function setWeatherPtfxOverrideCurrLevel(p0: number): void;
 export declare function setWeatherPtfxUseOverrideSettings(p0: boolean): void;
 /**
@@ -23962,7 +23962,7 @@ export declare function slerpNearQuaternion(t: number, x: number, y: number, z: 
  * @param speedZ
  * @param collision
  */
-export declare function slideObject(object: any, toX: number, toY: number, toZ: number, speedX: number, speedY: number, speedZ: number, collision: boolean): boolean;
+export declare function slideObject(object: number, toX: number, toY: number, toZ: number, speedX: number, speedY: number, speedZ: number, collision: boolean): boolean;
 /**
  * windowIndex:
  * 0 = Front Left Window
@@ -27202,7 +27202,7 @@ export declare function toggleStealthRadar(toggle: boolean): void;
  * @param toggle
  */
 export declare function toggleVehicleMod(vehicle: number, modType: number, toggle: boolean): void;
-export declare function trackObjectVisibility(object: any): void;
+export declare function trackObjectVisibility(object: number): void;
 /**
  * in script hook .net
  *
