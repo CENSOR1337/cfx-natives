@@ -19,7 +19,8 @@ function getNativeReturnType(type) {
     if (type == "Vector3") return "_rv";
     if (type == "long") return "_rl";
     if (type == "int") return "_ri";
-    if (type == "Object") return "_ro";
+    if (type == "object") return "_ro"; // This is CFX object
+    if (type == "Object") return "_ri"; // This is in game Object
     return "_ri"// default
 }
 
@@ -37,7 +38,8 @@ const nativeParamTypes = {
     "Hash": "hash",
     "Ped": "int",
     "Entity": "int",
-    "Object": "Object",
+    "Object": "int",
+    "object": "object",
     "Player": "int",
     "ScrHandle": "int",
     "Blip": "int",
