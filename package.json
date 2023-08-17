@@ -18,8 +18,7 @@
 	"scripts": {
 		"build": "tsc",
 		"update": "node ./scripts/update.js",
-		"gen": "node ./scripts/generate.js",
-		"validate": "node ./scripts/validate.js"
+		"gen": "node ./scripts/generate.js"
 	},
 	"author": "CENSOR_1337",
 	"license": "MIT",
