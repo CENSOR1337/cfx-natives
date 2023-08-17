@@ -1,4 +1,4 @@
-import { Vector3 } from "@cfx/shared";
+import { Vector3 } from "cfx-shared";
 export declare function abortVehicleCrewEmblemRequest(p0: number): [boolean, number];
 export declare function absf(value: number): number;
 export declare function absi(value: number): number;
