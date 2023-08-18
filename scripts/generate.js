@@ -33,7 +33,7 @@ function generateNatives() {
 
     // Sort by name
     allNatives.sort((a, b) => {
-        if (a.altName > b.altName) {
+        if (a.nativeName > b.nativeName) {
             return 1;
         } else {
             return -1;
