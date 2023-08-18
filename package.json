@@ -31,7 +31,6 @@
 		"typescript": "^5.1.6"
 	},
 	"dependencies": {
-		"cfx-shared": "^1.0.0",
-		"node-int64": "^0.4.0"
+		"cfx-shared": "^1.0.0"
 	}
 }
