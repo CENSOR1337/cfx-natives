@@ -19,8 +19,8 @@ function getNativeReturnType(type) {
     if (type == "Vector3") return "_rv";
     if (type == "long") return "_rl";
     if (type == "int") return "_ri";
-    if (type == "object") return "_ro"; // This is CFX object
-    if (type == "Object") return "_ri"; // This is in game Object
+    if (type == "object") return "_ri"; // This is in game object
+    if (type == "Object") return "_ro"; // This is CFX object
     return "_ri"// default
 }
 
