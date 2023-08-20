@@ -166,7 +166,7 @@ class Native {
                 if (param.type == "func") acc = `_mfr(${param.name})`;
                 if (param.type == "float") acc = `_fv(${param.name})`;
                 if (param.type == "hash") acc = `_ch(${param.name})`;
-                if (param.type == "object") acc = `...(_obj(${param.name})`;
+                if (param.type == "object") acc = `...(_obj(${param.name}))`;
                 if (param.type == "string") acc = `_ts(${param.name})`;
                 if (param.type == "char") acc = `_ts(${param.name})`;
                 acc = acc || param.name;
