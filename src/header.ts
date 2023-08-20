@@ -42,7 +42,7 @@ function _ch(hash: any) {
 	return hash;
 }
 
-function _obj(obj) {
+function _obj(obj: any) {
 	const s = msgpack_pack(obj);
 	return [s, s.length];
 }
