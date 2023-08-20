@@ -145,20 +145,10 @@ const _rf = Citizen.resultAsFloat();
 const _rl = Citizen.resultAsLong();
 const _s = Citizen.resultAsString();
 const _rv = Citizen.resultAsVector();
-//@ts-ignore
 const _ro = Citizen.resultAsObject2();
-//@ts-ignore
 const _in = Citizen.invokeNativeByHash;
-const _ii_base = Citizen.pointerValueInt();
-const _fi_base = Citizen.pointerValueFloat();
-function _ii(...args) {
-    // @ts-ignore
-    return _ii_base(...args);
-}
-function _fi(...args) {
-    // @ts-ignore
-    return _fi_base(...args);
-}
+const _ii = Citizen.pointerValueIntInitialized;
+const _fi = Citizen.pointerValueFloatInitialized;
 function joaat(s) {
     const k = s.toLowerCase();
     let h, i;
@@ -1988,8 +1978,7 @@ exports.attachContainerToHandlerFrameWhenLinedUp = attachContainerToHandlerFrame
  * @param p13
  */
 function attachEntitiesToRope(ropeId, ent1, ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length, p10, p11) {
-    const [p12_out, p13_out] = _in(0x3d95ec8b, 0x6d940ac3, ropeId, ent1, ent2, _fv(ent1_x), _fv(ent1_y), _fv(ent1_z), _fv(ent2_x), _fv(ent2_y), _fv(ent2_z), _fv(length), p10, p11, _i, _i);
-    return [p12_out, p13_out];
+    return _in(0x3d95ec8b, 0x6d940ac3, ropeId, ent1, ent2, _fv(ent1_x), _fv(ent1_y), _fv(ent1_z), _fv(ent2_x), _fv(ent2_y), _fv(ent2_z), _fv(length), p10, p11, _i, _i);
 }
 exports.attachEntitiesToRope = attachEntitiesToRope;
 function attachEntityBoneToEntityBone(entity1, entity2, boneIndex1, boneIndex2, p4, p5) {
@@ -3210,8 +3199,7 @@ exports.clearAreaOfVehicles = clearAreaOfVehicles;
  * @param offset
  */
 function clearBit(offset) {
-    const [address_out] = _in(0xe80492a9, 0xac099a93, _i, offset);
-    return [address_out];
+    return _in(0xe80492a9, 0xac099a93, _i, offset);
 }
 exports.clearBit = clearBit;
 function clearBrief() {
@@ -3653,8 +3641,7 @@ function clearScenarioSpawnHistory() {
 }
 exports.clearScenarioSpawnHistory = clearScenarioSpawnHistory;
 function clearSequenceTask(taskSequenceId) {
-    const [taskSequenceId_out] = _in(0x3841422e, 0x9c488d8c, _ii(taskSequenceId));
-    return [taskSequenceId_out];
+    return _in(0x3841422e, 0x9c488d8c, _ii(taskSequenceId));
 }
 exports.clearSequenceTask = clearSequenceTask;
 /**
@@ -3911,13 +3898,11 @@ exports.convertOldPickupTypeToNew = convertOldPickupTypeToNew;
  * @param timeStructure
  */
 function convertPosixTime(posixTime, timeStructure) {
-    const [timeStructure_out] = _in(0xac97af97, 0xfa68e5d5, posixTime, _ii(timeStructure));
-    return [timeStructure_out];
+    return _in(0xac97af97, 0xfa68e5d5, posixTime, _ii(timeStructure));
 }
 exports.convertPosixTime = convertPosixTime;
 function copyScriptStruct(size) {
-    const [dst_out, src_out] = _in(0x213aeb2b, 0x90cba7ac, _i, _i, size);
-    return [dst_out, src_out];
+    return _in(0x213aeb2b, 0x90cba7ac, _i, _i, size);
 }
 exports.copyScriptStruct = copyScriptStruct;
 /**
@@ -4645,8 +4630,7 @@ function damageObjectFragmentChild(p0, p1, p2) {
 }
 exports.damageObjectFragmentChild = damageObjectFragmentChild;
 function dataarrayAddBool(value) {
-    const [arrayData_out] = _in(0xf8b0f5a4, 0x3e928c76, _i, value);
-    return [arrayData_out];
+    return _in(0xf8b0f5a4, 0x3e928c76, _i, value);
 }
 exports.dataarrayAddBool = dataarrayAddBool;
 function dataarrayAddDict(arrayData) {
@@ -4655,23 +4639,19 @@ function dataarrayAddDict(arrayData) {
 }
 exports.dataarrayAddDict = dataarrayAddDict;
 function dataarrayAddFloat(value) {
-    const [arrayData_out] = _in(0x57a995fd, 0x75d37f56, _i, _fv(value));
-    return [arrayData_out];
+    return _in(0x57a995fd, 0x75d37f56, _i, _fv(value));
 }
 exports.dataarrayAddFloat = dataarrayAddFloat;
 function dataarrayAddInt(value) {
-    const [arrayData_out] = _in(0xcabdb751, 0xd86fe93b, _i, value);
-    return [arrayData_out];
+    return _in(0xcabdb751, 0xd86fe93b, _i, value);
 }
 exports.dataarrayAddInt = dataarrayAddInt;
 function dataarrayAddString(value) {
-    const [arrayData_out] = _in(0x2f0661c1, 0x55aeeeaa, _i, _ts(value));
-    return [arrayData_out];
+    return _in(0x2f0661c1, 0x55aeeeaa, _i, _ts(value));
 }
 exports.dataarrayAddString = dataarrayAddString;
 function dataarrayAddVector(valueX, valueY, valueZ) {
-    const [arrayData_out] = _in(0x407f8d03, 0x4f70f0c2, _i, _fv(valueX), _fv(valueY), _fv(valueZ));
-    return [arrayData_out];
+    return _in(0x407f8d03, 0x4f70f0c2, _i, _fv(valueX), _fv(valueY), _fv(valueZ));
 }
 exports.dataarrayAddVector = dataarrayAddVector;
 function dataarrayGetBool(arrayIndex) {
@@ -4789,28 +4769,23 @@ function datadictGetVector(key) {
 }
 exports.datadictGetVector = datadictGetVector;
 function datadictSetBool(key, value) {
-    const [objectData_out] = _in(0x35124302, 0xa556a325, _i, _ts(key), value);
-    return [objectData_out];
+    return _in(0x35124302, 0xa556a325, _i, _ts(key), value);
 }
 exports.datadictSetBool = datadictSetBool;
 function datadictSetFloat(key, value) {
-    const [objectData_out] = _in(0xc27e1cc2, 0xd795105e, _i, _ts(key), _fv(value));
-    return [objectData_out];
+    return _in(0xc27e1cc2, 0xd795105e, _i, _ts(key), _fv(value));
 }
 exports.datadictSetFloat = datadictSetFloat;
 function datadictSetInt(key, value) {
-    const [objectData_out] = _in(0xe7e03545, 0x0a7948d5, _i, _ts(key), value);
-    return [objectData_out];
+    return _in(0xe7e03545, 0x0a7948d5, _i, _ts(key), value);
 }
 exports.datadictSetInt = datadictSetInt;
 function datadictSetString(key, value) {
-    const [objectData_out] = _in(0x8ff3847d, 0xadd8e30c, _i, _ts(key), _ts(value));
-    return [objectData_out];
+    return _in(0x8ff3847d, 0xadd8e30c, _i, _ts(key), _ts(value));
 }
 exports.datadictSetString = datadictSetString;
 function datadictSetVector(key, valueX, valueY, valueZ) {
-    const [objectData_out] = _in(0x4cd49b76, 0x338c7dee, _i, _ts(key), _fv(valueX), _fv(valueY), _fv(valueZ));
-    return [objectData_out];
+    return _in(0x4cd49b76, 0x338c7dee, _i, _ts(key), _fv(valueX), _fv(valueY), _fv(valueZ));
 }
 exports.datadictSetVector = datadictSetVector;
 function datafileClearWatchList() {
@@ -5037,8 +5012,7 @@ exports.deleteChildRope = deleteChildRope;
  * @param entity
  */
 function deleteEntity(entity) {
-    const [entity_out] = _in(0xae3cbe5b, 0xf394c9c9, _ii(entity));
-    return [entity_out];
+    return _in(0xae3cbe5b, 0xf394c9c9, _ii(entity));
 }
 exports.deleteEntity = deleteEntity;
 /**
@@ -5056,8 +5030,7 @@ function deleteIncident(incidentId) {
 }
 exports.deleteIncident = deleteIncident;
 function deleteMissionTrain(train) {
-    const [train_out] = _in(0x5b76b14a, 0xe875c795, _ii(train));
-    return [train_out];
+    return _in(0x5b76b14a, 0xe875c795, _ii(train));
 }
 exports.deleteMissionTrain = deleteMissionTrain;
 /**
@@ -5065,8 +5038,7 @@ exports.deleteMissionTrain = deleteMissionTrain;
  * @param object
  */
 function deleteObject(object) {
-    const [object_out] = _in(0x539e0ae3, 0xe6634b9f, _ii(object));
-    return [object_out];
+    return _in(0x539e0ae3, 0xe6634b9f, _ii(object));
 }
 exports.deleteObject = deleteObject;
 /**
@@ -5087,13 +5059,11 @@ exports.deletePatrolRoute = deletePatrolRoute;
  * @param ped
  */
 function deletePed(ped) {
-    const [ped_out] = _in(0x9614299d, 0xcb53e54b, _ii(ped));
-    return [ped_out];
+    return _in(0x9614299d, 0xcb53e54b, _ii(ped));
 }
 exports.deletePed = deletePed;
 function deleteRope(ropeId) {
-    const [ropeId_out] = _in(0x52b48292, 0x81364649, _ii(ropeId));
-    return [ropeId_out];
+    return _in(0x52b48292, 0x81364649, _ii(ropeId));
 }
 exports.deleteRope = deleteRope;
 function deleteScriptVehicleGenerator(vehicleGenerator) {
@@ -5116,8 +5086,7 @@ exports.deleteStuntJump = deleteStuntJump;
  * @param vehicle
  */
 function deleteVehicle(vehicle) {
-    const [vehicle_out] = _in(0xea386986, 0xe786a54f, _ii(vehicle));
-    return [vehicle_out];
+    return _in(0xea386986, 0xe786a54f, _ii(vehicle));
 }
 exports.deleteVehicle = deleteVehicle;
 function deleteWaypointsFromThisPlayer() {
@@ -5630,8 +5599,7 @@ function displayOnscreenKeyboard(p0, windowTitle, p2, defaultText, defaultConcat
 }
 exports.displayOnscreenKeyboard = displayOnscreenKeyboard;
 function displayOnscreenKeyboardWithLongerInitialString(p0, windowTitle, defaultText, defaultConcat1, defaultConcat2, defaultConcat3, defaultConcat4, defaultConcat5, defaultConcat6, defaultConcat7, maxInputLength) {
-    const [p2_out] = _in(0xca78cfa0, 0x366592fe, p0, _ts(windowTitle), _i, _ts(defaultText), _ts(defaultConcat1), _ts(defaultConcat2), _ts(defaultConcat3), _ts(defaultConcat4), _ts(defaultConcat5), _ts(defaultConcat6), _ts(defaultConcat7), maxInputLength);
-    return [p2_out];
+    return _in(0xca78cfa0, 0x366592fe, p0, _ts(windowTitle), _i, _ts(defaultText), _ts(defaultConcat1), _ts(defaultConcat2), _ts(defaultConcat3), _ts(defaultConcat4), _ts(defaultConcat5), _ts(defaultConcat6), _ts(defaultConcat7), maxInputLength);
 }
 exports.displayOnscreenKeyboardWithLongerInitialString = displayOnscreenKeyboardWithLongerInitialString;
 /**
@@ -8104,8 +8072,7 @@ exports.getActiveVehicleMissionType = getActiveVehicleMissionType;
  * @param y
  */
 function getActualScreenResolution() {
-    const [x_out, y_out] = _in(0x873c9f31, 0x04101dd3, _i, _i);
-    return [x_out, y_out];
+    return _in(0x873c9f31, 0x04101dd3, _i, _i);
 }
 exports.getActualScreenResolution = getActualScreenResolution;
 function getAiPedPedBlipIndex(ped) {
@@ -9122,8 +9089,7 @@ function getCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance, p4) 
 }
 exports.getCoordsOfProjectileTypeWithinDistance = getCoordsOfProjectileTypeWithinDistance;
 function getCurrWeatherState() {
-    const [weatherType1_out, weatherType2_out, percentWeather2_out] = _in(0xf3bbe884, 0xa14bb413, _i, _i, _f);
-    return [weatherType1_out, weatherType2_out, percentWeather2_out];
+    return _in(0xf3bbe884, 0xa14bb413, _i, _i, _f);
 }
 exports.getCurrWeatherState = getCurrWeatherState;
 /**
@@ -9737,8 +9703,7 @@ function getEntityLodDist(entity) {
 }
 exports.getEntityLodDist = getEntityLodDist;
 function getEntityMatrix(entity) {
-    const [forwardVector_out, rightVector_out, upVector_out, position_out] = _in(0xecb2fc72, 0x35a7d137, entity, _v, _v, _v, _v);
-    return [_mv(forwardVector_out), _mv(rightVector_out), _mv(upVector_out), _mv(position_out)];
+    return _in(0xecb2fc72, 0x35a7d137, entity, _v, _v, _v, _v);
 }
 exports.getEntityMatrix = getEntityMatrix;
 /**
@@ -9812,8 +9777,7 @@ exports.getEntityProofs = getEntityProofs;
  * @param w
  */
 function getEntityQuaternion(entity) {
-    const [x_out, y_out, z_out, w_out] = _in(0x7b3703d2, 0xd32dfa18, entity, _f, _f, _f, _f);
-    return [x_out, y_out, z_out, w_out];
+    return _in(0x7b3703d2, 0xd32dfa18, entity, _f, _f, _f, _f);
 }
 exports.getEntityQuaternion = getEntityQuaternion;
 /**
@@ -10117,13 +10081,11 @@ function getFollowVehicleCamZoomLevel() {
 }
 exports.getFollowVehicleCamZoomLevel = getFollowVehicleCamZoomLevel;
 function getForcedComponent(componentHash, forcedComponentIndex) {
-    const [nameHash_out, enumValue_out, componentType_out] = _in(0x6c93ed8c, 0x2f74859b, _ch(componentHash), forcedComponentIndex, _i, _i, _i);
-    return [nameHash_out, enumValue_out, componentType_out];
+    return _in(0x6c93ed8c, 0x2f74859b, _ch(componentHash), forcedComponentIndex, _i, _i, _i);
 }
 exports.getForcedComponent = getForcedComponent;
 function getForcedProp(componentHash, forcedPropIndex) {
-    const [nameHash_out, enumValue_out, anchorPoint_out] = _in(0xe1ca84eb, 0xf72e691d, _ch(componentHash), forcedPropIndex, _i, _i, _i);
-    return [nameHash_out, enumValue_out, anchorPoint_out];
+    return _in(0xe1ca84eb, 0xf72e691d, _ch(componentHash), forcedPropIndex, _i, _i, _i);
 }
 exports.getForcedProp = getForcedProp;
 function getFrameCount() {
@@ -10238,8 +10200,7 @@ exports.getGroundZFor3dCoord = getGroundZFor3dCoord;
  * @param sizeInMembers
  */
 function getGroupSize(groupID) {
-    const [p1_out, sizeInMembers_out] = _in(0x8de69fe3, 0x5ca09a45, groupID, _i, _i);
-    return [p1_out, sizeInMembers_out];
+    return _in(0x8de69fe3, 0x5ca09a45, groupID, _i, _i);
 }
 exports.getGroupSize = getGroupSize;
 function getHasObjectBeenCompletelyDestroyed(p0) {
@@ -10343,8 +10304,7 @@ function getHeliTailRotorHealth(vehicle) {
 }
 exports.getHeliTailRotorHealth = getHeliTailRotorHealth;
 function getHudColour(hudColorIndex) {
-    const [r_out, g_out, b_out, a_out] = _in(0x7c9c91ab, 0x74a0360f, hudColorIndex, _i, _i, _i, _i);
-    return [r_out, g_out, b_out, a_out];
+    return _in(0x7c9c91ab, 0x74a0360f, hudColorIndex, _i, _i, _i, _i);
 }
 exports.getHudColour = getHudColour;
 function getHudComponentPosition(id) {
@@ -10485,8 +10445,7 @@ function getInteriorHeading(interior) {
 }
 exports.getInteriorHeading = getInteriorHeading;
 function getInteriorLocationAndNamehash(interior) {
-    const [position_out, nameHash_out] = _in(0x252bdc06, 0xb73fa6ea, interior, _v, _i);
-    return [_mv(position_out), nameHash_out];
+    return _in(0x252bdc06, 0xb73fa6ea, interior, _v, _i);
 }
 exports.getInteriorLocationAndNamehash = getInteriorLocationAndNamehash;
 function getIsArticulatedJointAtMaxAngle(p0, p1) {
@@ -10873,8 +10832,7 @@ exports.getLocalPlayerGamepadAimState = getLocalPlayerGamepadAimState;
  * @param second
  */
 function getLocalTime() {
-    const [year_out, month_out, day_out, hour_out, minute_out, second_out] = _in(0x50c7a990, 0x57a69748, _i, _i, _i, _i, _i, _i);
-    return [year_out, month_out, day_out, hour_out, minute_out, second_out];
+    return _in(0x50c7a990, 0x57a69748, _i, _i, _i, _i, _i, _i);
 }
 exports.getLocalTime = getLocalTime;
 function getLockonDistanceOfCurrentPedWeapon(ped) {
@@ -11003,8 +10961,7 @@ exports.getMeleeTargetForPed = getMeleeTargetForPed;
  * @param selectedItemUniqueId
  */
 function getMenuLayoutChangedEventDetails() {
-    const [lastItemMenuId_out, selectedItemMenuId_out, selectedItemUniqueId_out] = _in(0x7e17be53, 0xe1aaabaf, _i, _i, _i);
-    return [lastItemMenuId_out, selectedItemMenuId_out, selectedItemUniqueId_out];
+    return _in(0x7e17be53, 0xe1aaabaf, _i, _i, _i);
 }
 exports.getMenuLayoutChangedEventDetails = getMenuLayoutChangedEventDetails;
 /**
@@ -11033,8 +10990,7 @@ function getMenuPedMaskedIntStat(statHash, mask, p3) {
 }
 exports.getMenuPedMaskedIntStat = getMenuPedMaskedIntStat;
 function getMenuTriggerEventDetails() {
-    const [lastItemMenuId_out, selectedItemUniqueId_out] = _in(0x36c1451a, 0x88a09630, _i, _i);
-    return [lastItemMenuId_out, selectedItemUniqueId_out];
+    return _in(0x36c1451a, 0x88a09630, _i, _i);
 }
 exports.getMenuTriggerEventDetails = getMenuTriggerEventDetails;
 function getMillisecondsPerGameMinute() {
@@ -11054,18 +11010,15 @@ function getMissionFlag() {
 }
 exports.getMissionFlag = getMissionFlag;
 function getMobilePhonePosition(position) {
-    const [position_out] = _in(0x584fdfda, 0x48805b86, _v);
-    return [_mv(position_out)];
+    return _in(0x584fdfda, 0x48805b86, _v);
 }
 exports.getMobilePhonePosition = getMobilePhonePosition;
 function getMobilePhoneRenderId(renderId) {
-    const [renderId_out] = _in(0xb4a53e05, 0xf68b6fa1, _ii(renderId));
-    return [renderId_out];
+    return _in(0xb4a53e05, 0xf68b6fa1, _ii(renderId));
 }
 exports.getMobilePhoneRenderId = getMobilePhoneRenderId;
 function getMobilePhoneRotation(p1) {
-    const [rotation_out] = _in(0x1cefb61f, 0x193070ae, _v, p1);
-    return [_mv(rotation_out)];
+    return _in(0x1cefb61f, 0x193070ae, _v, p1);
 }
 exports.getMobilePhoneRotation = getMobilePhoneRotation;
 /**
@@ -11101,8 +11054,7 @@ exports.getModTextLabel = getModTextLabel;
  * @param maximum
  */
 function getModelDimensions(modelHash) {
-    const [minimum_out, maximum_out] = _in(0x03e8d3d5, 0xf549087a, _ch(modelHash), _v, _v);
-    return [_mv(minimum_out), _mv(maximum_out)];
+    return _in(0x03e8d3d5, 0xf549087a, _ch(modelHash), _v, _v);
 }
 exports.getModelDimensions = getModelDimensions;
 /**
@@ -12201,8 +12153,7 @@ exports.getPedGroupIndex = getPedGroupIndex;
  * @param outB
  */
 function getPedHairTintColor(hairColorIndex) {
-    const [outR_out, outG_out, outB_out] = _in(0x4852fc38, 0x6e2e1bb5, hairColorIndex, _i, _i, _i);
-    return [outR_out, outG_out, outB_out];
+    return _in(0x4852fc38, 0x6e2e1bb5, hairColorIndex, _i, _i, _i);
 }
 exports.getPedHairTintColor = getPedHairTintColor;
 /**
@@ -12337,8 +12288,7 @@ exports.getPedLastWeaponImpactCoord = getPedLastWeaponImpactCoord;
  * @param outB
  */
 function getPedMakeupTintColor(makeupColorIndex) {
-    const [outR_out, outG_out, outB_out] = _in(0x013e5cfc, 0x38cd5387, makeupColorIndex, _i, _i, _i);
-    return [outR_out, outG_out, outB_out];
+    return _in(0x013e5cfc, 0x38cd5387, makeupColorIndex, _i, _i, _i);
 }
 exports.getPedMakeupTintColor = getPedMakeupTintColor;
 function getPedMaxHealth(ped) {
@@ -12460,8 +12410,7 @@ function getPedParachuteState(ped) {
 }
 exports.getPedParachuteState = getPedParachuteState;
 function getPedParachuteTintIndex(ped, outTintIndex) {
-    const [outTintIndex_out] = _in(0xeaf5f7e5, 0xae7c6c9d, ped, _ii(outTintIndex));
-    return [outTintIndex_out];
+    return _in(0xeaf5f7e5, 0xae7c6c9d, ped, _ii(outTintIndex));
 }
 exports.getPedParachuteTintIndex = getPedParachuteTintIndex;
 /**
@@ -12715,13 +12664,11 @@ function getPlayerParachuteModelOverride(player) {
 }
 exports.getPlayerParachuteModelOverride = getPlayerParachuteModelOverride;
 function getPlayerParachutePackTintIndex(player, tintIndex) {
-    const [tintIndex_out] = _in(0x6e9c742f, 0x340ce5a2, player, _ii(tintIndex));
-    return [tintIndex_out];
+    return _in(0x6e9c742f, 0x340ce5a2, player, _ii(tintIndex));
 }
 exports.getPlayerParachutePackTintIndex = getPlayerParachutePackTintIndex;
 function getPlayerParachuteSmokeTrailColor(player) {
-    const [r_out, g_out, b_out] = _in(0xef56dbab, 0xd3cd4887, player, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0xef56dbab, 0xd3cd4887, player, _i, _i, _i);
 }
 exports.getPlayerParachuteSmokeTrailColor = getPlayerParachuteSmokeTrailColor;
 /**
@@ -12745,8 +12692,7 @@ exports.getPlayerParachuteSmokeTrailColor = getPlayerParachuteSmokeTrailColor;
  * @param tintIndex
  */
 function getPlayerParachuteTintIndex(player, tintIndex) {
-    const [tintIndex_out] = _in(0x75d3f7a1, 0xb0d9b145, player, _ii(tintIndex));
-    return [tintIndex_out];
+    return _in(0x75d3f7a1, 0xb0d9b145, player, _ii(tintIndex));
 }
 exports.getPlayerParachuteTintIndex = getPlayerParachuteTintIndex;
 /**
@@ -12816,13 +12762,11 @@ exports.getPlayerReserveParachuteModelOverride = getPlayerReserveParachuteModelO
  * @param index
  */
 function getPlayerReserveParachuteTintIndex(player, index) {
-    const [index_out] = _in(0xd5a016bc, 0x3c09cf40, player, _ii(index));
-    return [index_out];
+    return _in(0xd5a016bc, 0x3c09cf40, player, _ii(index));
 }
 exports.getPlayerReserveParachuteTintIndex = getPlayerReserveParachuteTintIndex;
 function getPlayerRgbColour(player) {
-    const [r_out, g_out, b_out] = _in(0xe902ef95, 0x1dce178f, player, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0xe902ef95, 0x1dce178f, player, _i, _i, _i);
 }
 exports.getPlayerRgbColour = getPlayerRgbColour;
 function getPlayerShortSwitchState() {
@@ -12973,8 +12917,7 @@ exports.getPositionOfVehicleRecordingIdAtTime = getPositionOfVehicleRecordingIdA
  * @param second
  */
 function getPosixTime() {
-    const [year_out, month_out, day_out, hour_out, minute_out, second_out] = _in(0xda488f29, 0x9a5b164e, _i, _i, _i, _i, _i, _i);
-    return [year_out, month_out, day_out, hour_out, minute_out, second_out];
+    return _in(0xda488f29, 0x9a5b164e, _i, _i, _i, _i, _i, _i);
 }
 exports.getPosixTime = getPosixTime;
 /**
@@ -13086,8 +13029,7 @@ exports.getRandomVehicleInSphere = getRandomVehicleInSphere;
  * @param successIndicator
  */
 function getRandomVehicleModelInMemory(p0) {
-    const [modelHash_out, successIndicator_out] = _in(0x055bf0ac, 0x0c34f4fd, p0, _i, _i);
-    return [modelHash_out, successIndicator_out];
+    return _in(0x055bf0ac, 0x0c34f4fd, p0, _i, _i);
 }
 exports.getRandomVehicleModelInMemory = getRandomVehicleModelInMemory;
 function getRandomVehicleNode(x, y, z, radius, p4, p5, p6) {
@@ -13220,8 +13162,7 @@ function getRequestingnightvision() {
 }
 exports.getRequestingnightvision = getRequestingnightvision;
 function getReservedMissionEntitiesInArea(x, y, z, p3) {
-    const [out1_out, out2_out, out3_out] = _in(0xe42d626e, 0xec94e5d9, _fv(x), _fv(y), _fv(z), p3, _i, _i, _i);
-    return [out1_out, out2_out, out3_out];
+    return _in(0xe42d626e, 0xec94e5d9, _fv(x), _fv(y), _fv(z), p3, _i, _i, _i);
 }
 exports.getReservedMissionEntitiesInArea = getReservedMissionEntitiesInArea;
 function getRoadBoundaryUsingHeading(x, y, z, heading, outPosition) {
@@ -13395,8 +13336,7 @@ exports.getScreenCoordFromWorldCoord = getScreenCoordFromWorldCoord;
  * @param y
  */
 function getScreenResolution() {
-    const [x_out, y_out] = _in(0x888d57e4, 0x07e63624, _i, _i);
-    return [x_out, y_out];
+    return _in(0x888d57e4, 0x07e63624, _i, _i);
 }
 exports.getScreenResolution = getScreenResolution;
 function getScreenblurFadeCurrentTime() {
@@ -13411,8 +13351,7 @@ exports.getScreenblurFadeCurrentTime = getScreenblurFadeCurrentTime;
  * @param calculatedY
  */
 function getScriptGfxAlignPosition(x, y) {
-    const [calculatedX_out, calculatedY_out] = _in(0x6dd8f5aa, 0x635eb4b2, _fv(x), _fv(y), _f, _f);
-    return [calculatedX_out, calculatedY_out];
+    return _in(0x6dd8f5aa, 0x635eb4b2, _fv(x), _fv(y), _f, _f);
 }
 exports.getScriptGfxAlignPosition = getScriptGfxAlignPosition;
 /**
@@ -13532,13 +13471,11 @@ exports.getShopPedApparelVariantPropCount = getShopPedApparelVariantPropCount;
  * @param outComponent
  */
 function getShopPedComponent(componentHash, outComponent) {
-    const [outComponent_out] = _in(0x74c0e2a5, 0x7ec66760, _ch(componentHash), _ii(outComponent));
-    return [outComponent_out];
+    return _in(0x74c0e2a5, 0x7ec66760, _ch(componentHash), _ii(outComponent));
 }
 exports.getShopPedComponent = getShopPedComponent;
 function getShopPedOutfit(p0, p1) {
-    const [p1_out] = _in(0xb7952076, 0xe444979d, p0, _ii(p1));
-    return [p1_out];
+    return _in(0xb7952076, 0xe444979d, p0, _ii(p1));
 }
 exports.getShopPedOutfit = getShopPedOutfit;
 /**
@@ -13573,8 +13510,7 @@ exports.getShopPedOutfitPropVariant = getShopPedOutfitPropVariant;
  * @param outProp
  */
 function getShopPedProp(componentHash, outProp) {
-    const [outProp_out] = _in(0x5d5caff6, 0x61ddf6fc, _ch(componentHash), _ii(outProp));
-    return [outProp_out];
+    return _in(0x5d5caff6, 0x61ddf6fc, _ch(componentHash), _ii(outProp));
 }
 exports.getShopPedProp = getShopPedProp;
 /**
@@ -13583,8 +13519,7 @@ exports.getShopPedProp = getShopPedProp;
  * @param outComponent
  */
 function getShopPedQueryComponent(componentId, outComponent) {
-    const [outComponent_out] = _in(0x249e310b, 0x2d920699, componentId, _ii(outComponent));
-    return [outComponent_out];
+    return _in(0x249e310b, 0x2d920699, componentId, _ii(outComponent));
 }
 exports.getShopPedQueryComponent = getShopPedQueryComponent;
 /**
@@ -13603,8 +13538,7 @@ exports.getShopPedQueryComponentIndex = getShopPedQueryComponentIndex;
  * @param outfit
  */
 function getShopPedQueryOutfit(outfitIndex, outfit) {
-    const [outfit_out] = _in(0x6d793f03, 0xa631fe56, outfitIndex, _ii(outfit));
-    return [outfit_out];
+    return _in(0x6d793f03, 0xa631fe56, outfitIndex, _ii(outfit));
 }
 exports.getShopPedQueryOutfit = getShopPedQueryOutfit;
 /**
@@ -13613,8 +13547,7 @@ exports.getShopPedQueryOutfit = getShopPedQueryOutfit;
  * @param outProp
  */
 function getShopPedQueryProp(componentId, outProp) {
-    const [outProp_out] = _in(0xde44a009, 0x99b2837d, componentId, _ii(outProp));
-    return [outProp_out];
+    return _in(0xde44a009, 0x99b2837d, componentId, _ii(outProp));
 }
 exports.getShopPedQueryProp = getShopPedQueryProp;
 /**
@@ -13676,8 +13609,7 @@ exports.getStatHashForCharacterStat = getStatHashForCharacterStat;
  * @param heading
  */
 function getStateOfClosestDoorOfType(type, x, y, z) {
-    const [locked_out, heading_out] = _in(0xedc1a5b8, 0x4aef33ff, _ch(type), _fv(x), _fv(y), _fv(z), _i, _f);
-    return [locked_out, heading_out];
+    return _in(0xedc1a5b8, 0x4aef33ff, _ch(type), _fv(x), _fv(y), _fv(z), _i, _f);
 }
 exports.getStateOfClosestDoorOfType = getStateOfClosestDoorOfType;
 /**
@@ -13762,8 +13694,7 @@ exports.getStreamPlayTime = getStreamPlayTime;
  * @param crossingRoad
  */
 function getStreetNameAtCoord(x, y, z) {
-    const [streetName_out, crossingRoad_out] = _in(0x2eb41072, 0xb4c1e4c0, _fv(x), _fv(y), _fv(z), _i, _i);
-    return [streetName_out, crossingRoad_out];
+    return _in(0x2eb41072, 0xb4c1e4c0, _fv(x), _fv(y), _fv(z), _i, _i);
 }
 exports.getStreetNameAtCoord = getStreetNameAtCoord;
 /**
@@ -14115,18 +14046,15 @@ exports.getUsingseethrough = getUsingseethrough;
  * @param second
  */
 function getUtcTime() {
-    const [year_out, month_out, day_out, hour_out, minute_out, second_out] = _in(0x8117e09a, 0x19eef4d3, _i, _i, _i, _i, _i, _i);
-    return [year_out, month_out, day_out, hour_out, minute_out, second_out];
+    return _in(0x8117e09a, 0x19eef4d3, _i, _i, _i, _i, _i, _i);
 }
 exports.getUtcTime = getUtcTime;
 function getVariantComponent(componentHash, variantComponentIndex) {
-    const [nameHash_out, enumValue_out, componentType_out] = _in(0x6e11f282, 0xf11863b6, _ch(componentHash), variantComponentIndex, _i, _i, _i);
-    return [nameHash_out, enumValue_out, componentType_out];
+    return _in(0x6e11f282, 0xf11863b6, _ch(componentHash), variantComponentIndex, _i, _i, _i);
 }
 exports.getVariantComponent = getVariantComponent;
 function getVariantProp(componentHash, variantPropIndex) {
-    const [nameHash_out, enumValue_out, anchorPoint_out] = _in(0xd81b7f27, 0xbc773e66, _ch(componentHash), variantPropIndex, _i, _i, _i);
-    return [nameHash_out, enumValue_out, anchorPoint_out];
+    return _in(0xd81b7f27, 0xbc773e66, _ch(componentHash), variantPropIndex, _i, _i, _i);
 }
 exports.getVariantProp = getVariantProp;
 function getVariationChosenForScriptedLine(p0) {
@@ -14263,8 +14191,7 @@ exports.getVehicleClassMaxTraction = getVehicleClassMaxTraction;
  * @param b
  */
 function getVehicleColor(vehicle) {
-    const [r_out, g_out, b_out] = _in(0xf3cc740d, 0x36221548, vehicle, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0xf3cc740d, 0x36221548, vehicle, _i, _i, _i);
 }
 exports.getVehicleColor = getVehicleColor;
 /**
@@ -14276,8 +14203,7 @@ function getVehicleColourCombination(vehicle) {
 }
 exports.getVehicleColourCombination = getVehicleColourCombination;
 function getVehicleColours(vehicle) {
-    const [colorPrimary_out, colorSecondary_out] = _in(0xa19435f1, 0x93e081ac, vehicle, _i, _i);
-    return [colorPrimary_out, colorSecondary_out];
+    return _in(0xa19435f1, 0x93e081ac, vehicle, _i, _i);
 }
 exports.getVehicleColours = getVehicleColours;
 /**
@@ -14310,13 +14236,11 @@ function getVehicleCurrentTimeInSlipStream(vehicle) {
 }
 exports.getVehicleCurrentTimeInSlipStream = getVehicleCurrentTimeInSlipStream;
 function getVehicleCustomPrimaryColour(vehicle) {
-    const [r_out, g_out, b_out] = _in(0xb64cf2cc, 0xa9d95f52, vehicle, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0xb64cf2cc, 0xa9d95f52, vehicle, _i, _i, _i);
 }
 exports.getVehicleCustomPrimaryColour = getVehicleCustomPrimaryColour;
 function getVehicleCustomSecondaryColour(vehicle) {
-    const [r_out, g_out, b_out] = _in(0x8389cd56, 0xca8072dc, vehicle, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0x8389cd56, 0xca8072dc, vehicle, _i, _i, _i);
 }
 exports.getVehicleCustomSecondaryColour = getVehicleCustomSecondaryColour;
 /**
@@ -14418,18 +14342,15 @@ function getVehicleEstimatedMaxSpeed(vehicle) {
 }
 exports.getVehicleEstimatedMaxSpeed = getVehicleEstimatedMaxSpeed;
 function getVehicleExtraColour5(vehicle, color) {
-    const [color_out] = _in(0x7d1464d4, 0x72d32136, vehicle, _ii(color));
-    return [color_out];
+    return _in(0x7d1464d4, 0x72d32136, vehicle, _ii(color));
 }
 exports.getVehicleExtraColour5 = getVehicleExtraColour5;
 function getVehicleExtraColour6(vehicle, color) {
-    const [color_out] = _in(0xb7635e80, 0xa5c31bff, vehicle, _ii(color));
-    return [color_out];
+    return _in(0xb7635e80, 0xa5c31bff, vehicle, _ii(color));
 }
 exports.getVehicleExtraColour6 = getVehicleExtraColour6;
 function getVehicleExtraColours(vehicle) {
-    const [pearlescentColor_out, wheelColor_out] = _in(0x3bc42459, 0x33a166f7, vehicle, _i, _i);
-    return [pearlescentColor_out, wheelColor_out];
+    return _in(0x3bc42459, 0x33a166f7, vehicle, _i, _i);
 }
 exports.getVehicleExtraColours = getVehicleExtraColours;
 function getVehicleFlightNozzlePosition(plane) {
@@ -14603,8 +14524,7 @@ function getVehicleMod(vehicle, modType) {
 }
 exports.getVehicleMod = getVehicleMod;
 function getVehicleModColor1(vehicle) {
-    const [paintType_out, color_out, pearlescentColor_out] = _in(0xe8d65ca7, 0x00c9a693, vehicle, _i, _i, _i);
-    return [paintType_out, color_out, pearlescentColor_out];
+    return _in(0xe8d65ca7, 0x00c9a693, vehicle, _i, _i, _i);
 }
 exports.getVehicleModColor1 = getVehicleModColor1;
 /**
@@ -14619,8 +14539,7 @@ function getVehicleModColor1Name(vehicle, p1) {
 }
 exports.getVehicleModColor1Name = getVehicleModColor1Name;
 function getVehicleModColor2(vehicle) {
-    const [paintType_out, color_out] = _in(0x81592be4, 0xe3878728, vehicle, _i, _i);
-    return [paintType_out, color_out];
+    return _in(0x81592be4, 0xe3878728, vehicle, _i, _i);
 }
 exports.getVehicleModColor2 = getVehicleModColor2;
 /**
@@ -14748,8 +14667,7 @@ exports.getVehicleModelValue = getVehicleModelValue;
  * @param b
  */
 function getVehicleNeonColour(vehicle) {
-    const [r_out, g_out, b_out] = _in(0x7619eee8, 0xc886757f, vehicle, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0x7619eee8, 0xc886757f, vehicle, _i, _i, _i);
 }
 exports.getVehicleNeonColour = getVehicleNeonColour;
 /**
@@ -14792,8 +14710,7 @@ exports.getVehicleNodeIsSwitchedOff = getVehicleNodeIsSwitchedOff;
  * @param outPosition
  */
 function getVehicleNodePosition(nodeId, outPosition) {
-    const [outPosition_out] = _in(0x703123e5, 0xe7d429c2, nodeId, _v);
-    return [_mv(outPosition_out)];
+    return _in(0x703123e5, 0xe7d429c2, nodeId, _v);
 }
 exports.getVehicleNodePosition = getVehicleNodePosition;
 /**
@@ -14916,8 +14833,7 @@ exports.getVehicleRecordingId = getVehicleRecordingId;
  * @param out2
  */
 function getVehicleSize(vehicle) {
-    const [out1_out, out2_out] = _in(0xdf7e3eeb, 0x29642c38, vehicle, _v, _v);
-    return [_mv(out1_out), _mv(out2_out)];
+    return _in(0xdf7e3eeb, 0x29642c38, vehicle, _v, _v);
 }
 exports.getVehicleSize = getVehicleSize;
 function getVehicleTrailerParentVehicle(trailer) {
@@ -14935,8 +14851,7 @@ function getVehicleTrailerVehicle(vehicle, trailer) {
 }
 exports.getVehicleTrailerVehicle = getVehicleTrailerVehicle;
 function getVehicleTyreSmokeColor(vehicle) {
-    const [r_out, g_out, b_out] = _in(0xb635392a, 0x4938b3c3, vehicle, _i, _i, _i);
-    return [r_out, g_out, b_out];
+    return _in(0xb635392a, 0x4938b3c3, vehicle, _i, _i, _i);
 }
 exports.getVehicleTyreSmokeColor = getVehicleTyreSmokeColor;
 function getVehicleTyresCanBurst(vehicle) {
@@ -16481,13 +16396,11 @@ function initPcScriptedControls(schemeName) {
 }
 exports.initPcScriptedControls = initPcScriptedControls;
 function initShopPedComponent(outComponent) {
-    const [outComponent_out] = _in(0x1e8c308f, 0xd312c036, _ii(outComponent));
-    return [outComponent_out];
+    return _in(0x1e8c308f, 0xd312c036, _ii(outComponent));
 }
 exports.initShopPedComponent = initShopPedComponent;
 function initShopPedProp(outProp) {
-    const [outProp_out] = _in(0xeb0a2b75, 0x8f7b850f, _ii(outProp));
-    return [outProp_out];
+    return _in(0xeb0a2b75, 0x8f7b850f, _ii(outProp));
 }
 exports.initShopPedProp = initShopPedProp;
 function initSynchSceneAudioWithEntity(audioEvent, entity) {
@@ -20510,8 +20423,7 @@ exports.networkAddEntityToSynchronisedScene = networkAddEntityToSynchronisedScen
  * @param p1
  */
 function networkAddFollowers(p1) {
-    const [p0_out] = _in(0x236406f6, 0x0cf216d6, _i, p1);
-    return [p0_out];
+    return _in(0x236406f6, 0x0cf216d6, _i, p1);
 }
 exports.networkAddFollowers = networkAddFollowers;
 function networkAddFriend(message) {
@@ -20984,8 +20896,7 @@ exports.networkClanGetMembershipValid = networkClanGetMembershipValid;
  * @param formattedTag
  */
 function networkClanGetUiFormattedTag(bufferSize, formattedTag) {
-    const [clanDesc_out] = _in(0xf4535242, 0x6ff3a4f0, _i, bufferSize, _ts(formattedTag));
-    return [clanDesc_out];
+    return _in(0xf4535242, 0x6ff3a4f0, _i, bufferSize, _ts(formattedTag));
 }
 exports.networkClanGetUiFormattedTag = networkClanGetUiFormattedTag;
 function networkClanHasCrewinfoMetadataBeenReceived() {
@@ -21519,8 +21430,7 @@ exports.networkEarnFromAiTargetKill = networkEarnFromAiTargetKill;
  * @param p2
  */
 function networkEarnFromAmbientJob(p0, p1, p2) {
-    const [p2_out] = _in(0xfb6db092, 0xfbae29e6, p0, _ts(p1), _ii(p2));
-    return [p2_out];
+    return _in(0xfb6db092, 0xfbae29e6, p0, _ts(p1), _ii(p2));
 }
 exports.networkEarnFromAmbientJob = networkEarnFromAmbientJob;
 function networkEarnFromBendJob(amount, heistHash) {
@@ -21532,8 +21442,7 @@ function networkEarnFromBetting(amount, p1) {
 }
 exports.networkEarnFromBetting = networkEarnFromBetting;
 function networkEarnFromBounty(amount, p3) {
-    const [gamerHandle_out, p2_out] = _in(0x131bb5da, 0x15453acf, amount, _i, _i, p3);
-    return [gamerHandle_out, p2_out];
+    return _in(0x131bb5da, 0x15453acf, amount, _i, _i, p3);
 }
 exports.networkEarnFromBounty = networkEarnFromBounty;
 function networkEarnFromBusinessBattle(p0) {
@@ -21553,8 +21462,7 @@ function networkEarnFromCashingOut(amount) {
 }
 exports.networkEarnFromCashingOut = networkEarnFromCashingOut;
 function networkEarnFromChallengeWin(p0, p2) {
-    const [p1_out] = _in(0x2b171e6b, 0x2f64d8df, p0, _i, p2);
-    return [p1_out];
+    return _in(0x2b171e6b, 0x2f64d8df, p0, _i, p2);
 }
 exports.networkEarnFromChallengeWin = networkEarnFromChallengeWin;
 function networkEarnFromClubManagementParticipation(p0, p1) {
@@ -21620,8 +21528,7 @@ function networkEarnFromJob(amount, p1) {
 }
 exports.networkEarnFromJob = networkEarnFromJob;
 function networkEarnFromJobBonus(p0) {
-    const [p1_out, p2_out] = _in(0x6816fb44, 0x16760775, p0, _i, _i);
-    return [p1_out, p2_out];
+    return _in(0x6816fb44, 0x16760775, p0, _i, _i);
 }
 exports.networkEarnFromJobBonus = networkEarnFromJobBonus;
 function networkEarnFromJobx2(amount, p1) {
@@ -22199,8 +22106,7 @@ function networkGetGamertagFromHandle(gamerHandle) {
 }
 exports.networkGetGamertagFromHandle = networkGetGamertagFromHandle;
 function networkGetGlobalMultiplayerClock() {
-    const [hours_out, minutes_out, seconds_out] = _in(0x6d03bfbd, 0x643b2a02, _i, _i, _i);
-    return [hours_out, minutes_out, seconds_out];
+    return _in(0x6d03bfbd, 0x643b2a02, _i, _i, _i);
 }
 exports.networkGetGlobalMultiplayerClock = networkGetGlobalMultiplayerClock;
 function networkGetHighestReliableResendCount(player) {
@@ -22265,8 +22171,7 @@ function networkGetLastVelReceivedOverNetwork(entity) {
 }
 exports.networkGetLastVelReceivedOverNetwork = networkGetLastVelReceivedOverNetwork;
 function networkGetLocalHandle(gamerHandleSize) {
-    const [gamerHandle_out] = _in(0xe8605178, 0x6b66cd8e, _i, gamerHandleSize);
-    return [gamerHandle_out];
+    return _in(0xe8605178, 0x6b66cd8e, _i, gamerHandleSize);
 }
 exports.networkGetLocalHandle = networkGetLocalHandle;
 function networkGetLocalSceneFromNetworkId(netId) {
@@ -22288,8 +22193,7 @@ exports.networkGetMaxNumParticipants = networkGetMaxNumParticipants;
  * @param p2
  */
 function networkGetMuteCountForPlayer(p0) {
-    const [p1_out, p2_out] = _in(0xadb57e5b, 0x663cca8b, p0, _f, _f);
-    return [p1_out, p2_out];
+    return _in(0xadb57e5b, 0x663cca8b, p0, _f, _f);
 }
 exports.networkGetMuteCountForPlayer = networkGetMuteCountForPlayer;
 /**
@@ -22297,8 +22201,7 @@ exports.networkGetMuteCountForPlayer = networkGetMuteCountForPlayer;
  * @param p0
  */
 function networkGetNetStatisticsInfo(p0) {
-    const [p0_out] = _in(0x6fd992c4, 0xa1c1b986, _ii(p0));
-    return [p0_out];
+    return _in(0x6fd992c4, 0xa1c1b986, _ii(p0));
 }
 exports.networkGetNetStatisticsInfo = networkGetNetStatisticsInfo;
 function networkGetNetworkIdFromEntity(entity) {
@@ -22527,8 +22430,7 @@ exports.networkGetRemainingTransferBalance = networkGetRemainingTransferBalance;
  * @param heading
  */
 function networkGetRespawnResult(randomInt) {
-    const [coordinates_out, heading_out] = _in(0x371ea436, 0x92861cf1, randomInt, _v, _f);
-    return [_mv(coordinates_out), heading_out];
+    return _in(0x371ea436, 0x92861cf1, randomInt, _v, _f);
 }
 exports.networkGetRespawnResult = networkGetRespawnResult;
 function networkGetRespawnResultFlags(p0) {
@@ -22544,8 +22446,7 @@ exports.networkGetScriptStatus = networkGetScriptStatus;
  * @param p0
  */
 function networkGetSignallingInfo(p0) {
-    const [p0_out] = _in(0x2555cf7d, 0xa5473794, _ii(p0));
-    return [p0_out];
+    return _in(0x2555cf7d, 0xa5473794, _ii(p0));
 }
 exports.networkGetSignallingInfo = networkGetSignallingInfo;
 function networkGetStringBankBalance() {
@@ -22615,28 +22516,23 @@ function networkGetVcWalletBalance(characterSlot) {
 }
 exports.networkGetVcWalletBalance = networkGetVcWalletBalance;
 function networkGivePlayerJobshareCash(amount, gamerHandle) {
-    const [gamerHandle_out] = _in(0xfb18df9c, 0xb95e0105, amount, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0xfb18df9c, 0xb95e0105, amount, _ii(gamerHandle));
 }
 exports.networkGivePlayerJobshareCash = networkGivePlayerJobshareCash;
 function networkHandleFromFriend(friendIndex, gamerHandleSize) {
-    const [gamerHandle_out] = _in(0xd45cb817, 0xd7e177d2, friendIndex, _i, gamerHandleSize);
-    return [gamerHandle_out];
+    return _in(0xd45cb817, 0xd7e177d2, friendIndex, _i, gamerHandleSize);
 }
 exports.networkHandleFromFriend = networkHandleFromFriend;
 function networkHandleFromMemberId(memberId, gamerHandleSize) {
-    const [gamerHandle_out] = _in(0xa0fd21be, 0xd61e5c4c, _ts(memberId), _i, gamerHandleSize);
-    return [gamerHandle_out];
+    return _in(0xa0fd21be, 0xd61e5c4c, _ts(memberId), _i, gamerHandleSize);
 }
 exports.networkHandleFromMemberId = networkHandleFromMemberId;
 function networkHandleFromPlayer(player, gamerHandleSize) {
-    const [gamerHandle_out] = _in(0x388eb2b8, 0x6c73b6b3, player, _i, gamerHandleSize);
-    return [gamerHandle_out];
+    return _in(0x388eb2b8, 0x6c73b6b3, player, _i, gamerHandleSize);
 }
 exports.networkHandleFromPlayer = networkHandleFromPlayer;
 function networkHandleFromUserId(userId, gamerHandleSize) {
-    const [gamerHandle_out] = _in(0xdcd51dd8, 0xf87aec5c, _ts(userId), _i, gamerHandleSize);
-    return [gamerHandle_out];
+    return _in(0xdcd51dd8, 0xf87aec5c, _ts(userId), _i, gamerHandleSize);
 }
 exports.networkHandleFromUserId = networkHandleFromUserId;
 function networkHasAgeRestrictions() {
@@ -23552,8 +23448,7 @@ function networkQuitMpToDesktop() {
 }
 exports.networkQuitMpToDesktop = networkQuitMpToDesktop;
 function networkReceivePlayerJobshareCash(value, gamerHandle) {
-    const [gamerHandle_out] = _in(0x56a3b519, 0x44c50598, value, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0x56a3b519, 0x44c50598, value, _ii(gamerHandle));
 }
 exports.networkReceivePlayerJobshareCash = networkReceivePlayerJobshareCash;
 /**
@@ -23616,13 +23511,11 @@ function networkRegisterHighFrequencyPlayerBroadcastVariables(p0, p1, p2) {
 }
 exports.networkRegisterHighFrequencyPlayerBroadcastVariables = networkRegisterHighFrequencyPlayerBroadcastVariables;
 function networkRegisterHostBroadcastVariables(numVars, debugName) {
-    const [vars_out] = _in(0x3e9b2f01, 0xc50df595, _i, numVars, _ts(debugName));
-    return [vars_out];
+    return _in(0x3e9b2f01, 0xc50df595, _i, numVars, _ts(debugName));
 }
 exports.networkRegisterHostBroadcastVariables = networkRegisterHostBroadcastVariables;
 function networkRegisterPlayerBroadcastVariables(numVars, debugName) {
-    const [vars_out] = _in(0x3364aa97, 0x340ca215, _i, numVars, _ts(debugName));
-    return [vars_out];
+    return _in(0x3364aa97, 0x340ca215, _i, numVars, _ts(debugName));
 }
 exports.networkRegisterPlayerBroadcastVariables = networkRegisterPlayerBroadcastVariables;
 function networkRemainInGameChat(p0) {
@@ -23658,8 +23551,7 @@ function networkRemovePresenceInvite(p0) {
 }
 exports.networkRemovePresenceInvite = networkRemovePresenceInvite;
 function networkRemoveTransitionInvite(p0) {
-    const [p0_out] = _in(0x7524b431, 0xb2e6f7ee, _ii(p0));
-    return [p0_out];
+    return _in(0x7524b431, 0xb2e6f7ee, _ii(p0));
 }
 exports.networkRemoveTransitionInvite = networkRemoveTransitionInvite;
 function networkReportCodeTamper() {
@@ -23834,8 +23726,7 @@ function networkSessionGetHostAimPreference() {
 }
 exports.networkSessionGetHostAimPreference = networkSessionGetHostAimPreference;
 function networkSessionGetInviter(gamerHandle) {
-    const [gamerHandle_out] = _in(0xe57397b4, 0xa3429dd0, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0xe57397b4, 0xa3429dd0, _ii(gamerHandle));
 }
 exports.networkSessionGetInviter = networkSessionGetInviter;
 function networkSessionGetKickVote(player) {
@@ -24016,8 +23907,7 @@ function networkSessionValidateJoin(p0) {
 }
 exports.networkSessionValidateJoin = networkSessionValidateJoin;
 function networkSessionVoiceConnectToPlayer(gamerHandle) {
-    const [gamerHandle_out] = _in(0xabd5e88b, 0x8a2d3db2, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0xabd5e88b, 0x8a2d3db2, _ii(gamerHandle));
 }
 exports.networkSessionVoiceConnectToPlayer = networkSessionVoiceConnectToPlayer;
 function networkSessionVoiceHost() {
@@ -24152,8 +24042,7 @@ function networkSetFriendlyFireOption(toggle) {
 }
 exports.networkSetFriendlyFireOption = networkSetFriendlyFireOption;
 function networkSetGamerInvitedToTransition(gamerHandle) {
-    const [gamerHandle_out] = _in(0xca2c8073, 0x411ecdb6, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0xca2c8073, 0x411ecdb6, _ii(gamerHandle));
 }
 exports.networkSetGamerInvitedToTransition = networkSetGamerInvitedToTransition;
 function networkSetIgnoreSpectatorChatLimitsSameTeam(toggle) {
@@ -24181,13 +24070,11 @@ function networkSetInSpectatorModeExtended(toggle, playerPed, p2) {
 }
 exports.networkSetInSpectatorModeExtended = networkSetInSpectatorModeExtended;
 function networkSetInviteFailedMessageForInviteMenu() {
-    const [p0_out, p1_out] = _in(0x0d77a82d, 0xc2d0da59, _i, _i);
-    return [p0_out, p1_out];
+    return _in(0x0d77a82d, 0xc2d0da59, _i, _i);
 }
 exports.networkSetInviteFailedMessageForInviteMenu = networkSetInviteFailedMessageForInviteMenu;
 function networkSetInviteOnCallForInviteMenu(p0) {
-    const [p0_out] = _in(0x66f010a4, 0xb031a331, _ii(p0));
-    return [p0_out];
+    return _in(0x66f010a4, 0xb031a331, _ii(p0));
 }
 exports.networkSetInviteOnCallForInviteMenu = networkSetInviteOnCallForInviteMenu;
 function networkSetLocalPlayerInvincibleTime(time) {
@@ -24352,8 +24239,7 @@ function networkSetTransitionActivityId(p0) {
 }
 exports.networkSetTransitionActivityId = networkSetTransitionActivityId;
 function networkSetTransitionCreatorHandle(p0) {
-    const [p0_out] = _in(0xef26739b, 0xcd9907d5, _ii(p0));
-    return [p0_out];
+    return _in(0xef26739b, 0xcd9907d5, _ii(p0));
 }
 exports.networkSetTransitionCreatorHandle = networkSetTransitionCreatorHandle;
 function networkSetTransitionVisibilityLock(p0, p1) {
@@ -24408,8 +24294,7 @@ function networkShowChatRestrictionMsc(player) {
 }
 exports.networkShowChatRestrictionMsc = networkShowChatRestrictionMsc;
 function networkShowProfileUi(gamerHandle) {
-    const [gamerHandle_out] = _in(0x859ed1ce, 0xa343fca8, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0x859ed1ce, 0xa343fca8, _ii(gamerHandle));
 }
 exports.networkShowProfileUi = networkShowProfileUi;
 /**
@@ -24440,8 +24325,7 @@ function networkSpendAgency(p0, p1, p2, p3, p4) {
 }
 exports.networkSpendAgency = networkSpendAgency;
 function networkSpendApartmentUtilities(amount, p1, p2, data) {
-    const [data_out] = _in(0x1254b5b3, 0x925efd3d, amount, p1, p2, _ii(data));
-    return [data_out];
+    return _in(0x1254b5b3, 0x925efd3d, amount, p1, p2, _ii(data));
 }
 exports.networkSpendApartmentUtilities = networkSpendApartmentUtilities;
 function networkSpendArcade(p0, p1, p2, p3, p4) {
@@ -24512,8 +24396,7 @@ function networkSpendBuyAutoshop(p0, p1, p2, p3) {
 }
 exports.networkSpendBuyAutoshop = networkSpendBuyAutoshop;
 function networkSpendBuyCasino(amount, p1, p2, data) {
-    const [data_out] = _in(0x34a6fc4d, 0x06c4da0f, amount, p1, p2, _ii(data));
-    return [data_out];
+    return _in(0x34a6fc4d, 0x06c4da0f, amount, p1, p2, _ii(data));
 }
 exports.networkSpendBuyCasino = networkSpendBuyCasino;
 function networkSpendBuyMfgarage(p0, p1, p2, p3) {
@@ -24697,8 +24580,7 @@ function networkSpendUpgradeAutoshop(p0, p1, p2, p3) {
 }
 exports.networkSpendUpgradeAutoshop = networkSpendUpgradeAutoshop;
 function networkSpendUpgradeCasino(amount, p1, p2, data) {
-    const [data_out] = _in(0x4740d62b, 0xc1b4ebea, amount, p1, p2, _ii(data));
-    return [data_out];
+    return _in(0x4740d62b, 0xc1b4ebea, amount, p1, p2, _ii(data));
 }
 exports.networkSpendUpgradeCasino = networkSpendUpgradeCasino;
 function networkSpendUpgradeMfgarage(p0, p1, p2, p3) {
@@ -24786,13 +24668,11 @@ function networkSpentBuyTruck(p0, p1, p2, p3) {
 }
 exports.networkSpentBuyTruck = networkSpentBuyTruck;
 function networkSpentBuyWantedlevel(p0, p2, p3, p4) {
-    const [p1_out] = _in(0xe1b13771, 0xa843c4f6, p0, _i, p2, p3, p4);
-    return [p1_out];
+    return _in(0xe1b13771, 0xa843c4f6, p0, _i, p2, p3, p4);
 }
 exports.networkSpentBuyWantedlevel = networkSpentBuyWantedlevel;
 function networkSpentCallPlayer(p0, p2, p3) {
-    const [p1_out] = _in(0xacde7185, 0xb374177c, p0, _i, p2, p3);
-    return [p1_out];
+    return _in(0xacde7185, 0xb374177c, p0, _i, p2, p3);
 }
 exports.networkSpentCallPlayer = networkSpentCallPlayer;
 function networkSpentCargoSourcing(p0, p1, p2, p3, p4, p5) {
@@ -24958,8 +24838,7 @@ exports.networkSpentPayBusinessSupplies = networkSpentPayBusinessSupplies;
  * @param hasTheMoney
  */
 function networkSpentPayVehicleInsurancePremium(amount, vehicleModel, notBankrupt, hasTheMoney) {
-    const [gamerHandle_out] = _in(0x9ff28d88, 0xc766e3e8, amount, _ch(vehicleModel), _i, notBankrupt, hasTheMoney);
-    return [gamerHandle_out];
+    return _in(0x9ff28d88, 0xc766e3e8, amount, _ch(vehicleModel), _i, notBankrupt, hasTheMoney);
 }
 exports.networkSpentPayVehicleInsurancePremium = networkSpentPayVehicleInsurancePremium;
 function networkSpentPlayerHealthcare(p0, p1, p2, p3) {
@@ -24987,8 +24866,7 @@ function networkSpentPurchaseHangar(p0, p1, p2, p3) {
 }
 exports.networkSpentPurchaseHangar = networkSpentPurchaseHangar;
 function networkSpentPurchaseImpexpWarehouseProperty(amount, p2, p3) {
-    const [data_out] = _in(0x33981d68, 0x04e62f49, amount, _i, p2, p3);
-    return [data_out];
+    return _in(0x33981d68, 0x04e62f49, amount, _i, p2, p3);
 }
 exports.networkSpentPurchaseImpexpWarehouseProperty = networkSpentPurchaseImpexpWarehouseProperty;
 function networkSpentPurchaseNightclubAndWarehouse(p0, p1, p2, p3) {
@@ -25416,8 +25294,7 @@ function openReportugcMenu() {
 }
 exports.openReportugcMenu = openReportugcMenu;
 function openSequenceTask(taskSequenceId) {
-    const [taskSequenceId_out] = _in(0xe8854a43, 0x26b9e12b, _ii(taskSequenceId));
-    return [taskSequenceId_out];
+    return _in(0xe8854a43, 0x26b9e12b, _ii(taskSequenceId));
 }
 exports.openSequenceTask = openSequenceTask;
 /**
@@ -25839,8 +25716,7 @@ function playEntityAnim(entity, animName, animDict, p3, loop, stayInAnim, p6, de
 }
 exports.playEntityAnim = playEntityAnim;
 function playEntityScriptedAnim(entity, blendInDelta, blendOutDelta) {
-    const [priorityLowData_out, priorityMidData_out, priorityHighData_out] = _in(0x77a1eec5, 0x47e7fcf1, entity, _i, _i, _i, _fv(blendInDelta), _fv(blendOutDelta));
-    return [priorityLowData_out, priorityMidData_out, priorityHighData_out];
+    return _in(0x77a1eec5, 0x47e7fcf1, entity, _i, _i, _i, _fv(blendInDelta), _fv(blendOutDelta));
 }
 exports.playEntityScriptedAnim = playEntityScriptedAnim;
 /**
@@ -26280,8 +26156,7 @@ function playstatsActivityDone(p0, activityId) {
 }
 exports.playstatsActivityDone = playstatsActivityDone;
 function playstatsAppendDirectorMetric(p0) {
-    const [p0_out] = _in(0x46326e13, 0xda4e0546, _ii(p0));
-    return [p0_out];
+    return _in(0x46326e13, 0xda4e0546, _ii(p0));
 }
 exports.playstatsAppendDirectorMetric = playstatsAppendDirectorMetric;
 function playstatsArcadeCabinet(p0) {
@@ -26297,8 +26172,7 @@ function playstatsArcadeLoveMatch(p0, p1) {
 }
 exports.playstatsArcadeLoveMatch = playstatsArcadeLoveMatch;
 function playstatsArenaWarsEnded(data) {
-    const [data_out] = _in(0xb479d9f0, 0xd48a1bc5, _ii(data));
-    return [data_out];
+    return _in(0xb479d9f0, 0xd48a1bc5, _ii(data));
 }
 exports.playstatsArenaWarsEnded = playstatsArenaWarsEnded;
 function playstatsArenaWarsSpectator(p0, p1, p2, p3, p4) {
@@ -26366,8 +26240,7 @@ function playstatsBusinessBattleEnded(p0) {
 }
 exports.playstatsBusinessBattleEnded = playstatsBusinessBattleEnded;
 function playstatsBuyContrabandMission(data) {
-    const [data_out] = _in(0xd6781e42, 0x755531f7, _ii(data));
-    return [data_out];
+    return _in(0xd6781e42, 0x755531f7, _ii(data));
 }
 exports.playstatsBuyContrabandMission = playstatsBuyContrabandMission;
 function playstatsBwAirFreight(p0) {
@@ -26508,13 +26381,11 @@ function playstatsCreateMatchHistoryId2() {
 }
 exports.playstatsCreateMatchHistoryId2 = playstatsCreateMatchHistoryId2;
 function playstatsDarCheckpoint(data) {
-    const [data_out] = _in(0x0bc254ff, 0x3a911501, _ii(data));
-    return [data_out];
+    return _in(0x0bc254ff, 0x3a911501, _ii(data));
 }
 exports.playstatsDarCheckpoint = playstatsDarCheckpoint;
 function playstatsDefendContrabandMission(data) {
-    const [data_out] = _in(0x2605663b, 0xd4f23b5d, _ii(data));
-    return [data_out];
+    return _in(0x2605663b, 0xd4f23b5d, _ii(data));
 }
 exports.playstatsDefendContrabandMission = playstatsDefendContrabandMission;
 function playstatsDjMissionEnded(p0) {
@@ -26530,8 +26401,7 @@ function playstatsDroneUsage(p0, p1, p2) {
 }
 exports.playstatsDroneUsage = playstatsDroneUsage;
 function playstatsDupeDetected(data) {
-    const [data_out] = _in(0x848b6610, 0x0ee33b05, _ii(data));
-    return [data_out];
+    return _in(0x848b6610, 0x0ee33b05, _ii(data));
 }
 exports.playstatsDupeDetected = playstatsDupeDetected;
 function playstatsEarnedMcPoints(p0, p1, p2, p3, p4, p5) {
@@ -26539,8 +26409,7 @@ function playstatsEarnedMcPoints(p0, p1, p2, p3, p4, p5) {
 }
 exports.playstatsEarnedMcPoints = playstatsEarnedMcPoints;
 function playstatsEnterSessionPack(data) {
-    const [data_out] = _in(0x878ff156, 0xd36e9956, _ii(data));
-    return [data_out];
+    return _in(0x878ff156, 0xd36e9956, _ii(data));
 }
 exports.playstatsEnterSessionPack = playstatsEnterSessionPack;
 function playstatsExtraEvent(p0) {
@@ -26618,8 +26487,7 @@ function playstatsFmEventVehicletarget(p0) {
 }
 exports.playstatsFmEventVehicletarget = playstatsFmEventVehicletarget;
 function playstatsFmHeistPrepEnded(data) {
-    const [data_out] = _in(0xd8afb345, 0xa9c5ccbb, _ii(data));
-    return [data_out];
+    return _in(0xd8afb345, 0xa9c5ccbb, _ii(data));
 }
 exports.playstatsFmHeistPrepEnded = playstatsFmHeistPrepEnded;
 function playstatsFmMissionEnd(p0, p1, p2) {
@@ -26627,8 +26495,7 @@ function playstatsFmMissionEnd(p0, p1, p2) {
 }
 exports.playstatsFmMissionEnd = playstatsFmMissionEnd;
 function playstatsFreemodeCasinoMissionEnded(data) {
-    const [data_out] = _in(0x1a0d4a6c, 0x336b7bc5, _ii(data));
-    return [data_out];
+    return _in(0x1a0d4a6c, 0x336b7bc5, _ii(data));
 }
 exports.playstatsFreemodeCasinoMissionEnded = playstatsFreemodeCasinoMissionEnded;
 function playstatsFriendActivity(p0, p1) {
@@ -26636,8 +26503,7 @@ function playstatsFriendActivity(p0, p1) {
 }
 exports.playstatsFriendActivity = playstatsFriendActivity;
 function playstatsGunrunningMissionEnded(data) {
-    const [data_out] = _in(0x0eacdf84, 0x87d5155a, _ii(data));
-    return [data_out];
+    return _in(0x0eacdf84, 0x87d5155a, _ii(data));
 }
 exports.playstatsGunrunningMissionEnded = playstatsGunrunningMissionEnded;
 function playstatsGunrunningRnd(p0) {
@@ -26713,8 +26579,7 @@ function playstatsInstMissionEnd(p0) {
 }
 exports.playstatsInstMissionEnd = playstatsInstMissionEnd;
 function playstatsInstancedHeistEnded(p1, p2, p3) {
-    const [data_out] = _in(0x1e1497d0, 0xd2108115, _i, p1, p2, p3);
-    return [data_out];
+    return _in(0x1e1497d0, 0xd2108115, _i, p1, p2, p3);
 }
 exports.playstatsInstancedHeistEnded = playstatsInstancedHeistEnded;
 function playstatsInventory(p0) {
@@ -26722,23 +26587,19 @@ function playstatsInventory(p0) {
 }
 exports.playstatsInventory = playstatsInventory;
 function playstatsJobActivityEnd() {
-    const [p0_out, p1_out, p2_out, p3_out] = _in(0xf8c54a46, 0x1c3e11dc, _i, _i, _i, _i);
-    return [p0_out, p1_out, p2_out, p3_out];
+    return _in(0xf8c54a46, 0x1c3e11dc, _i, _i, _i, _i);
 }
 exports.playstatsJobActivityEnd = playstatsJobActivityEnd;
 function playstatsJobBend() {
-    const [p0_out, p1_out, p2_out, p3_out] = _in(0xf5bb8dac, 0x426a52c0, _i, _i, _i, _i);
-    return [p0_out, p1_out, p2_out, p3_out];
+    return _in(0xf5bb8dac, 0x426a52c0, _i, _i, _i, _i);
 }
 exports.playstatsJobBend = playstatsJobBend;
 function playstatsJobLtsEnd() {
-    const [p0_out, p1_out, p2_out, p3_out] = _in(0xa736cf7f, 0xb7c5bff4, _i, _i, _i, _i);
-    return [p0_out, p1_out, p2_out, p3_out];
+    return _in(0xa736cf7f, 0xb7c5bff4, _i, _i, _i, _i);
 }
 exports.playstatsJobLtsEnd = playstatsJobLtsEnd;
 function playstatsJobLtsRoundEnd() {
-    const [p0_out, p1_out, p2_out, p3_out] = _in(0x14e0b2d1, 0xad1044e0, _i, _i, _i, _i);
-    return [p0_out, p1_out, p2_out, p3_out];
+    return _in(0x14e0b2d1, 0xad1044e0, _i, _i, _i, _i);
 }
 exports.playstatsJobLtsRoundEnd = playstatsJobLtsRoundEnd;
 function playstatsKillYourself() {
@@ -26810,8 +26671,7 @@ function playstatsNpcInvite(p0) {
 }
 exports.playstatsNpcInvite = playstatsNpcInvite;
 function playstatsNpcPhone(p0) {
-    const [p0_out] = _in(0x0077f156, 0x13d36993, _ii(p0));
-    return [p0_out];
+    return _in(0x0077f156, 0x13d36993, _ii(p0));
 }
 exports.playstatsNpcPhone = playstatsNpcPhone;
 /**
@@ -26829,8 +26689,7 @@ function playstatsPegasusAsPersonalAircraft(modelHash) {
 }
 exports.playstatsPegasusAsPersonalAircraft = playstatsPegasusAsPersonalAircraft;
 function playstatsPimenuHideOptions(data) {
-    const [data_out] = _in(0x203b3811, 0x33817079, _ii(data));
-    return [data_out];
+    return _in(0x203b3811, 0x33817079, _ii(data));
 }
 exports.playstatsPimenuHideOptions = playstatsPimenuHideOptions;
 function playstatsPlayerStyle(p0) {
@@ -26870,8 +26729,7 @@ function playstatsRankUp(rank) {
 }
 exports.playstatsRankUp = playstatsRankUp;
 function playstatsRecoverContrabandMission(data) {
-    const [data_out] = _in(0x04d90ba8, 0x207ada2d, _ii(data));
-    return [data_out];
+    return _in(0x04d90ba8, 0x207ada2d, _ii(data));
 }
 exports.playstatsRecoverContrabandMission = playstatsRecoverContrabandMission;
 function playstatsRivalBehavior(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9) {
@@ -26891,8 +26749,7 @@ function playstatsRosBet(amount, act, player, cm) {
 }
 exports.playstatsRosBet = playstatsRosBet;
 function playstatsSellContrabandMission(data) {
-    const [data_out] = _in(0xc729991a, 0x9065376e, _ii(data));
-    return [data_out];
+    return _in(0xc729991a, 0x9065376e, _ii(data));
 }
 exports.playstatsSellContrabandMission = playstatsSellContrabandMission;
 function playstatsSetJoinType(joinType) {
@@ -26916,13 +26773,11 @@ exports.playstatsShowroomNav = playstatsShowroomNav;
  * @param data
  */
 function playstatsShowroomOverview(data) {
-    const [data_out] = _in(0x151d6c04, 0xc9e2742f, _ii(data));
-    return [data_out];
+    return _in(0x151d6c04, 0xc9e2742f, _ii(data));
 }
 exports.playstatsShowroomOverview = playstatsShowroomOverview;
 function playstatsSmugglerMissionEnded(data) {
-    const [data_out] = _in(0x320c3514, 0x7d5b5ddd, _ii(data));
-    return [data_out];
+    return _in(0x320c3514, 0x7d5b5ddd, _ii(data));
 }
 exports.playstatsSmugglerMissionEnded = playstatsSmugglerMissionEnded;
 function playstatsSpentPiCustomLoadout(amount) {
@@ -26945,8 +26800,7 @@ function playstatsStartedSessionInOfflinemode() {
 }
 exports.playstatsStartedSessionInOfflinemode = playstatsStartedSessionInOfflinemode;
 function playstatsStoneHatchetEnded(data) {
-    const [data_out] = _in(0x35e39e55, 0x70358630, _ii(data));
-    return [data_out];
+    return _in(0x35e39e55, 0x70358630, _ii(data));
 }
 exports.playstatsStoneHatchetEnded = playstatsStoneHatchetEnded;
 /**
@@ -27345,8 +27199,7 @@ function refreshWaypoint() {
 }
 exports.refreshWaypoint = refreshWaypoint;
 function registerBoolToSave(name) {
-    const [p0_out] = _in(0xc8f41314, 0x14c835a1, _i, _ts(name));
-    return [p0_out];
+    return _in(0xc8f41314, 0x14c835a1, _i, _ts(name));
 }
 exports.registerBoolToSave = registerBoolToSave;
 /**
@@ -27363,13 +27216,11 @@ function registerEntityForCutscene(cutscenePed, cutsceneEntName, p2, modelHash, 
 }
 exports.registerEntityForCutscene = registerEntityForCutscene;
 function registerEnumToSave(name) {
-    const [p0_out] = _in(0x10c2fa78, 0xd0e128a1, _i, _ts(name));
-    return [p0_out];
+    return _in(0x10c2fa78, 0xd0e128a1, _i, _ts(name));
 }
 exports.registerEnumToSave = registerEnumToSave;
 function registerFloatToSave(name) {
-    const [p0_out] = _in(0x7caec29e, 0xcb5dfebb, _i, _ts(name));
-    return [p0_out];
+    return _in(0x7caec29e, 0xcb5dfebb, _i, _ts(name));
 }
 exports.registerFloatToSave = registerFloatToSave;
 /**
@@ -27382,13 +27233,11 @@ function registerHatedTargetsAroundPed(ped, radius) {
 }
 exports.registerHatedTargetsAroundPed = registerHatedTargetsAroundPed;
 function registerInt64ToSave(name) {
-    const [p0_out] = _in(0xa735353c, 0x77334ea0, _i, _ts(name));
-    return [p0_out];
+    return _in(0xa735353c, 0x77334ea0, _i, _ts(name));
 }
 exports.registerInt64ToSave = registerInt64ToSave;
 function registerIntToSave(name) {
-    const [p0_out] = _in(0x34c9ee59, 0x86258415, _i, _ts(name));
-    return [p0_out];
+    return _in(0x34c9ee59, 0x86258415, _i, _ts(name));
 }
 exports.registerIntToSave = registerIntToSave;
 function registerNamedRendertarget(name, p1) {
@@ -27462,8 +27311,7 @@ exports.registerSaveHouse = registerSaveHouse;
  * @param variable
  */
 function registerScriptVariable(variable) {
-    const [variable_out] = _in(0x40eb1efd, 0x921822bc, _ii(variable));
-    return [variable_out];
+    return _in(0x40eb1efd, 0x921822bc, _ii(variable));
 }
 exports.registerScriptVariable = registerScriptVariable;
 /**
@@ -27493,8 +27341,7 @@ exports.registerTarget = registerTarget;
  * @param name
  */
 function registerTextLabel15ToSave(name) {
-    const [p0_out] = _in(0x6f7794f2, 0x8c6b2535, _i, _ts(name));
-    return [p0_out];
+    return _in(0x6f7794f2, 0x8c6b2535, _i, _ts(name));
 }
 exports.registerTextLabel15ToSave = registerTextLabel15ToSave;
 /**
@@ -27507,8 +27354,7 @@ exports.registerTextLabel15ToSave = registerTextLabel15ToSave;
  * @param name
  */
 function registerTextLabel23ToSave(name) {
-    const [p0_out] = _in(0x48f06926, 0x5a0e4bec, _i, _ts(name));
-    return [p0_out];
+    return _in(0x48f06926, 0x5a0e4bec, _i, _ts(name));
 }
 exports.registerTextLabel23ToSave = registerTextLabel23ToSave;
 /**
@@ -27520,8 +27366,7 @@ exports.registerTextLabel23ToSave = registerTextLabel23ToSave;
  * @param name
  */
 function registerTextLabel31ToSave(name) {
-    const [p0_out] = _in(0x8269816f, 0x6cfd40f8, _i, _ts(name));
-    return [p0_out];
+    return _in(0x8269816f, 0x6cfd40f8, _i, _ts(name));
 }
 exports.registerTextLabel31ToSave = registerTextLabel31ToSave;
 /**
@@ -27539,13 +27384,11 @@ exports.registerTextLabel31ToSave = registerTextLabel31ToSave;
  * @param name
  */
 function registerTextLabel63ToSave(name) {
-    const [p0_out] = _in(0xfaa457ef, 0x263e8763, _i, _ts(name));
-    return [p0_out];
+    return _in(0xfaa457ef, 0x263e8763, _i, _ts(name));
 }
 exports.registerTextLabel63ToSave = registerTextLabel63ToSave;
 function registerTextLabelToSave(name) {
-    const [p0_out] = _in(0xedb1232c, 0x5beae62f, _i, _ts(name));
-    return [p0_out];
+    return _in(0xedb1232c, 0x5beae62f, _i, _ts(name));
 }
 exports.registerTextLabelToSave = registerTextLabelToSave;
 function registerWorldPointScriptBrain(scriptName, activationRange, p2) {
@@ -27747,8 +27590,7 @@ exports.removeAnimSet = removeAnimSet;
  * @param blip
  */
 function removeBlip(blip) {
-    const [blip_out] = _in(0x86a65257, 0x0e5f25dd, _ii(blip));
-    return [blip_out];
+    return _in(0x86a65257, 0x0e5f25dd, _ii(blip));
 }
 exports.removeBlip = removeBlip;
 /**
@@ -27971,8 +27813,7 @@ exports.removePedDefensiveArea = removePedDefensiveArea;
  * @param ped
  */
 function removePedElegantly(ped) {
-    const [ped_out] = _in(0xac6d445b, 0x994df95e, _ii(ped));
-    return [ped_out];
+    return _in(0xac6d445b, 0x994df95e, _ii(ped));
 }
 exports.removePedElegantly = removePedElegantly;
 function removePedFromGroup(ped) {
@@ -29194,13 +29035,11 @@ function ropeConvertToSimple(ropeId) {
 }
 exports.ropeConvertToSimple = ropeConvertToSimple;
 function ropeDrawEnabled(p1) {
-    const [ropeId_out] = _in(0xa1ae7365, 0x41b0fca3, _i, p1);
-    return [ropeId_out];
+    return _in(0xa1ae7365, 0x41b0fca3, _i, p1);
 }
 exports.ropeDrawEnabled = ropeDrawEnabled;
 function ropeDrawShadowEnabled(toggle) {
-    const [ropeId_out] = _in(0xf159a638, 0x06bb5ba8, _i, toggle);
-    return [ropeId_out];
+    return _in(0xf159a638, 0x06bb5ba8, _i, toggle);
 }
 exports.ropeDrawShadowEnabled = ropeDrawShadowEnabled;
 /**
@@ -29403,8 +29242,7 @@ function scCommunityEventIsActiveForType(p0) {
 }
 exports.scCommunityEventIsActiveForType = scCommunityEventIsActiveForType;
 function scEmailDeleteEmails(p1) {
-    const [p0_out] = _in(0x44aca259, 0xd67651db, _i, p1);
-    return [p0_out];
+    return _in(0x44aca259, 0xd67651db, _i, p1);
 }
 exports.scEmailDeleteEmails = scEmailDeleteEmails;
 function scEmailGetEmailAtIndex(p0, p1) {
@@ -29425,8 +29263,7 @@ function scEmailMessageClearRecipList() {
 }
 exports.scEmailMessageClearRecipList = scEmailMessageClearRecipList;
 function scEmailMessagePushGamerToRecipList(gamerHandle) {
-    const [gamerHandle_out] = _in(0x2330c12a, 0x7a605d16, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0x2330c12a, 0x7a605d16, _ii(gamerHandle));
 }
 exports.scEmailMessagePushGamerToRecipList = scEmailMessagePushGamerToRecipList;
 function scEmailRetrieveEmails(offset, limit) {
@@ -29524,8 +29361,7 @@ function scInboxMessageGetUgcdata(p0, p1) {
 }
 exports.scInboxMessageGetUgcdata = scInboxMessageGetUgcdata;
 function scInboxMessagePushGamerT0RecipList(gamerHandle) {
-    const [gamerHandle_out] = _in(0xda024bdb, 0xd600f44a, _ii(gamerHandle));
-    return [gamerHandle_out];
+    return _in(0xda024bdb, 0xd600f44a, _ii(gamerHandle));
 }
 exports.scInboxMessagePushGamerT0RecipList = scInboxMessagePushGamerT0RecipList;
 function scInboxSendBountyToRecipList(data) {
@@ -29534,8 +29370,7 @@ function scInboxSendBountyToRecipList(data) {
 }
 exports.scInboxSendBountyToRecipList = scInboxSendBountyToRecipList;
 function scInboxSendUgcstatupdateToRecipList(data) {
-    const [data_out] = _in(0xa68d3d22, 0x9f4f3b06, _ii(data));
-    return [data_out];
+    return _in(0xa68d3d22, 0x9f4f3b06, _ii(data));
 }
 exports.scInboxSendUgcstatupdateToRecipList = scInboxSendUgcstatupdateToRecipList;
 function scInboxSetMessageAsReadAtIndex(msgIndex) {
@@ -29854,8 +29689,7 @@ exports.sendMetricVipPoach = sendMetricVipPoach;
  * @param playerBits
  */
 function sendTuScriptEvent(eventGroup, eventDataSize, playerBits) {
-    const [eventData_out] = _in(0xa40cc53d, 0xf8e50837, eventGroup, _i, eventDataSize, playerBits);
-    return [eventData_out];
+    return _in(0xa40cc53d, 0xf8e50837, eventGroup, _i, eventDataSize, playerBits);
 }
 exports.sendTuScriptEvent = sendTuScriptEvent;
 function setAbilityBarValue(p0, p1) {
@@ -30409,13 +30243,11 @@ exports.setBinkShouldSkip = setBinkShouldSkip;
  * @param offset
  */
 function setBit(offset) {
-    const [address_out] = _in(0x933d6a9e, 0xec1bacd0, _i, offset);
-    return [address_out];
+    return _in(0x933d6a9e, 0xec1bacd0, _i, offset);
 }
 exports.setBit = setBit;
 function setBitsInRange(rangeStart, rangeEnd, p3) {
-    const [_var_out] = _in(0x8ef07e15, 0x701d61ed, _i, rangeStart, rangeEnd, p3);
-    return [_var_out];
+    return _in(0x8ef07e15, 0x701d61ed, _i, rangeStart, rangeEnd, p3);
 }
 exports.setBitsInRange = setBitsInRange;
 /**
@@ -32168,8 +32000,7 @@ exports.setEntityAsMissionEntity = setEntityAsMissionEntity;
  * @param entity
  */
 function setEntityAsNoLongerNeeded(entity) {
-    const [entity_out] = _in(0xb736a491, 0xe64a32cf, _ii(entity));
-    return [entity_out];
+    return _in(0xb736a491, 0xe64a32cf, _ii(entity));
 }
 exports.setEntityAsNoLongerNeeded = setEntityAsNoLongerNeeded;
 function setEntityCanBeDamaged(entity, toggle) {
@@ -33954,8 +33785,7 @@ exports.setMissionNameForUgcMission = setMissionNameForUgcMission;
  * @param p1
  */
 function setMissionTrainAsNoLongerNeeded(p1) {
-    const [train_out] = _in(0xbbe76483, 0x49b49be8, _i, p1);
-    return [train_out];
+    return _in(0xbbe76483, 0x49b49be8, _i, p1);
 }
 exports.setMissionTrainAsNoLongerNeeded = setMissionTrainAsNoLongerNeeded;
 function setMissionTrainCoords(train, x, y, z) {
@@ -34347,8 +34177,7 @@ exports.setObjectAllowLowLodBuoyancy = setObjectAllowLowLodBuoyancy;
  * @param object
  */
 function setObjectAsNoLongerNeeded(object) {
-    const [object_out] = _in(0x3ae22deb, 0x5ba5a3e6, _ii(object));
-    return [object_out];
+    return _in(0x3ae22deb, 0x5ba5a3e6, _ii(object));
 }
 exports.setObjectAsNoLongerNeeded = setObjectAsNoLongerNeeded;
 /**
@@ -34848,8 +34677,7 @@ exports.setPedAsGroupMember = setPedAsGroupMember;
  * @param ped
  */
 function setPedAsNoLongerNeeded(ped) {
-    const [ped_out] = _in(0x2595dd42, 0x36549ce3, _ii(ped));
-    return [ped_out];
+    return _in(0x2595dd42, 0x36549ce3, _ii(ped));
 }
 exports.setPedAsNoLongerNeeded = setPedAsNoLongerNeeded;
 function setPedBlendFromParents(ped, p1, p2, p3, p4) {
@@ -37859,8 +37687,7 @@ exports.setPlayerVisibleLocally = setPlayerVisibleLocally;
  * @param p3
  */
 function setPlayerWantedCentrePosition(player, p2, p3) {
-    const [position_out] = _in(0x520e541a, 0x97a13354, player, _v, p2, p3);
-    return [_mv(position_out)];
+    return _in(0x520e541a, 0x97a13354, player, _v, p2, p3);
 }
 exports.setPlayerWantedCentrePosition = setPlayerWantedCentrePosition;
 /**
@@ -38494,8 +38321,7 @@ function setSavegameListUniqueId(p0) {
 }
 exports.setSavegameListUniqueId = setSavegameListUniqueId;
 function setScaleformMovieAsNoLongerNeeded(scaleformHandle) {
-    const [scaleformHandle_out] = _in(0x1d132d61, 0x4dd86811, _ii(scaleformHandle));
-    return [scaleformHandle_out];
+    return _in(0x1d132d61, 0x4dd86811, _ii(scaleformHandle));
 }
 exports.setScaleformMovieAsNoLongerNeeded = setScaleformMovieAsNoLongerNeeded;
 function setScaleformMovieToUseLargeRt(scaleformHandle, toggle) {
@@ -39750,8 +39576,7 @@ exports.setVehicleAllowNoPassengersLockon = setVehicleAllowNoPassengersLockon;
  * @param vehicle
  */
 function setVehicleAsNoLongerNeeded(vehicle) {
-    const [vehicle_out] = _in(0x629bfa74, 0x418d6239, _ii(vehicle));
-    return [vehicle_out];
+    return _in(0x629bfa74, 0x418d6239, _ii(vehicle));
 }
 exports.setVehicleAsNoLongerNeeded = setVehicleAsNoLongerNeeded;
 /**
@@ -41405,8 +41230,7 @@ exports.setWarningMessageOptionItems = setWarningMessageOptionItems;
  * @param p9
  */
 function setWarningMessageWithHeader(entryHeader, entryLine1, instructionalKey, entryLine2, p4, p5, p8, p9) {
-    const [showBackground_out, p7_out] = _in(0xdc38cc1e, 0x35b6a5d7, _ts(entryHeader), _ts(entryLine1), instructionalKey, _ts(entryLine2), p4, p5, _i, _i, p8, p9);
-    return [showBackground_out, p7_out];
+    return _in(0xdc38cc1e, 0x35b6a5d7, _ts(entryHeader), _ts(entryLine1), instructionalKey, _ts(entryLine2), p4, p5, _i, _i, p8, p9);
 }
 exports.setWarningMessageWithHeader = setWarningMessageWithHeader;
 /**
@@ -41517,8 +41341,7 @@ function setWarningMessageWithHeaderAndSubstringFlagsExtended(labelTitle, labelM
 }
 exports.setWarningMessageWithHeaderAndSubstringFlagsExtended = setWarningMessageWithHeaderAndSubstringFlagsExtended;
 function setWarningMessageWithHeaderExtended(entryHeader, entryLine1, flags, entryLine2, p4, p5, showBg, p9, p10) {
-    const [p6_out, p7_out] = _in(0x38b55259, 0xc2e078ed, _ts(entryHeader), _ts(entryLine1), flags, _ts(entryLine2), p4, p5, _i, _i, showBg, p9, p10);
-    return [p6_out, p7_out];
+    return _in(0x38b55259, 0xc2e078ed, _ts(entryHeader), _ts(entryLine1), flags, _ts(entryLine2), p4, p5, _i, _i, showBg, p9, p10);
 }
 exports.setWarningMessageWithHeaderExtended = setWarningMessageWithHeaderExtended;
 /**
@@ -42211,8 +42034,7 @@ exports.skipToNextScriptedConversationLine = skipToNextScriptedConversationLine;
  * @param outW
  */
 function slerpNearQuaternion(t, x, y, z, w, x1, y1, z1, w1) {
-    const [outX_out, outY_out, outZ_out, outW_out] = _in(0xf2f6a2fa, 0x49278625, _fv(t), _fv(x), _fv(y), _fv(z), _fv(w), _fv(x1), _fv(y1), _fv(z1), _fv(w1), _f, _f, _f, _f);
-    return [outX_out, outY_out, outZ_out, outW_out];
+    return _in(0xf2f6a2fa, 0x49278625, _fv(t), _fv(x), _fv(y), _fv(z), _fv(w), _fv(x1), _fv(y1), _fv(z1), _fv(w1), _f, _f, _f, _f);
 }
 exports.slerpNearQuaternion = slerpNearQuaternion;
 /**
@@ -42262,13 +42084,11 @@ function spawnpointsGetNumSearchResults() {
 }
 exports.spawnpointsGetNumSearchResults = spawnpointsGetNumSearchResults;
 function spawnpointsGetSearchResult(randomInt) {
-    const [x_out, y_out, z_out] = _in(0x280c7e3a, 0xc7f56e90, randomInt, _f, _f, _f);
-    return [x_out, y_out, z_out];
+    return _in(0x280c7e3a, 0xc7f56e90, randomInt, _f, _f, _f);
 }
 exports.spawnpointsGetSearchResult = spawnpointsGetSearchResult;
 function spawnpointsGetSearchResultFlags(p0, p1) {
-    const [p1_out] = _in(0xb782f823, 0x8512bad5, p0, _ii(p1));
-    return [p1_out];
+    return _in(0xb782f823, 0x8512bad5, p0, _ii(p1));
 }
 exports.spawnpointsGetSearchResultFlags = spawnpointsGetSearchResultFlags;
 function spawnpointsIsSearchActive() {
@@ -43061,18 +42881,15 @@ function startRopeWinding(ropeId) {
 }
 exports.startRopeWinding = startRopeWinding;
 function startSaveArrayWithSize(size, arrayName) {
-    const [p0_out] = _in(0x60fe567d, 0xf1b1af9d, _i, size, _ts(arrayName));
-    return [p0_out];
+    return _in(0x60fe567d, 0xf1b1af9d, _i, size, _ts(arrayName));
 }
 exports.startSaveArrayWithSize = startSaveArrayWithSize;
 function startSaveData(p1, p2) {
-    const [p0_out] = _in(0xa9575f81, 0x2c6a7997, _i, p1, p2);
-    return [p0_out];
+    return _in(0xa9575f81, 0x2c6a7997, _i, p1, p2);
 }
 exports.startSaveData = startSaveData;
 function startSaveStructWithSize(size, structName) {
-    const [p0_out] = _in(0xbf737600, 0xcddbeadd, _i, size, _ts(structName));
-    return [p0_out];
+    return _in(0xbf737600, 0xcddbeadd, _i, size, _ts(structName));
 }
 exports.startSaveStructWithSize = startSaveStructWithSize;
 function startScriptConversation(p0, p1, p2, p3) {
@@ -45167,8 +44984,7 @@ function taskMoveNetworkAdvancedByName(ped, network, x, y, z, rotX, rotY, rotZ, 
 }
 exports.taskMoveNetworkAdvancedByName = taskMoveNetworkAdvancedByName;
 function taskMoveNetworkAdvancedByNameWithInitParams(ped, network, x, y, z, rotX, rotY, rotZ, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags) {
-    const [initialParameters_out] = _in(0x29682e2c, 0xcf21e9b5, ped, _ts(network), _i, _fv(x), _fv(y), _fv(z), _fv(rotX), _fv(rotY), _fv(rotZ), rotOrder, _fv(blendDuration), allowOverrideCloneUpdate, _ts(dictionary), flags);
-    return [initialParameters_out];
+    return _in(0x29682e2c, 0xcf21e9b5, ped, _ts(network), _i, _fv(x), _fv(y), _fv(z), _fv(rotX), _fv(rotY), _fv(rotZ), rotOrder, _fv(blendDuration), allowOverrideCloneUpdate, _ts(dictionary), flags);
 }
 exports.taskMoveNetworkAdvancedByNameWithInitParams = taskMoveNetworkAdvancedByNameWithInitParams;
 /**
@@ -45196,8 +45012,7 @@ exports.taskMoveNetworkByName = taskMoveNetworkByName;
  * @param flags
  */
 function taskMoveNetworkByNameWithInitParams(ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags) {
-    const [initialParameters_out] = _in(0x3d45b0b3, 0x55c5e0c9, ped, _ts(network), _i, _fv(blendDuration), allowOverrideCloneUpdate, _ts(animDict), flags);
-    return [initialParameters_out];
+    return _in(0x3d45b0b3, 0x55c5e0c9, ped, _ts(network), _i, _fv(blendDuration), allowOverrideCloneUpdate, _ts(animDict), flags);
 }
 exports.taskMoveNetworkByNameWithInitParams = taskMoveNetworkByNameWithInitParams;
 /**
@@ -45644,8 +45459,7 @@ exports.taskReloadWeapon = taskReloadWeapon;
  * @param blendOutDelta
  */
 function taskScriptedAnimation(ped, blendInDelta, blendOutDelta) {
-    const [priorityLowData_out, priorityMidData_out, priorityHighData_out] = _in(0x126ef75f, 0x1e17abe5, ped, _i, _i, _i, _fv(blendInDelta), _fv(blendOutDelta));
-    return [priorityLowData_out, priorityMidData_out, priorityHighData_out];
+    return _in(0x126ef75f, 0x1e17abe5, ped, _i, _i, _i, _fv(blendInDelta), _fv(blendOutDelta));
 }
 exports.taskScriptedAnimation = taskScriptedAnimation;
 function taskSeekCoverFromPed(ped, target, duration, allowPeekingAndFiring) {
@@ -46935,8 +46749,7 @@ exports.triggerScreenblurFadeOut = triggerScreenblurFadeOut;
  * @param playerBits
  */
 function triggerScriptEvent(eventGroup, eventDataSize, playerBits) {
-    const [eventData_out] = _in(0x5ae99c57, 0x1d5bbe5d, eventGroup, _i, eventDataSize, playerBits);
-    return [eventData_out];
+    return _in(0x5ae99c57, 0x1d5bbe5d, eventGroup, _i, eventDataSize, playerBits);
 }
 exports.triggerScriptEvent = triggerScriptEvent;
 function triggerSirenAudio(vehicle) {
@@ -47118,8 +46931,7 @@ function ugcGetContentTotal() {
 }
 exports.ugcGetContentTotal = ugcGetContentTotal;
 function ugcGetContentUpdatedDate(p0, p1) {
-    const [p1_out] = _in(0xcfd115b3, 0x73c0df63, p0, _ii(p1));
-    return [p1_out];
+    return _in(0xcfd115b3, 0x73c0df63, p0, _ii(p1));
 }
 exports.ugcGetContentUpdatedDate = ugcGetContentUpdatedDate;
 function ugcGetContentUserId(p0) {
@@ -47475,8 +47287,7 @@ function unregisterPedheadshot(id) {
 }
 exports.unregisterPedheadshot = unregisterPedheadshot;
 function unregisterScriptVariable(variable) {
-    const [variable_out] = _in(0x340a36a7, 0x00e99699, _ii(variable));
-    return [variable_out];
+    return _in(0x340a36a7, 0x00e99699, _ii(variable));
 }
 exports.unregisterScriptVariable = unregisterScriptVariable;
 /**

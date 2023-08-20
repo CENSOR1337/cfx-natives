@@ -3,7 +3,7 @@
 	"main": "dist/natives.js",
 	"module": "dist/natives.js",
 	"types": "dist/natives.d.ts",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "A list of game natives function for FiveM, using alloc8or native database.",
 	"keywords": [
 		"fivem",
