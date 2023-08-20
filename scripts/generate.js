@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { Native } = require("./Native");
+const { header } = require("./header");
 
 const debugNatives = [
     "0x3FEF770D40960D5A",
@@ -15,7 +16,6 @@ const debugNatives = [
 ]
 
 const bDebug = false;
-const template = fs.readFileSync("./src/header.ts", "utf8");
 
 function generateNatives() {
     const path = "./bin/natives.json";
@@ -40,7 +40,7 @@ function generateNatives() {
         }
     });
 
-    let output = template;
+    let output = header;
     allNatives.forEach((nativeInfo) => {
         if (bDebug && !debugNatives.includes(nativeInfo.hash)) return;
         const native = new Native(nativeInfo);
