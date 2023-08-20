@@ -168,6 +168,10 @@ function _ch(hash) {
     }
     return hash;
 }
+function _obj(obj) {
+    const s = msgpack_pack(obj);
+    return [s, s.length];
+}
 function _ts(num) {
     if (num === 0 || num === null || num === undefined || num === false) {
         // workaround for users calling string parameters with '0', also nil being translated
