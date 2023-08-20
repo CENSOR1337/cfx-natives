@@ -237,7 +237,7 @@ class Native {
 
     genBody() {
         const invokeParams = this.getInvokeArgs().join(", ");
-        if (this.getReferenceParams().length > 0) {
+        if (this.getReferenceParams().length > 0 && this.results[0] != "void") {
             const referenceParams = [];
             if (this.results.length > 0 && this.results[0] != "void") {
                 referenceParams.push({ name: "retval", type: this.results[0] });
