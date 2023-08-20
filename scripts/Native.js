@@ -226,7 +226,14 @@ class Native {
         for (const result of this.results) {
             results.push(getTypescriptType({ type: result }));
         }
-        if (results.length <= 1) return results[0];
+        const returnCount = this.getReturnCount();
+        if (returnCount <= 1) {
+            let tsReturnType = results[0];
+            results.forEach((result) => {
+                if (result != "void") tsReturnType = result;
+            });
+            return tsReturnType;
+        }
         if (results[0] == "void") results.shift();
         return `[${results.join(", ")}]`;
     }
@@ -235,9 +242,16 @@ class Native {
         if (this.getReferenceParams().length <= 0) return "void";
     }
 
+    getReturnCount() {
+        let returnCount = this.getReferenceParams().length;
+        if (this.results[0] != "void") returnCount++;
+        return returnCount;
+    }
+
     genBody() {
         const invokeParams = this.getInvokeArgs().join(", ");
-        if (this.getReferenceParams().length > 0 && this.results[0] != "void") {
+        const returnCount = this.getReturnCount()
+        if (returnCount > 1) {
             const referenceParams = [];
             if (this.results.length > 0 && this.results[0] != "void") {
                 referenceParams.push({ name: "retval", type: this.results[0] });
