@@ -1934,7 +1934,7 @@ export declare function clearAreaOfVehicles(x: number, y: number, z: number, rad
  * @param address
  * @param offset
  */
-export declare function clearBit(offset: number): [number];
+export declare function clearBit(offset: number): number;
 export declare function clearBrief(): void;
 export declare function clearCodeRequestedAutosave(): void;
 /**
@@ -2148,7 +2148,7 @@ export declare function clearRoomForGameViewport(): void;
  * Possibly used to clear scenario points.
  */
 export declare function clearScenarioSpawnHistory(): void;
-export declare function clearSequenceTask(taskSequenceId: number): [number];
+export declare function clearSequenceTask(taskSequenceId: number): number;
 /**
  * This native does absolutely nothing, just a nullsub
  */
@@ -2282,7 +2282,7 @@ export declare function convertOldPickupTypeToNew(pickupHash: number): number;
  * @param posixTime
  * @param timeStructure
  */
-export declare function convertPosixTime(posixTime: number, timeStructure: number): [number];
+export declare function convertPosixTime(posixTime: number, timeStructure: number): number;
 export declare function copyScriptStruct(size: number): [number, number];
 /**
  * Copies sourceVehicle's damage (broken bumpers, broken lights, etc.) to targetVehicle.
@@ -2847,12 +2847,12 @@ export declare function customMinimapSetActive(toggle: boolean): void;
  */
 export declare function customMinimapSetBlipObject(spriteId: number): void;
 export declare function damageObjectFragmentChild(p0: number, p1: number, p2: number): void;
-export declare function dataarrayAddBool(value: boolean): [number];
+export declare function dataarrayAddBool(value: boolean): number;
 export declare function dataarrayAddDict(arrayData: number): [number, number];
-export declare function dataarrayAddFloat(value: number): [number];
-export declare function dataarrayAddInt(value: number): [number];
-export declare function dataarrayAddString(value: string): [number];
-export declare function dataarrayAddVector(valueX: number, valueY: number, valueZ: number): [number];
+export declare function dataarrayAddFloat(value: number): number;
+export declare function dataarrayAddInt(value: number): number;
+export declare function dataarrayAddString(value: string): number;
+export declare function dataarrayAddVector(valueX: number, valueY: number, valueZ: number): number;
 export declare function dataarrayGetBool(arrayIndex: number): [boolean, number];
 export declare function dataarrayGetCount(arrayData: number): [number, number];
 export declare function dataarrayGetDict(arrayIndex: number): [number, number];
@@ -2895,11 +2895,11 @@ export declare function datadictGetString(key: string): [string, number];
  */
 export declare function datadictGetType(key: string): [number, number];
 export declare function datadictGetVector(key: string): [Vector3, number];
-export declare function datadictSetBool(key: string, value: boolean): [number];
-export declare function datadictSetFloat(key: string, value: number): [number];
-export declare function datadictSetInt(key: string, value: number): [number];
-export declare function datadictSetString(key: string, value: string): [number];
-export declare function datadictSetVector(key: string, valueX: number, valueY: number, valueZ: number): [number];
+export declare function datadictSetBool(key: string, value: boolean): number;
+export declare function datadictSetFloat(key: string, value: number): number;
+export declare function datadictSetInt(key: string, value: number): number;
+export declare function datadictSetString(key: string, value: string): number;
+export declare function datadictSetVector(key: string, valueX: number, valueY: number, valueZ: number): number;
 export declare function datafileClearWatchList(): void;
 export declare function datafileCreate(p0: number): void;
 export declare function datafileDelete(p0: number): void;
@@ -2999,7 +2999,7 @@ export declare function deleteChildRope(ropeId: number): void;
  * Deletes the specified entity, then sets the handle pointed to by the pointer to NULL.
  * @param entity
  */
-export declare function deleteEntity(entity: number): [number];
+export declare function deleteEntity(entity: number): number;
 /**
  * Delete an incident with a given id.
  *
@@ -3011,12 +3011,12 @@ export declare function deleteEntity(entity: number): [number];
  * @param incidentId
  */
 export declare function deleteIncident(incidentId: number): void;
-export declare function deleteMissionTrain(train: number): [number];
+export declare function deleteMissionTrain(train: number): number;
 /**
  * Deletes the specified object, then sets the handle pointed to by the pointer to NULL.
  * @param object
  */
-export declare function deleteObject(object: number): [number];
+export declare function deleteObject(object: number): number;
 /**
  * From the b617d scripts:
  *
@@ -3031,8 +3031,8 @@ export declare function deletePatrolRoute(patrolRoute: string): void;
  * Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
  * @param ped
  */
-export declare function deletePed(ped: number): [number];
-export declare function deleteRope(ropeId: number): [number];
+export declare function deletePed(ped: number): number;
+export declare function deleteRope(ropeId: number): number;
 export declare function deleteScriptVehicleGenerator(vehicleGenerator: number): void;
 export declare function deleteStuntJump(p0: number): void;
 /**
@@ -3046,7 +3046,7 @@ export declare function deleteStuntJump(p0: number): void;
  * Deletes the specified vehicle, then sets the handle pointed to by the pointer to NULL.
  * @param vehicle
  */
-export declare function deleteVehicle(vehicle: number): [number];
+export declare function deleteVehicle(vehicle: number): number;
 export declare function deleteWaypointsFromThisPlayer(): void;
 /**
  * Does nothing and always returns false.
@@ -3322,7 +3322,7 @@ export declare function displayHudWhenPausedThisFrame(): void;
  * @param maxInputLength
  */
 export declare function displayOnscreenKeyboard(p0: number, windowTitle: string, p2: string, defaultText: string, defaultConcat1: string, defaultConcat2: string, defaultConcat3: string, maxInputLength: number): void;
-export declare function displayOnscreenKeyboardWithLongerInitialString(p0: number, windowTitle: string, defaultText: string, defaultConcat1: string, defaultConcat2: string, defaultConcat3: string, defaultConcat4: string, defaultConcat5: string, defaultConcat6: string, defaultConcat7: string, maxInputLength: number): [number];
+export declare function displayOnscreenKeyboardWithLongerInitialString(p0: number, windowTitle: string, defaultText: string, defaultConcat1: string, defaultConcat2: string, defaultConcat3: string, defaultConcat4: string, defaultConcat5: string, defaultConcat6: string, defaultConcat7: string, maxInputLength: number): number;
 /**
  * Toggles whether or not name labels are shown on the expanded minimap next to player blips, like in GTA:O.
  * Doesn't need to be called every frame.
@@ -6771,9 +6771,9 @@ export declare function getMillisecondsPerGameMinute(): number;
 export declare function getMinimapFowCoordinateIsRevealed(x: number, y: number, z: number): boolean;
 export declare function getMinimapFowDiscoveryRatio(): number;
 export declare function getMissionFlag(): boolean;
-export declare function getMobilePhonePosition(position: Vector3): [Vector3];
-export declare function getMobilePhoneRenderId(renderId: number): [number];
-export declare function getMobilePhoneRotation(p1: number): [Vector3];
+export declare function getMobilePhonePosition(position: Vector3): Vector3;
+export declare function getMobilePhoneRenderId(renderId: number): number;
+export declare function getMobilePhoneRotation(p1: number): Vector3;
 /**
  * Returns the name for the type of vehicle mod(Armour, engine etc)
  *
@@ -7739,7 +7739,7 @@ export declare function getPedParachuteLandingType(ped: number): number;
  * @param ped
  */
 export declare function getPedParachuteState(ped: number): number;
-export declare function getPedParachuteTintIndex(ped: number, outTintIndex: number): [number];
+export declare function getPedParachuteTintIndex(ped: number, outTintIndex: number): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
@@ -7870,7 +7870,7 @@ export declare function getPlayerInvincible(player: number): boolean;
 export declare function getPlayerMaxArmour(player: number): number;
 export declare function getPlayerName(player: number): string;
 export declare function getPlayerParachuteModelOverride(player: number): number;
-export declare function getPlayerParachutePackTintIndex(player: number, tintIndex: number): [number];
+export declare function getPlayerParachutePackTintIndex(player: number, tintIndex: number): number;
 export declare function getPlayerParachuteSmokeTrailColor(player: number): [number, number, number];
 /**
  * Tints:
@@ -7892,7 +7892,7 @@ export declare function getPlayerParachuteSmokeTrailColor(player: number): [numb
  * @param player
  * @param tintIndex
  */
-export declare function getPlayerParachuteTintIndex(player: number, tintIndex: number): [number];
+export declare function getPlayerParachuteTintIndex(player: number, tintIndex: number): number;
 /**
  * Gets the ped for a specified player index.
  * @param player
@@ -7935,7 +7935,7 @@ export declare function getPlayerReserveParachuteModelOverride(player: number): 
  * @param player
  * @param index
  */
-export declare function getPlayerReserveParachuteTintIndex(player: number, index: number): [number];
+export declare function getPlayerReserveParachuteTintIndex(player: number, index: number): number;
 export declare function getPlayerRgbColour(player: number): [number, number, number];
 export declare function getPlayerShortSwitchState(): number;
 export declare function getPlayerSprintStaminaRemaining(player: number): number;
@@ -8373,8 +8373,8 @@ export declare function getShopPedApparelVariantPropCount(propHash: number): num
  * @param componentHash
  * @param outComponent
  */
-export declare function getShopPedComponent(componentHash: number, outComponent: number): [number];
-export declare function getShopPedOutfit(p0: number, p1: number): [number];
+export declare function getShopPedComponent(componentHash: number, outComponent: number): number;
+export declare function getShopPedOutfit(p0: number, p1: number): number;
 /**
  * See https://git.io/JtcBH for example and structs.
  * @param outfitHash
@@ -8395,13 +8395,13 @@ export declare function getShopPedOutfitPropVariant(outfitHash: number, variantI
  * @param componentHash
  * @param outProp
  */
-export declare function getShopPedProp(componentHash: number, outProp: number): [number];
+export declare function getShopPedProp(componentHash: number, outProp: number): number;
 /**
  * See https://git.io/JtcRf for example and structs.
  * @param componentId
  * @param outComponent
  */
-export declare function getShopPedQueryComponent(componentId: number, outComponent: number): [number];
+export declare function getShopPedQueryComponent(componentId: number, outComponent: number): number;
 /**
  * Returns some sort of index/offset for components.
  * Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = false and componentId with the drawable's component slot first, returns -1 otherwise.
@@ -8414,13 +8414,13 @@ export declare function getShopPedQueryComponentIndex(componentHash: number): nu
  * @param outfitIndex
  * @param outfit
  */
-export declare function getShopPedQueryOutfit(outfitIndex: number, outfit: number): [number];
+export declare function getShopPedQueryOutfit(outfitIndex: number, outfit: number): number;
 /**
  * See https://git.io/JtcRf for example and structs.
  * @param componentId
  * @param outProp
  */
-export declare function getShopPedQueryProp(componentId: number, outProp: number): [number];
+export declare function getShopPedQueryProp(componentId: number, outProp: number): number;
 /**
  * Returns some sort of index/offset for props.
  * Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = true and componentId = -1 first, returns -1 otherwise.
@@ -8893,8 +8893,8 @@ export declare function getVehicleEngineHealth(vehicle: number): number;
  */
 export declare function getVehicleEnveffScale(vehicle: number): number;
 export declare function getVehicleEstimatedMaxSpeed(vehicle: number): number;
-export declare function getVehicleExtraColour5(vehicle: number, color: number): [number];
-export declare function getVehicleExtraColour6(vehicle: number, color: number): [number];
+export declare function getVehicleExtraColour5(vehicle: number, color: number): number;
+export declare function getVehicleExtraColour6(vehicle: number, color: number): number;
 export declare function getVehicleExtraColours(vehicle: number): [number, number];
 export declare function getVehicleFlightNozzlePosition(plane: number): number;
 /**
@@ -9118,7 +9118,7 @@ export declare function getVehicleNodeIsSwitchedOff(nodeID: number): boolean;
  * @param nodeId
  * @param outPosition
  */
-export declare function getVehicleNodePosition(nodeId: number, outPosition: Vector3): [Vector3];
+export declare function getVehicleNodePosition(nodeId: number, outPosition: Vector3): Vector3;
 /**
  * Gets the density and flags of the closest node to the specified position.
  * Density is a value between 0 and 15, indicating how busy the road is.
@@ -10188,8 +10188,8 @@ export declare function initCreatorBudget(): void;
  * @param schemeName
  */
 export declare function initPcScriptedControls(schemeName: string): boolean;
-export declare function initShopPedComponent(outComponent: number): [number];
-export declare function initShopPedProp(outProp: number): [number];
+export declare function initShopPedComponent(outComponent: number): number;
+export declare function initShopPedProp(outProp: number): number;
 export declare function initSynchSceneAudioWithEntity(audioEvent: string, entity: number): void;
 export declare function initSynchSceneAudioWithPosition(audioEvent: string, x: number, y: number, z: number): void;
 export declare function instantlyFillPedPopulation(): void;
@@ -12163,7 +12163,7 @@ export declare function networkAddEntityToSynchronisedScene(entity: number, netS
  * @param p0
  * @param p1
  */
-export declare function networkAddFollowers(p1: number): [number];
+export declare function networkAddFollowers(p1: number): number;
 export declare function networkAddFriend(message: string): [boolean, number];
 export declare function networkAddInvalidObjectModel(modelHash: number): void;
 /**
@@ -12347,7 +12347,7 @@ export declare function networkClanGetMembershipValid(p1: number): [boolean, num
  * @param bufferSize
  * @param formattedTag
  */
-export declare function networkClanGetUiFormattedTag(bufferSize: number, formattedTag: string): [number];
+export declare function networkClanGetUiFormattedTag(bufferSize: number, formattedTag: string): number;
 export declare function networkClanHasCrewinfoMetadataBeenReceived(): boolean;
 export declare function networkClanIsEmblemReady(p0: number, p1: number): [boolean, number];
 /**
@@ -12530,7 +12530,7 @@ export declare function networkEarnFromAiTargetKill(p0: number, p1: number): voi
  * @param p1
  * @param p2
  */
-export declare function networkEarnFromAmbientJob(p0: number, p1: string, p2: number): [number];
+export declare function networkEarnFromAmbientJob(p0: number, p1: string, p2: number): number;
 export declare function networkEarnFromBendJob(amount: number, heistHash: string): void;
 export declare function networkEarnFromBetting(amount: number, p1: string): void;
 export declare function networkEarnFromBounty(amount: number, p3: number): [number, number];
@@ -12538,7 +12538,7 @@ export declare function networkEarnFromBusinessBattle(p0: number): void;
 export declare function networkEarnFromBusinessHubSell(p0: number, p1: number, p2: number): void;
 export declare function networkEarnFromBusinessProduct(amount: number, p1: number, p2: number, p3: number): void;
 export declare function networkEarnFromCashingOut(amount: number): void;
-export declare function networkEarnFromChallengeWin(p0: number, p2: boolean): [number];
+export declare function networkEarnFromChallengeWin(p0: number, p2: boolean): number;
 export declare function networkEarnFromClubManagementParticipation(p0: number, p1: number): void;
 export declare function networkEarnFromContraband(amount: number, p1: number): void;
 export declare function networkEarnFromCrateDrop(amount: number): void;
@@ -12830,7 +12830,7 @@ export declare function networkGetLastPlayerPosReceivedOverNetwork(player: numbe
  * @param entity
  */
 export declare function networkGetLastVelReceivedOverNetwork(entity: number): Vector3;
-export declare function networkGetLocalHandle(gamerHandleSize: number): [number];
+export declare function networkGetLocalHandle(gamerHandleSize: number): number;
 export declare function networkGetLocalSceneFromNetworkId(netId: number): number;
 export declare function networkGetMaxFriends(): number;
 export declare function networkGetMaxNumParticipants(): number;
@@ -12845,7 +12845,7 @@ export declare function networkGetMuteCountForPlayer(p0: number): [number, numbe
  * Does nothing (it's a nullsub).
  * @param p0
  */
-export declare function networkGetNetStatisticsInfo(p0: number): [number];
+export declare function networkGetNetStatisticsInfo(p0: number): number;
 export declare function networkGetNetworkIdFromEntity(entity: number): number;
 /**
  * Hardcoded to return zero.
@@ -12938,7 +12938,7 @@ export declare function networkGetScriptStatus(): number;
  * Does nothing (it's a nullsub).
  * @param p0
  */
-export declare function networkGetSignallingInfo(p0: number): [number];
+export declare function networkGetSignallingInfo(p0: number): number;
 export declare function networkGetStringBankBalance(): string;
 export declare function networkGetStringBankWalletBalance(character: number): string;
 export declare function networkGetStringWalletBalance(characterSlot: number): string;
@@ -12961,11 +12961,11 @@ export declare function networkGetUnreliableResendCount(player: number): number;
 export declare function networkGetVcBalance(): number;
 export declare function networkGetVcBankBalance(): number;
 export declare function networkGetVcWalletBalance(characterSlot: number): number;
-export declare function networkGivePlayerJobshareCash(amount: number, gamerHandle: number): [number];
-export declare function networkHandleFromFriend(friendIndex: number, gamerHandleSize: number): [number];
-export declare function networkHandleFromMemberId(memberId: string, gamerHandleSize: number): [number];
-export declare function networkHandleFromPlayer(player: number, gamerHandleSize: number): [number];
-export declare function networkHandleFromUserId(userId: string, gamerHandleSize: number): [number];
+export declare function networkGivePlayerJobshareCash(amount: number, gamerHandle: number): number;
+export declare function networkHandleFromFriend(friendIndex: number, gamerHandleSize: number): number;
+export declare function networkHandleFromMemberId(memberId: string, gamerHandleSize: number): number;
+export declare function networkHandleFromPlayer(player: number, gamerHandleSize: number): number;
+export declare function networkHandleFromUserId(userId: string, gamerHandleSize: number): number;
 export declare function networkHasAgeRestrictions(): boolean;
 export declare function networkHasAutomuteOverride(): boolean;
 export declare function networkHasBoneBeenHitByKiller(boneIndex: number): boolean;
@@ -13311,7 +13311,7 @@ export declare function networkPreventScriptHostMigration(): void;
 export declare function networkQueryRespawnResults(p0: number): [number, number];
 export declare function networkQueueGamerForStatus(p0: number): [boolean, number];
 export declare function networkQuitMpToDesktop(): void;
-export declare function networkReceivePlayerJobshareCash(value: number, gamerHandle: number): [number];
+export declare function networkReceivePlayerJobshareCash(value: number, gamerHandle: number): number;
 /**
  * index
  * -------
@@ -13359,8 +13359,8 @@ export declare function networkRefundCash(index: number, context: string, reason
 export declare function networkRegisterEntityAsNetworked(entity: number): void;
 export declare function networkRegisterHighFrequencyHostBroadcastVariables(p0: number, p1: number, p2: number): void;
 export declare function networkRegisterHighFrequencyPlayerBroadcastVariables(p0: number, p1: number, p2: number): void;
-export declare function networkRegisterHostBroadcastVariables(numVars: number, debugName: string): [number];
-export declare function networkRegisterPlayerBroadcastVariables(numVars: number, debugName: string): [number];
+export declare function networkRegisterHostBroadcastVariables(numVars: number, debugName: string): number;
+export declare function networkRegisterPlayerBroadcastVariables(numVars: number, debugName: string): number;
 export declare function networkRemainInGameChat(p0: boolean): void;
 export declare function networkRemoveAllQueuedJoinRequests(): void;
 export declare function networkRemoveAllTransitionInvite(): void;
@@ -13369,7 +13369,7 @@ export declare function networkRemoveAndCancelAllTransitionInvites(): void;
 export declare function networkRemoveEntityArea(areaHandle: number): boolean;
 export declare function networkRemoveInvalidObjectModel(modelHash: number): void;
 export declare function networkRemovePresenceInvite(p0: number): boolean;
-export declare function networkRemoveTransitionInvite(p0: number): [number];
+export declare function networkRemoveTransitionInvite(p0: number): number;
 export declare function networkReportCodeTamper(): void;
 export declare function networkRequestCloudBackgroundScripts(): boolean;
 export declare function networkRequestCloudTunables(): void;
@@ -13443,7 +13443,7 @@ export declare function networkSessionDoFriendMatchmaking(p0: number, p1: number
 export declare function networkSessionEnd(p0: boolean, p1: boolean): boolean;
 export declare function networkSessionForceCancelInvite(): void;
 export declare function networkSessionGetHostAimPreference(): number;
-export declare function networkSessionGetInviter(gamerHandle: number): [number];
+export declare function networkSessionGetInviter(gamerHandle: number): number;
 export declare function networkSessionGetKickVote(player: number): boolean;
 export declare function networkSessionGetMatchmakingGroupFree(p0: number): number;
 export declare function networkSessionGetPrivateSlots(): number;
@@ -13516,7 +13516,7 @@ export declare function networkSessionSetUniqueCrewLimit(p0: number): void;
 export declare function networkSessionSetUniqueCrewLimitTransition(p0: number): void;
 export declare function networkSessionSetUniqueCrewOnlyCrewsTransition(p0: boolean): void;
 export declare function networkSessionValidateJoin(p0: boolean): void;
-export declare function networkSessionVoiceConnectToPlayer(gamerHandle: number): [number];
+export declare function networkSessionVoiceConnectToPlayer(gamerHandle: number): number;
 export declare function networkSessionVoiceHost(): boolean;
 export declare function networkSessionVoiceLeave(): boolean;
 export declare function networkSessionVoiceRespondToRequest(p0: boolean, p1: number): void;
@@ -13583,7 +13583,7 @@ export declare function networkSetEntityCanBlend(entity: number, toggle: boolean
  */
 export declare function networkSetEntityOnlyExistsForParticipants(entity: number, toggle: boolean): void;
 export declare function networkSetFriendlyFireOption(toggle: boolean): void;
-export declare function networkSetGamerInvitedToTransition(gamerHandle: number): [number];
+export declare function networkSetGamerInvitedToTransition(gamerHandle: number): number;
 export declare function networkSetIgnoreSpectatorChatLimitsSameTeam(toggle: boolean): void;
 export declare function networkSetInFreeCamMode(toggle: boolean): void;
 export declare function networkSetInMpCutscene(p0: boolean, p1: boolean): void;
@@ -13591,7 +13591,7 @@ export declare function networkSetInProgressFinishTime(p0: number): void;
 export declare function networkSetInSpectatorMode(toggle: boolean, playerPed: number): void;
 export declare function networkSetInSpectatorModeExtended(toggle: boolean, playerPed: number, p2: boolean): void;
 export declare function networkSetInviteFailedMessageForInviteMenu(): [number, number];
-export declare function networkSetInviteOnCallForInviteMenu(p0: number): [number];
+export declare function networkSetInviteOnCallForInviteMenu(p0: number): number;
 export declare function networkSetLocalPlayerInvincibleTime(time: number): void;
 export declare function networkSetLocalPlayerSyncLookAt(toggle: boolean): void;
 export declare function networkSetLookAtTalkers(p0: boolean): void;
@@ -13660,7 +13660,7 @@ export declare function networkSetTaskCutsceneInscopeMultipler(p0: number): void
 export declare function networkSetTeamOnlyChat(toggle: boolean): void;
 export declare function networkSetThisScriptIsNetworkScript(maxNumMissionParticipants: number, p1: boolean, instanceId: number): void;
 export declare function networkSetTransitionActivityId(p0: number): void;
-export declare function networkSetTransitionCreatorHandle(p0: number): [number];
+export declare function networkSetTransitionCreatorHandle(p0: number): number;
 export declare function networkSetTransitionVisibilityLock(p0: boolean, p1: boolean): void;
 /**
  * Used by MetricVEHICLE_DIST_DRIVEN
@@ -13685,7 +13685,7 @@ export declare function networkShowAccountUpgradeUi(): void;
  * @param player
  */
 export declare function networkShowChatRestrictionMsc(player: number): void;
-export declare function networkShowProfileUi(gamerHandle: number): [number];
+export declare function networkShowProfileUi(gamerHandle: number): number;
 /**
  * This native does absolutely nothing, just a nullsub
  */
@@ -13698,7 +13698,7 @@ export declare function networkSkipRadioResetNextOpen(): void;
  */
 export declare function networkSkipRadioWarning(): boolean;
 export declare function networkSpendAgency(p0: number, p1: number, p2: number, p3: number, p4: number): void;
-export declare function networkSpendApartmentUtilities(amount: number, p1: boolean, p2: boolean, data: number): [number];
+export declare function networkSpendApartmentUtilities(amount: number, p1: boolean, p2: boolean, data: number): number;
 export declare function networkSpendArcade(p0: number, p1: number, p2: number, p3: number, p4: number): void;
 export declare function networkSpendArcadeMgmt(p0: number, p1: number, p2: number, p3: number, p4: number): void;
 export declare function networkSpendArenaPremium(amount: number, p1: boolean, p2: boolean): void;
@@ -13721,7 +13721,7 @@ export declare function networkSpendBuyAgency(p0: number, p1: number, p2: number
 export declare function networkSpendBuyArcade(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendBuyArena(amount: number, p1: boolean, p2: boolean, p3: string): void;
 export declare function networkSpendBuyAutoshop(p0: number, p1: number, p2: number, p3: number): void;
-export declare function networkSpendBuyCasino(amount: number, p1: boolean, p2: boolean, data: number): [number];
+export declare function networkSpendBuyCasino(amount: number, p1: boolean, p2: boolean, data: number): number;
 export declare function networkSpendBuyMfgarage(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendBuySub(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendBuySupplies(p0: number, p1: boolean, p2: boolean, p3: number): void;
@@ -13770,7 +13770,7 @@ export declare function networkSpendUpgradeAgency(p0: number, p1: number, p2: nu
 export declare function networkSpendUpgradeArcade(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendUpgradeArena(amount: number, p1: boolean, p2: boolean, p3: string): void;
 export declare function networkSpendUpgradeAutoshop(p0: number, p1: number, p2: number, p3: number): void;
-export declare function networkSpendUpgradeCasino(amount: number, p1: boolean, p2: boolean, data: number): [number];
+export declare function networkSpendUpgradeCasino(amount: number, p1: boolean, p2: boolean, data: number): number;
 export declare function networkSpendUpgradeMfgarage(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendUpgradeSub(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpendVehicleRequested(p0: number, p1: number, p2: number, p3: number, p4: number): void;
@@ -13792,8 +13792,8 @@ export declare function networkSpentBuyPassiveMode(p0: number, p1: boolean, p2: 
 export declare function networkSpentBuyRevealPlayers(p0: number, p1: boolean, p2: boolean, p3: number): void;
 export declare function networkSpentBuyTiltrotor(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentBuyTruck(p0: number, p1: number, p2: number, p3: number): void;
-export declare function networkSpentBuyWantedlevel(p0: number, p2: boolean, p3: boolean, p4: number): [number];
-export declare function networkSpentCallPlayer(p0: number, p2: boolean, p3: boolean): [number];
+export declare function networkSpentBuyWantedlevel(p0: number, p2: boolean, p3: boolean, p4: number): number;
+export declare function networkSpentCallPlayer(p0: number, p2: boolean, p3: boolean): number;
 export declare function networkSpentCargoSourcing(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): void;
 export declare function networkSpentCarwash(p0: number, p1: number, p2: number, p3: boolean, p4: boolean): void;
 export declare function networkSpentCashDrop(amount: number, p1: boolean, p2: boolean): void;
@@ -13860,14 +13860,14 @@ export declare function networkSpentPayBusinessSupplies(p0: number, p1: number, 
  * @param notBankrupt
  * @param hasTheMoney
  */
-export declare function networkSpentPayVehicleInsurancePremium(amount: number, vehicleModel: number, notBankrupt: boolean, hasTheMoney: boolean): [number];
+export declare function networkSpentPayVehicleInsurancePremium(amount: number, vehicleModel: number, notBankrupt: boolean, hasTheMoney: boolean): number;
 export declare function networkSpentPlayerHealthcare(p0: number, p1: number, p2: boolean, p3: boolean): void;
 export declare function networkSpentProstitutes(p0: number, p1: boolean, p2: boolean): void;
 export declare function networkSpentPurchaseBusinessProperty(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentPurchaseClubHouse(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentPurchaseHackerTruck(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentPurchaseHangar(p0: number, p1: number, p2: number, p3: number): void;
-export declare function networkSpentPurchaseImpexpWarehouseProperty(amount: number, p2: boolean, p3: boolean): [number];
+export declare function networkSpentPurchaseImpexpWarehouseProperty(amount: number, p2: boolean, p3: boolean): number;
 export declare function networkSpentPurchaseNightclubAndWarehouse(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentPurchaseOfficeGarage(p0: number, p1: number, p2: number, p3: number): void;
 export declare function networkSpentPurchaseOfficeProperty(p0: number, p1: number, p2: number, p3: number, p4: number): void;
@@ -14066,7 +14066,7 @@ export declare function openPatrolRoute(patrolRoute: string): void;
  * Shows a menu for reporting UGC content.
  */
 export declare function openReportugcMenu(): void;
-export declare function openSequenceTask(taskSequenceId: number): [number];
+export declare function openSequenceTask(taskSequenceId: number): number;
 /**
  * Uses the `SOCIAL_CLUB2` scaleform.
  * menu: GALLERY, MISSIONS, CREWS, MIGRATE, PLAYLISTS, JOBS
@@ -14627,11 +14627,11 @@ export declare function playstatsAcidMissionEnd(p0: number): void;
 export declare function playstatsAcidRnd(p0: number): void;
 export declare function playstatsAcquiredHiddenPackage(p0: number): void;
 export declare function playstatsActivityDone(p0: number, activityId: number): void;
-export declare function playstatsAppendDirectorMetric(p0: number): [number];
+export declare function playstatsAppendDirectorMetric(p0: number): number;
 export declare function playstatsArcadeCabinet(p0: number): void;
 export declare function playstatsArcadeGame(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number): void;
 export declare function playstatsArcadeLoveMatch(p0: number, p1: number): void;
-export declare function playstatsArenaWarsEnded(data: number): [number];
+export declare function playstatsArenaWarsEnded(data: number): number;
 export declare function playstatsArenaWarsSpectator(p0: number, p1: number, p2: number, p3: number, p4: number): void;
 export declare function playstatsAttritionStageEnd(p0: number): void;
 export declare function playstatsAwardBadSport(id: number): void;
@@ -14648,7 +14648,7 @@ export declare function playstatsBcProtectionRacket(p0: number): void;
 export declare function playstatsBcSalvage(p0: number): void;
 export declare function playstatsBcSmashAndGrab(p0: number): void;
 export declare function playstatsBusinessBattleEnded(p0: number): void;
-export declare function playstatsBuyContrabandMission(data: number): [number];
+export declare function playstatsBuyContrabandMission(data: number): number;
 export declare function playstatsBwAirFreight(p0: number): void;
 export declare function playstatsBwAssault(p0: number): void;
 export declare function playstatsBwBellyOfTheBeast(p0: number): void;
@@ -14683,14 +14683,14 @@ export declare function playstatsCopyRankIntoNewSlot(p0: number, p1: number, p2:
 export declare function playstatsCrateCreated(p0: number, p1: number, p2: number): void;
 export declare function playstatsCrateDropMissionDone(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number): void;
 export declare function playstatsCreateMatchHistoryId2(): [boolean, number, number];
-export declare function playstatsDarCheckpoint(data: number): [number];
-export declare function playstatsDefendContrabandMission(data: number): [number];
+export declare function playstatsDarCheckpoint(data: number): number;
+export declare function playstatsDefendContrabandMission(data: number): number;
 export declare function playstatsDjMissionEnded(p0: number): void;
 export declare function playstatsDjUsage(p0: number, p1: number): void;
 export declare function playstatsDroneUsage(p0: number, p1: number, p2: number): void;
-export declare function playstatsDupeDetected(data: number): [number];
+export declare function playstatsDupeDetected(data: number): number;
 export declare function playstatsEarnedMcPoints(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): void;
-export declare function playstatsEnterSessionPack(data: number): [number];
+export declare function playstatsEnterSessionPack(data: number): number;
 export declare function playstatsExtraEvent(p0: number): void;
 export declare function playstatsFastTrvl(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: number): void;
 /**
@@ -14717,11 +14717,11 @@ export declare function playstatsFmEventPasstheparcel(p0: number): void;
 export declare function playstatsFmEventPennedin(p0: number): void;
 export declare function playstatsFmEventUrbanwarfare(p0: number): void;
 export declare function playstatsFmEventVehicletarget(p0: number): void;
-export declare function playstatsFmHeistPrepEnded(data: number): [number];
+export declare function playstatsFmHeistPrepEnded(data: number): number;
 export declare function playstatsFmMissionEnd(p0: number, p1: number, p2: number): void;
-export declare function playstatsFreemodeCasinoMissionEnded(data: number): [number];
+export declare function playstatsFreemodeCasinoMissionEnded(data: number): number;
 export declare function playstatsFriendActivity(p0: number, p1: boolean): void;
-export declare function playstatsGunrunningMissionEnded(data: number): [number];
+export declare function playstatsGunrunningMissionEnded(data: number): number;
 export declare function playstatsGunrunningRnd(p0: number): void;
 export declare function playstatsHeist3Drone(p0: number): void;
 export declare function playstatsHeist3Finale(p0: number): void;
@@ -14740,7 +14740,7 @@ export declare function playstatsIdleKick(msStoodIdle: number): void;
 export declare function playstatsImpexpMissionEnded(p0: number): void;
 export declare function playstatsImportExportMissionDone(p0: number, p1: number, p2: number, p3: number): void;
 export declare function playstatsInstMissionEnd(p0: number): void;
-export declare function playstatsInstancedHeistEnded(p1: number, p2: number, p3: number): [number];
+export declare function playstatsInstancedHeistEnded(p1: number, p2: number, p3: number): number;
 export declare function playstatsInventory(p0: number): void;
 export declare function playstatsJobActivityEnd(): [number, number, number, number];
 export declare function playstatsJobBend(): [number, number, number, number];
@@ -14763,7 +14763,7 @@ export declare function playstatsMissionVote(p0: number): void;
 export declare function playstatsNightclubMissionEnded(p0: number): void;
 export declare function playstatsNjvsVote(p0: number): void;
 export declare function playstatsNpcInvite(p0: string): void;
-export declare function playstatsNpcPhone(p0: number): [number];
+export declare function playstatsNpcPhone(p0: number): number;
 /**
  * This native does absolutely nothing, just a nullsub
  * @param totalTimeMs
@@ -14772,7 +14772,7 @@ export declare function playstatsNpcPhone(p0: number): [number];
  */
 export declare function playstatsOddjobDone(totalTimeMs: number, p1: number, p2: boolean): void;
 export declare function playstatsPegasusAsPersonalAircraft(modelHash: number): void;
-export declare function playstatsPimenuHideOptions(data: number): [number];
+export declare function playstatsPimenuHideOptions(data: number): number;
 export declare function playstatsPlayerStyle(p0: number): void;
 export declare function playstatsPropChange(p0: number, p1: number, p2: number, p3: number): void;
 export declare function playstatsQuickfixTool(element: number, item: string): void;
@@ -14782,12 +14782,12 @@ export declare function playstatsRaceToPointMissionDone(p0: number, p1: number, 
 export declare function playstatsRandomEvent(p0: number): void;
 export declare function playstatsRandomMissionDone(name: string, p1: number, p2: number, p3: number): void;
 export declare function playstatsRankUp(rank: number): void;
-export declare function playstatsRecoverContrabandMission(data: number): [number];
+export declare function playstatsRecoverContrabandMission(data: number): number;
 export declare function playstatsRivalBehavior(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number): void;
 export declare function playstatsRobberyFinale(p0: number): void;
 export declare function playstatsRobberyPrep(p0: number): void;
 export declare function playstatsRosBet(amount: number, act: number, player: number, cm: number): void;
-export declare function playstatsSellContrabandMission(data: number): [number];
+export declare function playstatsSellContrabandMission(data: number): number;
 export declare function playstatsSetJoinType(joinType: number): void;
 export declare function playstatsShopItem(p0: number, p1: number, p2: number, p3: number, p4: number): void;
 export declare function playstatsShopmenuNav(p0: number, p1: number, p2: number): void;
@@ -14796,8 +14796,8 @@ export declare function playstatsShowroomNav(p0: number, p1: number, entity: num
  * Data struct contains various tunables related to test drives at Simeons Showroom or Luxury Showcase.
  * @param data
  */
-export declare function playstatsShowroomOverview(data: number): [number];
-export declare function playstatsSmugglerMissionEnded(data: number): [number];
+export declare function playstatsShowroomOverview(data: number): number;
+export declare function playstatsSmugglerMissionEnded(data: number): number;
 export declare function playstatsSpentPiCustomLoadout(amount: number): void;
 export declare function playstatsSpinWheel(p0: number, p1: number, p2: number, p3: number): void;
 /**
@@ -14805,7 +14805,7 @@ export declare function playstatsSpinWheel(p0: number, p1: number, p2: number, p
  */
 export declare function playstatsStartTrackingStunts(): void;
 export declare function playstatsStartedSessionInOfflinemode(): void;
-export declare function playstatsStoneHatchetEnded(data: number): [number];
+export declare function playstatsStoneHatchetEnded(data: number): number;
 /**
  * Disallows CEventNetworkStuntPerformed to be triggered.
  */
@@ -15014,7 +15014,7 @@ export declare function refreshClosestOceanShoreline(): void;
 export declare function refreshInterior(interior: number): void;
 export declare function refreshPlayerListStats(p0: number): boolean;
 export declare function refreshWaypoint(): void;
-export declare function registerBoolToSave(name: string): [number];
+export declare function registerBoolToSave(name: string): number;
 /**
  * Does nothing (it's a nullsub).
  * @param p0
@@ -15022,16 +15022,16 @@ export declare function registerBoolToSave(name: string): [number];
  */
 export declare function registerEffectForReplayEditor(p0: string, p1: boolean): void;
 export declare function registerEntityForCutscene(cutscenePed: number, cutsceneEntName: string, p2: number, modelHash: number, p4: number): void;
-export declare function registerEnumToSave(name: string): [number];
-export declare function registerFloatToSave(name: string): [number];
+export declare function registerEnumToSave(name: string): number;
+export declare function registerFloatToSave(name: string): number;
 /**
  * Based on TASK_COMBAT_HATED_TARGETS_AROUND_PED, the parameters are likely similar (PedHandle, and area to attack in).
  * @param ped
  * @param radius
  */
 export declare function registerHatedTargetsAroundPed(ped: number, radius: number): void;
-export declare function registerInt64ToSave(name: string): [number];
-export declare function registerIntToSave(name: string): [number];
+export declare function registerInt64ToSave(name: string): number;
+export declare function registerIntToSave(name: string): number;
 export declare function registerNamedRendertarget(name: string, p1: boolean): boolean;
 /**
  * Used with 'NG_filmnoir_BW{01,02}' timecycles and the "NOIR_FILTER_SOUNDS" audioref.
@@ -15078,7 +15078,7 @@ export declare function registerSaveHouse(x: number, y: number, z: number, p3: n
  * Registers a protected variable that will be checked for modifications by the anticheat
  * @param variable
  */
-export declare function registerScriptVariable(variable: number): [number];
+export declare function registerScriptVariable(variable: number): number;
 /**
  * This native does absolutely nothing, just a nullsub
  * @param p0
@@ -15099,7 +15099,7 @@ export declare function registerTarget(ped: number, target: number): void;
  * @param p0
  * @param name
  */
-export declare function registerTextLabel15ToSave(name: string): [number];
+export declare function registerTextLabel15ToSave(name: string): number;
 /**
  * Only found 3 times in decompiled scripts.
  *
@@ -15109,7 +15109,7 @@ export declare function registerTextLabel15ToSave(name: string): [number];
  * @param p0
  * @param name
  */
-export declare function registerTextLabel23ToSave(name: string): [number];
+export declare function registerTextLabel23ToSave(name: string): number;
 /**
  * Only found 2 times in decompiled scripts.
  *
@@ -15118,7 +15118,7 @@ export declare function registerTextLabel23ToSave(name: string): [number];
  * @param p0
  * @param name
  */
-export declare function registerTextLabel31ToSave(name: string): [number];
+export declare function registerTextLabel31ToSave(name: string): number;
 /**
  * MISC::REGISTER_TEXT_LABEL_63_TO_SAVE(a_0, "Thumb_label");
  * MISC::REGISTER_TEXT_LABEL_63_TO_SAVE(&a_0._f10, "Photo_label");
@@ -15133,8 +15133,8 @@ export declare function registerTextLabel31ToSave(name: string): [number];
  * @param p0
  * @param name
  */
-export declare function registerTextLabel63ToSave(name: string): [number];
-export declare function registerTextLabelToSave(name: string): [number];
+export declare function registerTextLabel63ToSave(name: string): number;
+export declare function registerTextLabelToSave(name: string): number;
 export declare function registerWorldPointScriptBrain(scriptName: string, activationRange: number, p2: number): void;
 export declare function releaseAllCommerceItemImages(): void;
 export declare function releaseAmbientAudioBank(): void;
@@ -15240,7 +15240,7 @@ export declare function removeAnimSet(animSet: string): void;
  * Remove blip will currently crash your game, just artificially remove the blip by setting the sprite to a id that is 'invisible'.
  * @param blip
  */
-export declare function removeBlip(blip: number): [number];
+export declare function removeBlip(blip: number): number;
 /**
  * Alias for REMOVE_ANIM_SET.
  *
@@ -15352,7 +15352,7 @@ export declare function removePedDefensiveArea(ped: number, toggle: boolean): vo
  * Judging purely from a quick disassembly, if the ped is in a vehicle, the ped will be deleted immediately. If not, it'll be marked as no longer needed. - very elegant..
  * @param ped
  */
-export declare function removePedElegantly(ped: number): [number];
+export declare function removePedElegantly(ped: number): number;
 export declare function removePedFromGroup(ped: number): void;
 export declare function removePedHelmet(ped: number, instantly: boolean): void;
 export declare function removePedPreferredCoverSet(ped: number): void;
@@ -16055,8 +16055,8 @@ export declare function ropeAreTexturesLoaded(): boolean;
 export declare function ropeAttachVirtualBoundGeom(ropeId: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: number, p11: number, p12: number, p13: number): void;
 export declare function ropeChangeScriptOwner(p0: number, p1: boolean, p2: boolean): void;
 export declare function ropeConvertToSimple(ropeId: number): void;
-export declare function ropeDrawEnabled(p1: boolean): [number];
-export declare function ropeDrawShadowEnabled(toggle: boolean): [number];
+export declare function ropeDrawEnabled(p1: boolean): number;
+export declare function ropeDrawShadowEnabled(toggle: boolean): number;
 /**
  * Forces a rope to a certain length.
  * @param ropeId
@@ -16125,12 +16125,12 @@ export declare function scCommunityEventGetExtraDataStringForType(p0: string, p1
 export declare function scCommunityEventIsActive(): boolean;
 export declare function scCommunityEventIsActiveById(p0: number): boolean;
 export declare function scCommunityEventIsActiveForType(p0: string): boolean;
-export declare function scEmailDeleteEmails(p1: number): [number];
+export declare function scEmailDeleteEmails(p1: number): number;
 export declare function scEmailGetEmailAtIndex(p0: number, p1: number): [boolean, number];
 export declare function scEmailGetNumRetrievedEmails(): number;
 export declare function scEmailGetRetrievalStatus(): number;
 export declare function scEmailMessageClearRecipList(): void;
-export declare function scEmailMessagePushGamerToRecipList(gamerHandle: number): [number];
+export declare function scEmailMessagePushGamerToRecipList(gamerHandle: number): number;
 export declare function scEmailRetrieveEmails(offset: number, limit: number): void;
 export declare function scEmailSendEmail(p0: string): void;
 export declare function scEmailSetCurrentEmailTag(p0: number): boolean;
@@ -16156,9 +16156,9 @@ export declare function scInboxMessageGetDataInt(p0: number, context: string, ou
 export declare function scInboxMessageGetDataString(p0: number, context: string, out: string): boolean;
 export declare function scInboxMessageGetRawTypeAtIndex(p0: number): string;
 export declare function scInboxMessageGetUgcdata(p0: number, p1: number): [boolean, number];
-export declare function scInboxMessagePushGamerT0RecipList(gamerHandle: number): [number];
+export declare function scInboxMessagePushGamerT0RecipList(gamerHandle: number): number;
 export declare function scInboxSendBountyToRecipList(data: number): [boolean, number];
-export declare function scInboxSendUgcstatupdateToRecipList(data: number): [number];
+export declare function scInboxSendUgcstatupdateToRecipList(data: number): number;
 export declare function scInboxSetMessageAsReadAtIndex(msgIndex: number): boolean;
 export declare function scLicenseplateAdd(plateText: string): [boolean, number, number];
 export declare function scLicenseplateCheckString(p0: string, p1: number): [boolean, number];
@@ -16280,7 +16280,7 @@ export declare function sendMetricVipPoach(p0: number, p1: number, p2: number): 
  * @param eventDataSize
  * @param playerBits
  */
-export declare function sendTuScriptEvent(eventGroup: number, eventDataSize: number, playerBits: number): [number];
+export declare function sendTuScriptEvent(eventGroup: number, eventDataSize: number, playerBits: number): number;
 export declare function setAbilityBarValue(p0: number, p1: number): void;
 export declare function setAbilityBarVisibility(visible: boolean): void;
 /**
@@ -16624,8 +16624,8 @@ export declare function setBinkShouldSkip(binkMovie: number, bShouldSkip: boolea
  * @param address
  * @param offset
  */
-export declare function setBit(offset: number): [number];
-export declare function setBitsInRange(rangeStart: number, rangeEnd: number, p3: number): [number];
+export declare function setBit(offset: number): number;
+export declare function setBitsInRange(rangeStart: number, rangeEnd: number, p3: number): number;
 /**
  * Sets alpha-channel for blip color.
  *
@@ -17625,7 +17625,7 @@ export declare function setEntityAsMissionEntity(entity: number, p1: boolean, p2
  * }
  * @param entity
  */
-export declare function setEntityAsNoLongerNeeded(entity: number): [number];
+export declare function setEntityAsNoLongerNeeded(entity: number): number;
 export declare function setEntityCanBeDamaged(entity: number, toggle: boolean): void;
 export declare function setEntityCanBeDamagedByRelationshipGroup(entity: number, bCanBeDamaged: boolean, relGroup: number): void;
 /**
@@ -18639,7 +18639,7 @@ export declare function setMissionNameForUgcMission(p0: boolean, name: string): 
  * @param train
  * @param p1
  */
-export declare function setMissionTrainAsNoLongerNeeded(p1: boolean): [number];
+export declare function setMissionTrainAsNoLongerNeeded(p1: boolean): number;
 export declare function setMissionTrainCoords(train: number, x: number, y: number, z: number): void;
 export declare function setMobilePhoneDofState(toggle: boolean): void;
 export declare function setMobilePhonePosition(posX: number, posY: number, posZ: number): void;
@@ -18869,7 +18869,7 @@ export declare function setObjectAllowLowLodBuoyancy(object: number, toggle: boo
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  * @param object
  */
-export declare function setObjectAsNoLongerNeeded(object: number): [number];
+export declare function setObjectAsNoLongerNeeded(object: number): number;
 /**
  * Overrides a flag on the object which determines if the object should be avoided by a vehicle in task CTaskVehicleGoToPointWithAvoidanceAutomobile.
  * @param object
@@ -19144,7 +19144,7 @@ export declare function setPedAsGroupMember(ped: number, groupId: number): void;
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  * @param ped
  */
-export declare function setPedAsNoLongerNeeded(ped: number): [number];
+export declare function setPedAsNoLongerNeeded(ped: number): number;
 export declare function setPedBlendFromParents(ped: number, p1: number, p2: number, p3: number, p4: number): void;
 export declare function setPedBlocksPathingWhenDead(ped: number, toggle: boolean): void;
 export declare function setPedBoundsOrientation(ped: number, p1: number, p2: number, x: number, y: number, z: number): void;
@@ -21224,7 +21224,7 @@ export declare function setPlayerVisibleLocally(player: number, bIncludePlayersV
  * @param p2
  * @param p3
  */
-export declare function setPlayerWantedCentrePosition(player: number, p2: boolean, p3: boolean): [Vector3];
+export declare function setPlayerWantedCentrePosition(player: number, p2: boolean, p3: boolean): Vector3;
 /**
  * Call SET_PLAYER_WANTED_LEVEL_NOW for immediate effect
  *
@@ -21609,7 +21609,7 @@ export declare function setSaveMenuActive(ignoreVehicle: boolean): void;
  */
 export declare function setSaveMigrationTransactionIdWarning(transactionId: number): void;
 export declare function setSavegameListUniqueId(p0: number): void;
-export declare function setScaleformMovieAsNoLongerNeeded(scaleformHandle: number): [number];
+export declare function setScaleformMovieAsNoLongerNeeded(scaleformHandle: number): number;
 export declare function setScaleformMovieToUseLargeRt(scaleformHandle: number, toggle: boolean): void;
 /**
  * This native is used in some casino scripts to fit the scaleform in the rendertarget.
@@ -22381,7 +22381,7 @@ export declare function setVehicleAllowNoPassengersLockon(veh: number, toggle: b
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  * @param vehicle
  */
-export declare function setVehicleAsNoLongerNeeded(vehicle: number): [number];
+export declare function setVehicleAsNoLongerNeeded(vehicle: number): number;
 /**
  * intensity: 0.0f - 1.0f, only used once with 1.0f in R* Scripts (nigel2)
  * Makes an engine rattling noise when you decelerate, you need to be going faster to hear lower values
@@ -24071,7 +24071,7 @@ export declare function smashVehicleWindow(vehicle: number, windowIndex: number)
 export declare function spawnpointsCancelSearch(): void;
 export declare function spawnpointsGetNumSearchResults(): number;
 export declare function spawnpointsGetSearchResult(randomInt: number): [number, number, number];
-export declare function spawnpointsGetSearchResultFlags(p0: number, p1: number): [number];
+export declare function spawnpointsGetSearchResultFlags(p0: number, p1: number): number;
 export declare function spawnpointsIsSearchActive(): boolean;
 export declare function spawnpointsIsSearchComplete(): boolean;
 export declare function spawnpointsIsSearchFailed(): boolean;
@@ -24670,9 +24670,9 @@ export declare function startPreloadedConversation(): void;
 export declare function startReplayRecording(mode: number): void;
 export declare function startRopeUnwindingFront(ropeId: number): void;
 export declare function startRopeWinding(ropeId: number): void;
-export declare function startSaveArrayWithSize(size: number, arrayName: string): [number];
-export declare function startSaveData(p1: number, p2: boolean): [number];
-export declare function startSaveStructWithSize(size: number, structName: string): [number];
+export declare function startSaveArrayWithSize(size: number, arrayName: string): number;
+export declare function startSaveData(p1: number, p2: boolean): number;
+export declare function startSaveStructWithSize(size: number, structName: string): number;
 export declare function startScriptConversation(p0: boolean, p1: boolean, p2: boolean, p3: boolean): void;
 /**
  * Starts a fire:
@@ -26041,7 +26041,7 @@ export declare function taskLookAtEntity(ped: number, lookAt: number, duration: 
  * @param flags
  */
 export declare function taskMoveNetworkAdvancedByName(ped: number, network: string, x: number, y: number, z: number, rotX: number, rotY: number, rotZ: number, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void;
-export declare function taskMoveNetworkAdvancedByNameWithInitParams(ped: number, network: string, x: number, y: number, z: number, rotX: number, rotY: number, rotZ: number, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, dictionary: string, flags: number): [number];
+export declare function taskMoveNetworkAdvancedByNameWithInitParams(ped: number, network: string, x: number, y: number, z: number, rotX: number, rotY: number, rotZ: number, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, dictionary: string, flags: number): number;
 /**
  * Example:
  * TASK::TASK_MOVE_NETWORK_BY_NAME(PLAYER::PLAYER_PED_ID(), "arm_wrestling_sweep_paired_a_rev3", 0.0f, true, "mini@arm_wrestling", 0);
@@ -26063,7 +26063,7 @@ export declare function taskMoveNetworkByName(ped: number, task: string, multipl
  * @param animDict
  * @param flags
  */
-export declare function taskMoveNetworkByNameWithInitParams(ped: number, network: string, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): [number];
+export declare function taskMoveNetworkByNameWithInitParams(ped: number, network: string, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): number;
 /**
  * The given ped will try to open the nearest door to 'seat'.
  * Example: telling the ped to open the door for the driver seat does not necessarily mean it will open the driver door, it may choose to open the passenger door instead if that one is closer.
@@ -27349,7 +27349,7 @@ export declare function triggerScreenblurFadeOut(transitionTime: number): boolea
  * @param eventDataSize
  * @param playerBits
  */
-export declare function triggerScriptEvent(eventGroup: number, eventDataSize: number, playerBits: number): [number];
+export declare function triggerScriptEvent(eventGroup: number, eventDataSize: number, playerBits: number): number;
 export declare function triggerSirenAudio(vehicle: number): void;
 export declare function triggerSonarBlip(posX: number, posY: number, posZ: number, radius: number, p4: number): void;
 /**
@@ -27401,7 +27401,7 @@ export declare function ugcGetContentRatingCount(p0: number, p1: number): number
 export declare function ugcGetContentRatingNegativeCount(p0: number, p1: number): number;
 export declare function ugcGetContentRatingPositiveCount(p0: number, p1: number): number;
 export declare function ugcGetContentTotal(): number;
-export declare function ugcGetContentUpdatedDate(p0: number, p1: number): [number];
+export declare function ugcGetContentUpdatedDate(p0: number, p1: number): number;
 export declare function ugcGetContentUserId(p0: number): string;
 export declare function ugcGetContentUserName(p0: number): string;
 export declare function ugcGetCreateContentId(): string;
@@ -27522,7 +27522,7 @@ export declare function unpinRopeVertex(ropeId: number, vertex: number): void;
  * @param id
  */
 export declare function unregisterPedheadshot(id: number): void;
-export declare function unregisterScriptVariable(variable: number): [number];
+export declare function unregisterScriptVariable(variable: number): number;
 /**
  * This native does absolutely nothing, just a nullsub
  */
