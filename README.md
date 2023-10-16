@@ -1,9 +1,7 @@
-# @cfx/natives
+# This repo is now archived
 
-Example:
-```ts
-import * as native from "cfx-natives";
+## please visit related repo:
 
-const ped = native.playerPedId();
-const pos = native.getEntityCoords(ped, false); // return as Vector3
-```
+- [@censor1337/cfx-core](https://github.com/CENSOR1337/cfx-core-js)
+- [@censor1337/cfx-api](https://github.com/CENSOR1337/cfx-api-js)
+- [@censor1337/cslib](https://github.com/CENSOR1337/cfx-cslib-js)
